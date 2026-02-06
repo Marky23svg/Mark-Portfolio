@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ================================
+   COLOR THEME VARIABLES
+================================ */
+
+@layer base {
+  :root {
+    /* Light Mode */
+    --bg-page: 245 245 245;      /* #f5f5f5 */
+    --bg-card: 255 255 255;
+    --bg-soft: 0 0 0;
+
+    --text-main: 15 15 15;
+    --text-muted: 55 55 55;
+
+    --border-main: 0 0 0;
+
+    --accent: 0 0 0;
+  }
+
+  .dark {
+    /* Dark Mode */
+    --bg-page: 3 7 18;          /* gray-950 */
+    --bg-card: 17 24 39;        /* gray-900 */
+    --bg-soft: 255 255 255;
+
+    --text-main: 243 244 246;
+    --text-muted: 156 163 175;
+
+    --border-main: 55 65 81;
+
+    --accent: 255 255 255;
+  }
+
+  body {
+    background-color: rgb(var(--bg-page));
+    color: rgb(var(--text-main));
+    @apply transition-colors duration-300;
+  }
+}
+
+/* ================================
+   REUSABLE THEME CLASSES
+================================ */
+
+@layer components {
+  .page-bg {
+    background-color: rgb(var(--bg-page));
+  }
+
+  .card {
+    background-color: rgb(var(--bg-card) / 0.7);
+    @apply rounded-xl shadow-lg;
+  }
+
+  .card-strong {
+    background-color: rgb(var(--bg-card) / 0.85);
+    @apply rounded-xl shadow-xl;
+  }
+
+  .soft-box {
+    background-color: rgb(var(--bg-soft) / 0.05);
+  }
+
+  .text-main {
+    color: rgb(var(--text-main));
+  }
+
+  .text-muted {
+    color: rgb(var(--text-muted));
+  }
+
+  .border-theme {
+    border-color: rgb(var(--border-main) / 0.2);
+  }
+
+  .accent-bg {
+    background-color: rgb(var(--accent) / 0.85);
+  }
+
+  .accent-text {
+    color: rgb(var(--accent));
+  }
+}
+
+/* ================================
+   CAROUSEL (UNCHANGED)
+================================ */
+
+.carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Infinite carousel backup
+
+.carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: carousel-scroll 18s linear infinite;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes carousel-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+*/
