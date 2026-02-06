@@ -10,7 +10,7 @@ function Header() {
 
   return (
     <header className="relative">
-      <div className="absolute top-4 right-4 sm:top-12 sm:right-30">
+      <div className="absolute top-4 right-4 sm:top-12 sm:right-30 cursor-pointer">
         <ThemeToggle />
       </div>
       <section className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10 py-10 px-5 pb-5 sm:px-30 bg-gray-100 dark:bg-gray-950 border-b border-black/10 dark:border-gray-600">
