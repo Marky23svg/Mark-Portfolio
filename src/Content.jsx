@@ -181,7 +181,8 @@ function Content() {
                 <h1 className="text-gray-900 dark:text-white text-2xl font-bold px-8 p-5">Web Projects</h1>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-3 gap-y-4 justify-items-center mx-0 sm:mx-8 my-4">
-                    <div className="h-50 w-62 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer">
+                    <div className="h-50 w-62 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
+                    onClick={() => window.open("https://demo-system-g5uf.vercel.app/", "_blank")}>
                         <img
                             src={Proj1}
                             className="h-36 object-cover rounded-xl p-1"
