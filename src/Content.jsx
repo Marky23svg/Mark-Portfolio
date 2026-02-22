@@ -197,12 +197,13 @@ function Content() {
                         />
                         <h3 className="text-gray-900 dark:text-white text-normal font-semibold mt-3">Travel Booking Website</h3>
                     </div>
-                    <div className="h-50 w-62 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer">
+                    <div className="h-50 w-62 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
+                    onClick={() => window.open("https://formula1-website-gamma.vercel.app/", "_blank")}>
                         <img
                             src={Proj3}
                             className="h-36 object-cover rounded-xl p-1"
                         />
-                        <h3 className="text-gray-900 dark:text-white text-normal font-semibold mt-3">F1 Racing Website</h3>
+                        <h3 className="text-gray-900 dark:text-white text-normal font-semibold mt-3">Formula 1 Website</h3>
                     </div>
                 </div>
 
