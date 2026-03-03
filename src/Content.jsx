@@ -14,12 +14,12 @@ function Content() {
     const navigate = useNavigate(); //For button
     return (
         
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 p-5 sm:px-30 bg-gray-50 dark:bg-black">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 p-5 sm:px-50 bg-gray-50 dark:bg-black">
             
             {/*About me*/}
             <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] sm:min-h-[50px] col-span-2 sm:pb-1 pb-5">
-                <h1 className="text-black dark:text-white text-2xl font-bold px-8 p-5">About Me</h1>
-                <p className="text-gray-950 dark:text-gray-300 px-8 text-justify text-base font-semibold">
+                <h1 className="text-black dark:text-white text-2xl font-bold px-5 p-4">About Me</h1>
+                <p className="text-gray-950 dark:text-gray-300 px-5 text-justify text-base font-medium">
                     I am <b>Mark Justin Canuel</b>, a 3rd year Bachelor of Science in Information Technology student with a strong interest
                     in UI/UX design and web development. I specialize in frontend development, where I enjoy building clean, responsive, and
                     user-friendly interfaces, and I also have basic knowledge of backend development, allowing me to understand how different
@@ -27,8 +27,8 @@ function Content() {
                     with the goal of creating web applications that are both visually appealing and functional.
                 </p>
             </div>
-            <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] row-span-2  ">
-                <h1 className="text-black dark:text-white text-2xl font-bold px-8 p-5">Education</h1>
+            <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] row-span-1 sm:row-span-2">
+                <h1 className="text-black dark:text-white text-2xl font-bold px-5 p-4">Education</h1>
 
                 <div className="relative mx-8 my-10">
                     {/* timeline column */}
@@ -49,7 +49,7 @@ function Content() {
                         {/* content */}
                         <div className="ml-12 bg-gray-50 dark:bg-black pl-3 w-full">
                             <h2 className="font-bold">Capstone Project Developer</h2>
-                            <p className="text-xs text-gray-700 dark:text-gray-300 font-semibold">eGuide ICCT School and Academic Requirements Guide System</p>
+                            <p className="text-xs text-gray-700 dark:text-gray-300 font-semibold">eGuide ICCT Centralized School Requirements Guide System</p>
                             <p className="text-xs text-gray-700 dark:text-gray-400">2026</p>
                         </div>
                     </div>
@@ -66,7 +66,7 @@ function Content() {
                         {/* content */}
                         <div className="ml-12 bg-gray-50 dark:bg-black  pl-3 w-full">
                             <h2 className="font-bold">Tech Stack & Programming Experience </h2>
-                            <p className="text-xs text-gray-700 dark:text-gray-300 font-semibold">React, Spring Boot, MySQL, & Web Dev</p>
+                            <p className="text-xs text-gray-700 dark:text-gray-300 font-semibold">React, Tailwind, Spring Boot, MySQL, & Web Dev</p>
                             <p className="text-xs text-gray-700 dark:text-gray-400">2025</p>
                         </div>
                     </div>
@@ -141,12 +141,12 @@ function Content() {
 
             {/*Tools & Technologies*/}
             <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] col-span-2">
-                <h1 className="text-black dark:text-white text-2xl font-bold px-8 p-5">Tools & Technologies</h1>
-                <div className="px-8 py-7">
+                <h1 className="text-black dark:text-white text-2xl font-bold px-5 p-4">Tools & Technologies</h1>
+                <div className="px-0 py-7">
                     <TechCarousel />
                 </div>
 
-                <div className="grid grid-cols-3 sm:grid-cols-7 mx-8 my-4 gap-x-2 gap-y-4 ">
+                <div className="grid grid-cols-3 sm:grid-cols-6 mx-8 my-4 gap-x-5 gap-y-4 ">
                     <div className="h-6 w-24 bg-[#ff4d00] text-sm text-white font-semibold text-center rounded-xl cursor-pointer ">HTML</div>
                     <div className="h-6 w-24 bg-[#005eff] text-sm text-white font-semibold text-center rounded-xl cursor-pointer">CSS</div>
                     <div className="h-6 w-24 bg-[#ffee00] text-sm text-black/80 font-semibold text-center rounded-xl cursor-pointer">JavaScript</div>
@@ -162,14 +162,14 @@ function Content() {
                 </div>
             </div>
 
-            <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 min-h-[50px] py-5  row-span-3">
-                <h1 className="text-black dark:text-white text-2xl font-bold px-8 ">Graphic Design Projects</h1>
-                <div className="px-8 py-10">
+            <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 min-h-[50px] py-4  row-span-3">
+                <h1 className="text-black dark:text-white text-2xl font-bold px-5 ">Graphic Design Projects</h1>
+                <div className="px-0 py-10">
                     <GraphicCarousel />
                 </div>
                 <div className="flex justify-center px-8">
                     <button
-                        className="bg-black dark:bg-gray-100 dark:hover:bg-gray-900 dark:hover:text-white rounded-lg h-8 w-24 text-white dark:text-black cursor-pointer border border-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors"
+                        className="bg-black dark:bg-gray-100 dark:hover:bg-black dark:hover:text-white rounded-lg h-8 w-24 text-white dark:text-black cursor-pointer border border-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors"
                         onClick={() => navigate("/graphic-design-details")}
                     >
                         View
@@ -178,32 +178,32 @@ function Content() {
             </div>
             <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] sm:min-h-[50px] col-span-2 row-span-2 pb-10">
 
-                <h1 className="text-black dark:text-white text-2xl font-bold px-8 p-5">Web Projects</h1>
+                <h1 className="text-black dark:text-white text-2xl font-bold px-5 p-4">Web Projects</h1>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-3 gap-y-4 justify-items-center mx-0 sm:mx-8 my-4">
-                    <div className="h-50 w-62 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-3 gap-y-4 justify-items-center mx-0 sm:mx-2 my-4">
+                    <div className="h-45 w-55 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
                     onClick={() => window.open("https://demo-system-g5uf.vercel.app/", "_blank")}>
                         <img
                             src={Proj1}
-                            className="h-36 object-cover rounded-xl p-1"
+                            className="h-31 object-cover rounded-xl p-1"
                         />
-                        <h3 className="text-gray-900 dark:text-white text-normal font-semibold mt-3">eGuide ICCT System</h3>
+                        <h3 className="text-gray-900 dark:text-white text-normal font-semibold mt-1">eGuide ICCT System</h3>
                     </div>
-                    <div className="h-50 w-62 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
+                    <div className="h-45 w-55 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
                     onClick={() => window.open("https://destination-website-five.vercel.app/", "_blank")}>
                         <img
                             src={Proj2}
-                            className="h-36 object-cover rounded-xl p-1"
+                            className="h-31 object-cover rounded-xl p-1"
                         />
-                        <h3 className="text-gray-900 dark:text-white text-normal font-semibold mt-3">Travel Booking Website</h3>
+                        <h3 className="text-gray-900 dark:text-white text-normal font-semibold mt-1">Travel Booking Website</h3>
                     </div>
-                    <div className="h-50 w-62 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
+                    <div className="h-45 w-55 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
                     onClick={() => window.open("https://formula1-website-gamma.vercel.app/", "_blank")}>
                         <img
                             src={Proj3}
-                            className="h-36 object-cover rounded-xl p-1"
+                            className="h-31 object-cover rounded-xl p-1"
                         />
-                        <h3 className="text-gray-900 dark:text-white text-normal font-semibold mt-3">Formula 1 Website</h3>
+                        <h3 className="text-gray-900 dark:text-white text-normal font-semibold mt-1">Formula 1 Website</h3>
                     </div>
                 </div>
 
@@ -212,7 +212,7 @@ function Content() {
                 <h1 className="text-black dark:text-white text-2xl text-center font-bold px-8 p-5">Do What You Love, Love What You Do</h1>
             </div>
             <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] col-span-1 sm:col-span-3 sm:pb-10 pb-10">
-                <h1 className="text-black dark:text-white text-2xl font-bold px-8 p-5">Certifications</h1>
+                <h1 className="text-black dark:text-white text-2xl font-bold px-5 p-4">Certifications</h1>
                 <div className="grid grid-cols-1 sm:grid-cols-4 gap-x-3 gap-y-4 justify-items-center mx-0 sm:mx-8 my-4">
                     <div className="h-50 w-62 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm font-semibold text-center rounded-xl cursor-pointer">
                         <img
@@ -242,7 +242,7 @@ function Content() {
             </div>
 
             <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 col-span-2 sm:pb-10 pb-5">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-4 gap-y-6 justify-items-stretch mx-8 my-4 px-1">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-2 gap-y-6 justify-items-stretch mx-5 my-4 px-1">
 
                     {/* Column 1: Get in touch */}
                     <div className="w-full">
@@ -292,7 +292,7 @@ function Content() {
                             className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-2 px-3 mb-3"
                         >
                             <FaEnvelope className="h-4 w-4" />
-                            <p className="text-sm font-medium">markjustincanuel2@gmail.com</p>
+                            <p className="text-xs font-medium">markjustincanuel2@gmail.com</p>
                         </button>
 
                         <button
@@ -300,7 +300,7 @@ function Content() {
                             className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-2 px-3"
                         >
                             <FaPhone className="h-4 w-4" />
-                             <p className="text-sm font-medium">09679101896</p>
+                             <p className="text-xs font-medium">09679101896</p>
                         </button>
                     </div>
 
@@ -308,11 +308,11 @@ function Content() {
             </div>
 
 
-            <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] row-span-2 mb-5 pb-10 ">
+            <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] row-span-2 mb-5 py-5 sm:p-0 ">
             <h1 className="text-black dark:text-white text-xl font-bold text-left px-8 p-4 mb-1">Goals</h1>
                <div className="px-5">
                         
-                        <div className="bg-gray-50 dark:bg-black dark:border-gray-600 flex justify-center items-center border border-black/10 rounded-lg p-3 mb-5">
+                        <div className="bg-gray-50 dark:bg-black dark:border-gray-600 flex justify-center items-center border border-black/10 rounded-lg p-3 mb-3">
                             <p className="text-sm font-semibold text-gray-900 dark:text-gray-300">
                                 Grow and build a strong career in IT through continuous learning and hands-on experience.
                             </p>

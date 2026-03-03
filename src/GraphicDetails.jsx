@@ -32,7 +32,7 @@ export default function GraphicDetails() {
 
 
   return (
-    <div className="min-h-screen bg-gray-100 p-3 dark:bg-gray-950">
+    <div className="min-h-screen bg-gray-100 p-3 dark:bg-black">
       {/* Header */}
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold text-black dark:text-white">

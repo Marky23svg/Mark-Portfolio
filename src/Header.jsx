@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaDownload, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { MdVerified } from "react-icons/md";
 
 import Mark from './assets/Markpfp3.png';
 import MarkHover from './assets/MarkpfpHover.png'; // <-- new image
@@ -10,28 +11,30 @@ function Header() {
 
   return (
     <header className="relative">
-      <div className="absolute top-4 right-4 sm:top-12 sm:right-30">
+      <div className="absolute top-4 right-4 sm:top-12 sm:right-50">
         <ThemeToggle />
       </div>
-      <section className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10 py-10 px-5 pb-5 sm:px-30 bg-gray-50 dark:bg-black border-b border-black/10 dark:border-gray-600">
+      <section className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10 py-10 px-5 pb-5 sm:px-50 bg-gray-50 dark:bg-black border-b border-black/10 dark:border-gray-600">
 
         {/* Image */}
         <img
           src={hovered ? MarkHover : Mark}
           alt="Mark Dev"
-          className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl shadow-md transition-all duration-500 cursor-pointer"
+          className="w-32 h-32 sm:w-40 sm:h-40 rounded-xl shadow-md transition-all duration-500 cursor-pointer"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
         />
 
 
         <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+          <div className="flex items-center gap-2">
           <h2 className="text-2xl sm:text-4xl font-bold">
-            Canuel, Mark Justin
+            Canuel, Mark Justin 
           </h2>
-
+          <MdVerified className="h-5 w-5 sm:h-6 sm:w-6 mt-1 text-blue-500" />
+          </div>
           <h2 className="text-sm sm:text-lg font-medium mt-1 text-gray-700 dark:text-gray-400">
-            Marikina City
+            Marikina City, Philippines
           </h2>
 
           <h2 className="text-lg sm:text-2xl font-medium text-black dark:text-white">
