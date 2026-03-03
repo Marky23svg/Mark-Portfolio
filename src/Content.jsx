@@ -14,12 +14,12 @@ function Content() {
     const navigate = useNavigate(); //For button
     return (
         
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 p-5 sm:px-30 bg-gray-100 dark:bg-gray-950">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 p-5 sm:px-30 bg-gray-50 dark:bg-black">
             
             {/*About me*/}
-            <div className="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] sm:min-h-[50px] col-span-2 sm:pb-1 pb-5">
-                <h1 className="text-gray-900 dark:text-white text-2xl font-bold px-8 p-5">About Me</h1>
-                <p className="text-gray-800 dark:text-gray-300 px-8 text-justify text-base font-semibold">
+            <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] sm:min-h-[50px] col-span-2 sm:pb-1 pb-5">
+                <h1 className="text-black dark:text-white text-2xl font-bold px-8 p-5">About Me</h1>
+                <p className="text-gray-950 dark:text-gray-300 px-8 text-justify text-base font-semibold">
                     I am <b>Mark Justin Canuel</b>, a 3rd year Bachelor of Science in Information Technology student with a strong interest
                     in UI/UX design and web development. I specialize in frontend development, where I enjoy building clean, responsive, and
                     user-friendly interfaces, and I also have basic knowledge of backend development, allowing me to understand how different
@@ -27,8 +27,8 @@ function Content() {
                     with the goal of creating web applications that are both visually appealing and functional.
                 </p>
             </div>
-            <div className="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] row-span-2  ">
-                <h1 className="text-gray-900 dark:text-white text-2xl font-bold px-8 p-5">Education</h1>
+            <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] row-span-2  ">
+                <h1 className="text-black dark:text-white text-2xl font-bold px-8 p-5">Education</h1>
 
                 <div className="relative mx-8 my-10">
                     {/* timeline column */}
@@ -47,7 +47,7 @@ function Content() {
                         </div>
 
                         {/* content */}
-                        <div className="ml-12 bg-gray-50 dark:bg-gray-900 pl-3 w-full">
+                        <div className="ml-12 bg-gray-50 dark:bg-black pl-3 w-full">
                             <h2 className="font-bold">Capstone Project Developer</h2>
                             <p className="text-xs text-gray-700 dark:text-gray-300 font-semibold">eGuide ICCT School and Academic Requirements Guide System</p>
                             <p className="text-xs text-gray-700 dark:text-gray-400">2026</p>
@@ -64,7 +64,7 @@ function Content() {
                         </div>
 
                         {/* content */}
-                        <div className="ml-12 bg-gray-50 dark:bg-gray-900  pl-3 w-full">
+                        <div className="ml-12 bg-gray-50 dark:bg-black  pl-3 w-full">
                             <h2 className="font-bold">Tech Stack & Programming Experience </h2>
                             <p className="text-xs text-gray-700 dark:text-gray-300 font-semibold">React, Spring Boot, MySQL, & Web Dev</p>
                             <p className="text-xs text-gray-700 dark:text-gray-400">2025</p>
@@ -80,7 +80,7 @@ function Content() {
                         </div>
 
                         {/* content */}
-                        <div className="ml-12 bg-gray-50 dark:bg-gray-900 pl-3 w-full">
+                        <div className="ml-12 bg-gray-50 dark:bg-black pl-3 w-full">
                             <h2 className="font-bold">CCNA Certification </h2>
                             <p className="text-xs text-gray-700 dark:text-gray-300 font-semibold">Networking fundamentals, routing, switching, and device configuration</p>
                             <p className="text-xs text-gray-700 dark:text-gray-400">2025</p>
@@ -96,7 +96,7 @@ function Content() {
                         </div>
 
                         {/* content */}
-                        <div className="ml-12 bg-gray-50 dark:bg-gray-900 pl-3 w-full">
+                        <div className="ml-12 bg-gray-50 dark:bg-black pl-3 w-full">
                             <h2 className="font-bold">Programming Foundations </h2>
                             <p className="text-xs text-gray-700 dark:text-gray-300 font-semibold">Self-learning, online courses, mini-projects</p>
                             <p className="text-xs text-gray-700 dark:text-gray-400">2024</p>
@@ -112,7 +112,7 @@ function Content() {
                         </div>
 
                         {/* content */}
-                        <div className="ml-12 bg-gray-50 dark:bg-gray-900 pl-3 w-full">
+                        <div className="ml-12 bg-gray-50 dark:bg-black pl-3 w-full">
                             <h2 className="font-bold">WordPress Workshop Experience</h2>
                             <p className="text-xs text-gray-700 dark:text-gray-300 font-semibold">Peer collaboration, designing, and developing interactive web applications.</p>
                             <p className="text-xs text-gray-700 dark:text-gray-400">2023</p>
@@ -128,7 +128,7 @@ function Content() {
                         </div>
 
                         {/* content */}
-                        <div className="ml-12 bg-gray-50 dark:bg-gray-900 pl-3 w-full">
+                        <div className="ml-12 bg-gray-50 dark:bg-black pl-3 w-full">
                             <h2 className="font-bold">Hello World!</h2>
                             <p className="text-xs text-gray-700 dark:text-gray-300 font-semibold">Started learning programming</p>
                             <p className="text-xs text-gray-700 dark:text-gray-400">2023</p>
@@ -140,8 +140,8 @@ function Content() {
             </div>
 
             {/*Tools & Technologies*/}
-            <div className="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] col-span-2">
-                <h1 className="text-gray-900 dark:text-white text-2xl font-bold px-8 p-5">Tools & Technologies</h1>
+            <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] col-span-2">
+                <h1 className="text-black dark:text-white text-2xl font-bold px-8 p-5">Tools & Technologies</h1>
                 <div className="px-8 py-7">
                     <TechCarousel />
                 </div>
@@ -162,26 +162,26 @@ function Content() {
                 </div>
             </div>
 
-            <div className="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-300 dark:border-gray-600 min-h-[50px] py-5  row-span-3">
-                <h1 className="text-gray-900 dark:text-white text-2xl font-bold px-8 ">Graphic Design Projects</h1>
+            <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 min-h-[50px] py-5  row-span-3">
+                <h1 className="text-black dark:text-white text-2xl font-bold px-8 ">Graphic Design Projects</h1>
                 <div className="px-8 py-10">
                     <GraphicCarousel />
                 </div>
                 <div className="flex justify-center px-8">
                     <button
-                        className="bg-gray-900 dark:bg-gray-100 dark:hover:bg-gray-900 dark:hover:text-white rounded-lg h-8 w-24 text-white dark:text-black cursor-pointer border border-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors"
+                        className="bg-black dark:bg-gray-100 dark:hover:bg-gray-900 dark:hover:text-white rounded-lg h-8 w-24 text-white dark:text-black cursor-pointer border border-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors"
                         onClick={() => navigate("/graphic-design-details")}
                     >
                         View
                     </button>
                 </div>
             </div>
-            <div className="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] sm:min-h-[50px] col-span-2 row-span-2 pb-10">
+            <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] sm:min-h-[50px] col-span-2 row-span-2 pb-10">
 
-                <h1 className="text-gray-900 dark:text-white text-2xl font-bold px-8 p-5">Web Projects</h1>
+                <h1 className="text-black dark:text-white text-2xl font-bold px-8 p-5">Web Projects</h1>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-3 gap-y-4 justify-items-center mx-0 sm:mx-8 my-4">
-                    <div className="h-50 w-62 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
+                    <div className="h-50 w-62 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
                     onClick={() => window.open("https://demo-system-g5uf.vercel.app/", "_blank")}>
                         <img
                             src={Proj1}
@@ -189,7 +189,7 @@ function Content() {
                         />
                         <h3 className="text-gray-900 dark:text-white text-normal font-semibold mt-3">eGuide ICCT System</h3>
                     </div>
-                    <div className="h-50 w-62 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
+                    <div className="h-50 w-62 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
                     onClick={() => window.open("https://destination-website-five.vercel.app/", "_blank")}>
                         <img
                             src={Proj2}
@@ -197,7 +197,7 @@ function Content() {
                         />
                         <h3 className="text-gray-900 dark:text-white text-normal font-semibold mt-3">Travel Booking Website</h3>
                     </div>
-                    <div className="h-50 w-62 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
+                    <div className="h-50 w-62 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
                     onClick={() => window.open("https://formula1-website-gamma.vercel.app/", "_blank")}>
                         <img
                             src={Proj3}
@@ -208,13 +208,13 @@ function Content() {
                 </div>
 
             </div>
-            <div className="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-300 dark:border-gray-600 min-h-[50px] col-span-2">
-                <h1 className="text-gray-900 dark:text-white text-2xl text-center font-bold px-8 p-5">Do What You Love, Love What You Do</h1>
+            <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 min-h-[50px] col-span-2">
+                <h1 className="text-black dark:text-white text-2xl text-center font-bold px-8 p-5">Do What You Love, Love What You Do</h1>
             </div>
-            <div className="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] col-span-1 sm:col-span-3 sm:pb-10 pb-10">
-                <h1 className="text-gray-900 dark:text-white text-2xl font-bold px-8 p-5">Certifications</h1>
+            <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] col-span-1 sm:col-span-3 sm:pb-10 pb-10">
+                <h1 className="text-black dark:text-white text-2xl font-bold px-8 p-5">Certifications</h1>
                 <div className="grid grid-cols-1 sm:grid-cols-4 gap-x-3 gap-y-4 justify-items-center mx-0 sm:mx-8 my-4">
-                    <div className="h-50 w-62 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 text-sm font-semibold text-center rounded-xl cursor-pointer">
+                    <div className="h-50 w-62 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm font-semibold text-center rounded-xl cursor-pointer">
                         <img
                             src={Cert1}
                             className="h-49 object-cover rounded-xl p-1"
@@ -241,13 +241,13 @@ function Content() {
 
             </div>
 
-            <div className="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 col-span-2 sm:pb-10 pb-5">
+            <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 col-span-2 sm:pb-10 pb-5">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-4 gap-y-6 justify-items-stretch mx-8 my-4 px-1">
 
                     {/* Column 1: Get in touch */}
                     <div className="w-full">
-                        <h1 className="text-gray-900 dark:text-white text-xl font-bold text-left mb-5">Get in touch</h1>
-                        <div className="bg-gray-50 dark:bg-gray-900 dark:border-gray-600 flex justify-center items-center border border-black/10 rounded p-9">
+                        <h1 className="text-black dark:text-white text-xl font-bold text-left mb-5">Get in touch</h1>
+                        <div className="bg-gray-50 dark:bg-black dark:border-gray-600 flex justify-center items-center border border-black/10 rounded-lg p-9">
                             <p className="text-medium font-semibold text-center text-gray-900 dark:text-gray-300">
                                 Actively seeking an OJT/Internship opportunity.
                             </p>
@@ -256,11 +256,11 @@ function Content() {
 
                     {/* Column 2: Social Links */}
                     <div className="w-full">
-                        <h1 className="text-gray-900 dark:text-white text-xl font-bold text-left mb-5">Social Links</h1>
+                        <h1 className="text-black dark:text-white text-xl font-bold text-left mb-5">Social Links</h1>
 
                         <button
                             onClick={() => window.open("https://www.facebook.com/markjustin.canuel", "_blank")}
-                            className="bg-gray-50 dark:bg-gray-900 dark:border-gray-600 h-10 w-full rounded border border-black/10 flex items-center gap-3 px-5 mb-3 cursor-pointer"
+                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-3 px-5 mb-3 cursor-pointer"
                         >
                             <FaFacebook className="h-5 w-5 text-blue-600" />
                             <p className="text-sm font-medium">Facebook</p>
@@ -268,7 +268,7 @@ function Content() {
 
                         <button
                             onClick={() => window.open("https://www.instagram.com/imnotmarkkk_/", "_blank")}
-                            className="bg-gray-50 dark:bg-gray-900 dark:border-gray-600 h-10 w-full rounded border border-black/10 flex items-center gap-3 px-5 mb-3 cursor-pointer"
+                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-3 px-5 mb-3 cursor-pointer"
                         >
                             <FaInstagram className="h-5 w-5 text-pink-500" />
                             <p className="text-sm font-medium">Instagram</p>
@@ -276,7 +276,7 @@ function Content() {
 
                         <button
                             onClick={() => window.open("https://github.com/Marky23svg", "_blank")}
-                            className="bg-gray-50 dark:bg-gray-900 dark:border-gray-600 h-10 w-full rounded border border-black/10 flex items-center gap-3 px-5 cursor-pointer"
+                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-3 px-5 cursor-pointer"
                         >
                             <FaGithub className="h-5 w-5" />
                             <p className="text-sm font-medium">Github</p>
@@ -285,19 +285,19 @@ function Content() {
 
                     {/* Column 3: Contacts */}
                     <div className="w-full">
-                        <h1 className="text-gray-900 dark:text-white text-xl font-bold text-left mb-5">Contacts</h1>
+                        <h1 className="text-black dark:text-white text-xl font-bold text-left mb-5">Contacts</h1>
 
                         <button
                             onClick={() => window.open("mailto:markjustincanuel2@gmail.com", "_blank")}
-                            className="bg-gray-50 dark:bg-gray-900 dark:border-gray-600 h-10 w-full rounded border border-black/10 flex items-center gap-2 px-3 mb-3"
+                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-2 px-3 mb-3"
                         >
                             <FaEnvelope className="h-4 w-4" />
                             <p className="text-sm font-medium">markjustincanuel2@gmail.com</p>
                         </button>
 
                         <button
-                            onClick={() => window.open("tel:0967dummy#", "_blank")}
-                            className="bg-gray-50 dark:bg-gray-900 dark:border-gray-600 h-10 w-full rounded border border-black/10 flex items-center gap-2 px-3"
+                            onClick={() => window.open("tel#", "_blank")}
+                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-2 px-3"
                         >
                             <FaPhone className="h-4 w-4" />
                              <p className="text-sm font-medium">09679101896</p>
@@ -308,16 +308,16 @@ function Content() {
             </div>
 
 
-            <div className="bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] row-span-2 mb-5 pb-10 ">
-            <h1 className="text-gray-900 dark:text-white text-xl font-bold text-left px-8 p-4 mb-1">Goals</h1>
+            <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] row-span-2 mb-5 pb-10 ">
+            <h1 className="text-black dark:text-white text-xl font-bold text-left px-8 p-4 mb-1">Goals</h1>
                <div className="px-5">
                         
-                        <div className="bg-gray-50 dark:bg-gray-900 dark:border-gray-600 flex justify-center items-center border border-black/10 rounded p-3 mb-5">
+                        <div className="bg-gray-50 dark:bg-black dark:border-gray-600 flex justify-center items-center border border-black/10 rounded-lg p-3 mb-5">
                             <p className="text-sm font-semibold text-gray-900 dark:text-gray-300">
                                 Grow and build a strong career in IT through continuous learning and hands-on experience.
                             </p>
                         </div>
-                        <div className="bg-gray-50 dark:bg-gray-900 dark:border-gray-600 flex justify-center items-center border border-black/10 rounded p-3">
+                        <div className="bg-gray-50 dark:bg-black dark:border-gray-600 flex justify-center items-center border border-black/10 rounded-lg p-3">
                             <p className="text-sm font-semibold text-gray-900 dark:text-gray-300">
                                 Improve my skills in software development and contribute to real-world impactful projects.
                             </p>
