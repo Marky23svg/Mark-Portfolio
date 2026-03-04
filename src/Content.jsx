@@ -58,7 +58,7 @@ function Content() {
                     <div className="relative flex mb-8">
                         {/* dot */}
                         <div className="absolute left-5 top-2">
-                            <div className="h-4 w-4 bg-gray-900 dark:bg-gray-100 shadow-black rounded-full pt-1 -translate-x-1/2">
+                            <div className="h-4 w-4 bg-gray-50 dark:bg-black hover:bg-black dark:hover:bg-white border border-gray-400 border-2 shadow-black rounded-full cursor-pointer pt-1 -translate-x-1/2">
                             </div>
 
                         </div>
@@ -74,7 +74,7 @@ function Content() {
                     <div className="relative flex mb-8">
                         {/* dot */}
                         <div className="absolute left-5 top-2">
-                            <div className="h-4 w-4 bg-gray-900 dark:bg-gray-100 shadow-black rounded-full pt-1 -translate-x-1/2">
+                            <div className="h-4 w-4 bg-gray-50 dark:bg-black hover:bg-black dark:hover:bg-white border border-gray-400 border-2 shadow-black rounded-full cursor-pointer pt-1 -translate-x-1/2">
                             </div>
 
                         </div>
@@ -90,7 +90,7 @@ function Content() {
                     <div className="relative flex mb-8">
                         {/* dot */}
                         <div className="absolute left-5 top-2">
-                            <div className="h-4 w-4 bg-gray-900 dark:bg-gray-100 shadow-black rounded-full pt-1 -translate-x-1/2">
+                            <div className="h-4 w-4 bg-gray-50 dark:bg-black hover:bg-black dark:hover:bg-white border border-gray-400 border-2 shadow-black rounded-full cursor-pointer pt-1 -translate-x-1/2">
                             </div>
 
                         </div>
@@ -106,7 +106,7 @@ function Content() {
                     <div className="relative flex mb-8">
                         {/* dot */}
                         <div className="absolute left-5 top-2">
-                            <div className="h-4 w-4 bg-gray-900 dark:bg-gray-100 shadow-black rounded-full pt-1 -translate-x-1/2">
+                            <div className="h-4 w-4 bg-gray-50 dark:bg-black hover:bg-black dark:hover:bg-white border border-gray-400 border-2 shadow-black rounded-full cursor-pointer pt-1 -translate-x-1/2">
                             </div>
 
                         </div>
@@ -122,7 +122,7 @@ function Content() {
                     <div className="relative flex mb-8">
                         {/* dot */}
                         <div className="absolute left-5 top-2">
-                            <div className="h-4 w-4 bg-gray-900 dark:bg-gray-100 shadow-black rounded-full pt-1 -translate-x-1/2">
+                            <div className="h-4 w-4 bg-gray-50 dark:bg-black hover:bg-black dark:hover:bg-white border border-gray-400 border-2 shadow-black rounded-full cursor-pointer pt-1 -translate-x-1/2">
                             </div>
 
                         </div>
@@ -209,7 +209,7 @@ function Content() {
 
             </div>
             <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 min-h-[50px] col-span-2">
-                <h1 className="text-black dark:text-white text-2xl text-center font-bold px-8 p-5">Do What You Love, Love What You Do</h1>
+                <h1 className="text-black dark:text-white text-2xl text-center font-bold px-8 p-5">Do what you Love, Love what you Do</h1>
             </div>
             <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] col-span-1 sm:col-span-3 sm:pb-10 pb-10">
                 <h1 className="text-black dark:text-white text-2xl font-bold px-5 p-4">Certifications</h1>

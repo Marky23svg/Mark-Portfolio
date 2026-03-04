@@ -31,7 +31,7 @@ function Header() {
           <h2 className="text-2xl sm:text-4xl font-bold">
             Canuel, Mark Justin 
           </h2>
-          <MdVerified className="h-5 w-5 sm:h-6 sm:w-6 mt-1 text-blue-500" />
+          <MdVerified className="h-5 w-5 sm:h-6 sm:w-6 mt- text-blue-500" />
           </div>
           <h2 className="text-sm sm:text-lg font-medium mt-1 text-gray-700 dark:text-gray-400">
             Marikina City, Philippines
@@ -43,7 +43,7 @@ function Header() {
 
           {/* Buttons */}
 
-          <div className="flex flex-wrap justify-center sm:justify-start gap-3 mt-4">
+          <div className="flex flex-wrap justify-center sm:justify-start gap-3 mt-4 sm">
             <a href="/Mark_resume.pdf" download="MARK_JUSTIN_CANUEL_Resume.pdf">
               <button className="group px-5 py-2 bg-gradient-to-r from-[#FFD700] to-[#FBBF24] 
       text-gray-100 font-semibold rounded-lg flex items-center gap-2 cursor-pointer
@@ -57,8 +57,8 @@ function Header() {
 
             <button
               onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })}
-              className="group px-4 py-1 bg-white border dark:bg-black dark:text-white dark:border-gray-600 border-gray-300 text-black rounded-lg 
-              hover:text-black transition duration-300 flex items-center gap-2 cursor-pointer">
+              className="group px-5 py-1 bg-white border dark:bg-black dark:text-white dark:border-gray-600 border-gray-300 text-black rounded-lg 
+              hover:text-black dark:hover:text-white transition duration-300 flex items-center gap-2 cursor-pointer">
               <FaEnvelope className="group-hover:translate-y-1 transition-transform" />
               Send Email
             </button>
@@ -66,8 +66,8 @@ function Header() {
 
             <button
               onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })}
-              className="group px-5 py-1 bg-white border dark:bg-black dark:text-white dark:border-gray-600 border-gray-300 text-black rounded-lg 
-              hover:text-black transition duration-300 flex items-center gap-2 cursor-pointer">
+              className="group px-5 py-2 bg-white border dark:bg-black dark:text-white dark:border-gray-600 border-gray-300 text-black rounded-lg 
+              hover:text-black dark:hover:text-white transition duration-300 flex items-center gap-2 cursor-pointer sm:py-1">
               <FaPhoneAlt className="group-hover:translate-y-1 transition-transform" />
               Contact
             </button>
