@@ -4,18 +4,21 @@ import Proj1 from "./assets/proj1.png";
 import Proj2 from "./assets/proj2.png";
 import Proj3 from "./assets/proj3.png";
 import Cert1 from "./assets/cert1.jpg";
+import Cert2 from "./assets/cert2.jpg";
 import { useNavigate } from "react-router-dom"; //Image hover
 import { FaFacebook, FaInstagram, FaGithub, FaEnvelope, FaPhone } from "react-icons/fa6";
+import { useState } from "react";
 
 
 
 
 function Content() {
     const navigate = useNavigate(); //For button
+    const [showModal, setShowModal] = useState(false); 
     return (
-        
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 p-5 sm:px-50 bg-gray-50 dark:bg-black">
-            
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 p-5 sm:px-50 bg-gray-50 dark:bg-black">
+
             {/*About me*/}
             <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] sm:min-h-[50px] col-span-2 sm:pb-1 pb-5">
                 <h1 className="text-black dark:text-white text-2xl font-bold px-5 p-4">About Me</h1>
@@ -30,7 +33,7 @@ function Content() {
             <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] row-span-1 sm:row-span-2">
                 <h1 className="text-black dark:text-white text-2xl font-bold px-5 p-4">Education</h1>
 
-                <div className="relative mx-8 my-10">
+                <div className="relative mx-8 my-10"> 
                     {/* timeline column */}
                     <div className="absolute left-0 top-0 h-full w-10 flex justify-center">
                         <div className="w-0.5 bg-gray-400 dark:bg-gray-500 h-full mt-2"></div>
@@ -182,7 +185,7 @@ function Content() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-3 gap-y-4 justify-items-center mx-0 sm:mx-2 my-4">
                     <div className="h-45 w-55 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
-                    onClick={() => window.open("https://demo-system-g5uf.vercel.app/", "_blank")}>
+                        onClick={() => window.open("https://demo-system-g5uf.vercel.app/", "_blank")}>
                         <img
                             src={Proj1}
                             className="h-31 object-cover rounded-xl p-1"
@@ -190,7 +193,7 @@ function Content() {
                         <h3 className="text-gray-900 dark:text-white text-normal font-semibold mt-1">eGuide ICCT System</h3>
                     </div>
                     <div className="h-45 w-55 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
-                    onClick={() => window.open("https://destination-website-five.vercel.app/", "_blank")}>
+                        onClick={() => window.open("https://destination-website-five.vercel.app/", "_blank")}>
                         <img
                             src={Proj2}
                             className="h-31 object-cover rounded-xl p-1"
@@ -198,7 +201,7 @@ function Content() {
                         <h3 className="text-gray-900 dark:text-white text-normal font-semibold mt-1">Travel Booking Website</h3>
                     </div>
                     <div className="h-45 w-55 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
-                    onClick={() => window.open("https://formula1-website-gamma.vercel.app/", "_blank")}>
+                        onClick={() => window.open("https://formula1-website-gamma.vercel.app/", "_blank")}>
                         <img
                             src={Proj3}
                             className="h-31 object-cover rounded-xl p-1"
@@ -214,12 +217,36 @@ function Content() {
             <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] col-span-1 sm:col-span-3 sm:pb-10 pb-10">
                 <h1 className="text-black dark:text-white text-2xl font-bold px-5 p-4">Certifications</h1>
                 <div className="grid grid-cols-1 sm:grid-cols-4 gap-x-3 gap-y-4 justify-items-center mx-0 sm:mx-8 my-4">
-                    <div className="h-50 w-62 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm font-semibold text-center rounded-xl cursor-pointer">
+                    <div className="h-45 w-62 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 
+                    text-sm font-semibold text-center rounded-xl cursor-pointer flex items-center justify-center"
+                        onClick={() => setShowModal(true)}>
                         <img
                             src={Cert1}
-                            className="h-49 object-cover rounded-xl p-1"
+                            className="h-44 object-cover rounded-xl p-1"
                         />
-                        
+
+                    </div>
+                    {/* Modal Popup */}
+                    {showModal && (
+                        <div
+                            className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4"
+                            onClick={() => setShowModal(false)}
+                        >
+                            <img
+                                src={Cert1}
+                                className="max-w-full max-h-full object-contain rounded-lg"
+                                onClick={(e) => e.stopPropagation()}
+                            />
+                        </div>
+                    )}
+                    <div className="h-45 w-62 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 
+                    text-sm font-semibold text-center rounded-xl cursor-pointer flex items-center justify-center"
+                    onClick={() => window.open("https://www.vibecoders.ph/cert/GAI2Z26-611B", "_blank")}>
+                        <img
+                            src={Cert2}
+                            className="h-44.5 object-cover rounded-xl p-1"
+                        />
+
                     </div>
                     {/* Additional certification items can be added here 
                     <div className="h-50 w-62 bg-gray-50 dark:bg-gray-900 dark:border border-gray-600 text-sm text-white font-semibold shadow-lg text-center rounded-xl cursor-pointer">
@@ -300,7 +327,7 @@ function Content() {
                             className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-2 px-3"
                         >
                             <FaPhone className="h-4 w-4" />
-                             <p className="text-xs font-medium">09679101896</p>
+                            <p className="text-xs font-medium">09679101896</p>
                         </button>
                     </div>
 
@@ -309,20 +336,20 @@ function Content() {
 
 
             <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] row-span-2 mb-5 py-5 sm:p-0 ">
-            <h1 className="text-black dark:text-white text-xl font-bold text-left px-8 p-4 mb-1">Goals</h1>
-               <div className="px-5">
-                        
-                        <div className="bg-gray-50 dark:bg-black dark:border-gray-600 flex justify-center items-center border border-black/10 rounded-lg p-3 mb-3">
-                            <p className="text-sm font-semibold text-gray-900 dark:text-gray-300">
-                                Grow and build a strong career in IT through continuous learning and hands-on experience.
-                            </p>
-                        </div>
-                        <div className="bg-gray-50 dark:bg-black dark:border-gray-600 flex justify-center items-center border border-black/10 rounded-lg p-3">
-                            <p className="text-sm font-semibold text-gray-900 dark:text-gray-300">
-                                Improve my skills in software development and contribute to real-world impactful projects.
-                            </p>
-                        </div>
-                    </div> 
+                <h1 className="text-black dark:text-white text-xl font-bold text-left px-5 p-4 mb-1">Goals</h1>
+                <div className="px-5 pb-4.5">
+
+                    <div className="bg-gray-50 dark:bg-black dark:border-gray-600 flex justify-center items-center border border-black/10 rounded-lg p-3 mb-3">
+                        <p className="text-sm font-semibold text-gray-900 dark:text-gray-300">
+                            Grow and build a strong career in IT through continuous learning and hands-on experience.
+                        </p>
+                    </div>
+                    <div className="bg-gray-50 dark:bg-black dark:border-gray-600 flex justify-center items-center border border-black/10 rounded-lg p-3">
+                        <p className="text-sm font-semibold text-gray-900 dark:text-gray-300">
+                            Improve my skills in software development and contribute to real-world impactful projects.
+                        </p>
+                    </div>
+                </div>
             </div>
 
 
