@@ -26,7 +26,7 @@ const model = genAI.getGenerativeModel({ model: MODEL_NAME });
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { text: "Hi! I'm Mark. How can I help you today?", sender: "bot" }
+    { text: "Hi! I'm Mark. How can I help you?", sender: "bot" }
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -112,7 +112,7 @@ Your response (as Mark, first person, conversational):`
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="w-80 h-96 bg-white border border-gray-300 dark:border-gray-600 rounded-xl shadow-xl flex flex-col">
+        <div className="w-85 h-110 bg-white border border-gray-300 dark:border-gray-600 rounded-xl shadow-xl flex flex-col">
           {/* Header */}
           <div className="bg-gray-200 dark:bg-gray-100 border-gray-300 p-3 border-b rounded-t-xl flex justify-between items-center">
             <div>
@@ -131,7 +131,7 @@ Your response (as Mark, first person, conversational):`
           <div className="flex-1 p-3 overflow-y-auto">
             {messages.map((msg, i) => (
               <div key={i} className={`mb-2 ${msg.sender === "user" ? "text-right" : ""}`}>
-                <span className={`inline-block p-2 rounded-xl ${
+                <span className={`inline-block p-2 rounded-xl max-w-[75%] break-words ${
                   msg.sender === "user" 
                     ? "bg-black text-white text-sm" 
                     : "bg-gray-200 text-black text-sm"
@@ -162,7 +162,7 @@ Your response (as Mark, first person, conversational):`
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Ask me about Mark..."
+                placeholder="Feel free to ask about me..."
                 className="flex-1 px-3 py-2 text-sm rounded border border-gray-300 text-black"
                 disabled={isLoading}
               />
