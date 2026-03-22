@@ -5,6 +5,9 @@ import Graphic1 from "./assets/graphic1.png";
 import Graphic2 from "./assets/graphic2.png";
 import Graphic3 from "./assets/graphic3.png";
 import Graphic4 from "./assets/graphic4.png";
+import Graphic5 from "./assets/graphic5.png";
+import Graphic6 from "./assets/graphic6.png";
+import Graphic7 from "./assets/graphic7.png";
 
 export default function GraphicDetails() {
   const navigate = useNavigate();
@@ -15,6 +18,9 @@ export default function GraphicDetails() {
     { src: Graphic2, title: "Poster 2" },
     { src: Graphic3, title: "Poster 3" },
     { src: Graphic4, title: "Poster 4" },
+    { src: Graphic5, title: "Poster 5" },
+    { src: Graphic6, title: "Poster 6" },
+    { src: Graphic7, title: "Poster 7" },
   ];
 
   const nextSlide = () => {
