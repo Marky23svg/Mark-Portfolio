@@ -17,12 +17,12 @@ function Content() {
     const [showModal, setShowModal] = useState(false); 
     return (
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 p-5 sm:px-50 bg-gray-50 dark:bg-black">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-5 sm:px-60 px-3 bg-gray-50 dark:bg-black">
 
             {/*About me*/}
             <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] sm:min-h-[50px] col-span-2 sm:pb-1 pb-5">
                 <h1 className="text-black dark:text-white text-2xl font-bold px-5 p-4">About Me</h1>
-                <p className="text-gray-950 dark:text-gray-300 px-5 text-justify text-base font-medium">
+                <p className="text-black dark:text-gray-300 px-5 text-justify text-base font-normal">
                     I am <b>Mark Justin Canuel</b>, a 3rd year Bachelor of Science in Information Technology student with a strong interest
                     in UI/UX design and web development. I specialize in frontend development, where I enjoy building clean, responsive, and
                     user-friendly interfaces, and I also have basic knowledge of backend development, allowing me to understand how different
@@ -31,20 +31,20 @@ function Content() {
                 </p>
             </div>
             <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] row-span-1 sm:row-span-2">
-                <h1 className="text-black dark:text-white text-2xl font-bold px-5 p-4">Education</h1>
+                <h1 className="text-black dark:text-white text-2xl font-bold px-5 pt-4">Education</h1>
 
-                <div className="relative mx-8 my-10"> 
+                <div className="relative mx-8 my-2"> 
                     {/* timeline column */}
                     <div className="absolute left-0 top-0 h-full w-10 flex justify-center">
                         <div className="w-0.5 bg-gray-400 dark:bg-gray-500 h-full mt-2"></div>
                     </div>
 
                     {/* item */}
-                    <div className="relative flex mb-8">
+                    <div className="relative flex mb-3">
                         {/* dot */}
                         <div className="absolute left-5 top-1">
-                            <div className="h-6 w-6 bg-gray-400 shadow-black rounded-full pt-1 -translate-x-1/2">
-                                <div className="h-4 w-4 bg-gray-900 dark:bg-gray-100 shadow-black rounded-full ml-1 "></div>
+                            <div className="h-5 w-5 bg-gray-400 shadow-black rounded- pt-1 -translate-x-1/2">
+                                <div className="h-3 w-3 bg-gray-900 dark:bg-gray-100 shadow-black rounded- ml-1 "></div>
                             </div>
 
                         </div>
@@ -58,10 +58,10 @@ function Content() {
                     </div>
 
                     {/* item */}
-                    <div className="relative flex mb-8">
+                    <div className="relative flex mb-3">
                         {/* dot */}
                         <div className="absolute left-5 top-2">
-                            <div className="h-4 w-4 bg-gray-50 dark:bg-black hover:bg-black dark:hover:bg-white border border-gray-400 border-2 shadow-black rounded-full cursor-pointer pt-1 -translate-x-1/2">
+                            <div className="h-4 w-4 bg-gray-50 dark:bg-black hover:bg-black dark:hover:bg-white border border-gray-400 border-2 shadow-black rounded- cursor-pointer pt-1 -translate-x-1/2">
                             </div>
 
                         </div>
@@ -74,10 +74,10 @@ function Content() {
                         </div>
                     </div>
 
-                    <div className="relative flex mb-8">
+                    <div className="relative flex mb-3">
                         {/* dot */}
                         <div className="absolute left-5 top-2">
-                            <div className="h-4 w-4 bg-gray-50 dark:bg-black hover:bg-black dark:hover:bg-white border border-gray-400 border-2 shadow-black rounded-full cursor-pointer pt-1 -translate-x-1/2">
+                            <div className="h-4 w-4 bg-gray-50 dark:bg-black hover:bg-black dark:hover:bg-white border border-gray-400 border-2 shadow-black rounded- cursor-pointer pt-1 -translate-x-1/2">
                             </div>
 
                         </div>
@@ -90,10 +90,10 @@ function Content() {
                         </div>
                     </div>
 
-                    <div className="relative flex mb-8">
+                    <div className="relative flex mb-3">
                         {/* dot */}
                         <div className="absolute left-5 top-2">
-                            <div className="h-4 w-4 bg-gray-50 dark:bg-black hover:bg-black dark:hover:bg-white border border-gray-400 border-2 shadow-black rounded-full cursor-pointer pt-1 -translate-x-1/2">
+                            <div className="h-4 w-4 bg-gray-50 dark:bg-black hover:bg-black dark:hover:bg-white border border-gray-400 border-2 shadow-black rounded- cursor-pointer pt-1 -translate-x-1/2">
                             </div>
 
                         </div>
@@ -106,10 +106,10 @@ function Content() {
                         </div>
                     </div>
 
-                    <div className="relative flex mb-8">
+                    <div className="relative flex mb-3">
                         {/* dot */}
                         <div className="absolute left-5 top-2">
-                            <div className="h-4 w-4 bg-gray-50 dark:bg-black hover:bg-black dark:hover:bg-white border border-gray-400 border-2 shadow-black rounded-full cursor-pointer pt-1 -translate-x-1/2">
+                            <div className="h-4 w-4 bg-gray-50 dark:bg-black hover:bg-black dark:hover:bg-white border border-gray-400 border-2 shadow-black rounded- cursor-pointer pt-1 -translate-x-1/2">
                             </div>
 
                         </div>
@@ -125,7 +125,7 @@ function Content() {
                     <div className="relative flex mb-8">
                         {/* dot */}
                         <div className="absolute left-5 top-2">
-                            <div className="h-4 w-4 bg-gray-50 dark:bg-black hover:bg-black dark:hover:bg-white border border-gray-400 border-2 shadow-black rounded-full cursor-pointer pt-1 -translate-x-1/2">
+                            <div className="h-4 w-4 bg-gray-50 dark:bg-black hover:bg-black dark:hover:bg-white border border-gray-400 border-2 shadow-black rounded- cursor-pointer pt-1 -translate-x-1/2">
                             </div>
 
                         </div>
@@ -149,18 +149,18 @@ function Content() {
                     <TechCarousel />
                 </div>
 
-                <div className="grid grid-cols-3 sm:grid-cols-6 mx-8 my-4 gap-x-5 gap-y-4 ">
-                    <div className="h-6 w-24 bg-[#ff4d00] text-sm text-white font-semibold text-center rounded-xl cursor-pointer ">HTML</div>
-                    <div className="h-6 w-24 bg-[#005eff] text-sm text-white font-semibold text-center rounded-xl cursor-pointer">CSS</div>
-                    <div className="h-6 w-24 bg-[#ffee00] text-sm text-black/80 font-semibold text-center rounded-xl cursor-pointer">JavaScript</div>
-                    <div className="h-6 w-24 bg-[#00d9ff] text-sm text-white font-semibold text-center rounded-xl cursor-pointer">React</div>
-                    <div className="h-6 w-24 bg-[#000021] text-sm text-[#00d9ff] font-semibold text-center rounded-xl cursor-pointer">Tailwind</div>
-                    <div className="h-6 w-24 bg-[#7511f5] text-sm text-white font-semibold text-center rounded-xl cursor-pointer">Bootstrap</div>
-                    <div className="h-6 w-24 bg-[#5aa5fa] text-sm text-[white] font-semibold text-center rounded-xl cursor-pointer">MySQL</div>
-                    <div className="h-6 w-24 bg-[#71ba41] text-sm text-white font-semibold text-center rounded-xl cursor-pointer">Spring Boot</div>
-                    <div className="h-6 w-24 bg-[#000021] text-sm text-[#ff0d6e] font-semibold text-center rounded-xl cursor-pointer">Figma</div>
-                    <div className="h-6 w-24 bg-[#0181ce] text-sm text-white font-semibold text-center rounded-xl cursor-pointer">VSCode</div>
-                    <div className="h-6 w-24 bg-[#001e36] text-sm text-[#31a8ff] font-semibold text-center rounded-xl cursor-pointer">Photoshop</div>
+                <div className="grid grid-cols-3 sm:grid-cols-6 mx-8 pr-2 my-4 gap-x-5 gap-y-4 ">
+                    <div className="h-6 w-24 bg-[#ff4d00] text-sm text-white font-medium text-center rounded-md cursor-pointer ">HTML</div>
+                    <div className="h-6 w-24 bg-[#005eff] text-sm text-white font-medium text-center rounded-md cursor-pointer">CSS</div>
+                    <div className="h-6 w-24 bg-[#ffee00] text-sm text-black/80 font-medium text-center rounded-md cursor-pointer">JavaScript</div>
+                    <div className="h-6 w-24 bg-[#00d9ff] text-sm text-white font-medium text-center rounded-md cursor-pointer">React</div>
+                    <div className="h-6 w-24 bg-[#000021] text-sm text-[#00d9ff] font-medium text-center rounded-md cursor-pointer">Tailwind</div>
+                    <div className="h-6 w-24 bg-[#7511f5] text-sm text-white font-medium text-center rounded-md cursor-pointer">Bootstrap</div>
+                    <div className="h-6 w-24 bg-[#5aa5fa] text-sm text-[white] font-medium text-center rounded-md cursor-pointer">MySQL</div>
+                    <div className="h-6 w-24 bg-[#71ba41] text-sm text-white font-medium text-center rounded-md cursor-pointer">Spring Boot</div>
+                    <div className="h-6 w-24 bg-[#000021] text-sm text-[#ff0d6e] font-medium text-center rounded-md cursor-pointer">Figma</div>
+                    <div className="h-6 w-24 bg-[#0181ce] text-sm text-white font-medium text-center rounded-md cursor-pointer">VSCode</div>
+                    <div className="h-6 w-24 bg-[#001e36] text-sm text-[#31a8ff] font-medium text-center rounded-md cursor-pointer">Photoshop</div>
 
                 </div>
             </div>
@@ -183,28 +183,28 @@ function Content() {
 
                 <h1 className="text-black dark:text-white text-2xl font-bold px-5 p-4">Web Projects</h1>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-3 gap-y-4 justify-items-center mx-0 sm:mx-2 my-4">
-                    <div className="h-45 w-55 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-3 gap-y-4 justify-items-center mx-0 sm:mx-4 my-4">
+                    <div className="h-40 w-50 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
                         onClick={() => window.open("https://demo-system-g5uf.vercel.app/", "_blank")}>
                         <img
                             src={Proj1}
-                            className="h-31 object-cover rounded-xl p-1"
+                            className="h-30 object-cover rounded-xl p-1"
                         />
                         <h3 className="text-gray-900 dark:text-white text-normal font-semibold mt-1">eGuide ICCT System</h3>
                     </div>
-                    <div className="h-45 w-55 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
+                    <div className="h-40 w-50 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
                         onClick={() => window.open("https://destination-website-five.vercel.app/", "_blank")}>
                         <img
                             src={Proj2}
-                            className="h-31 object-cover rounded-xl p-1"
+                            className="h-30 object-cover rounded-xl p-1"
                         />
                         <h3 className="text-gray-900 dark:text-white text-normal font-semibold mt-1">Travel Booking Website</h3>
                     </div>
-                    <div className="h-45 w-55 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
+                    <div className="h-40 w-50 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
                         onClick={() => window.open("https://formula1-website-gamma.vercel.app/", "_blank")}>
                         <img
                             src={Proj3}
-                            className="h-31 object-cover rounded-xl p-1"
+                            className="h-30 object-cover rounded-xl p-1"
                         />
                         <h3 className="text-gray-900 dark:text-white text-normal font-semibold mt-1">Formula 1 Website</h3>
                     </div>
@@ -215,8 +215,10 @@ function Content() {
                 <h1 className="text-black dark:text-white text-2xl text-center font-bold px-8 p-5">Do what you Love, Love what you Do</h1>
             </div>
             <div className="bg-gray-50 dark:bg-black rounded-xl border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] col-span-1 sm:col-span-3 sm:pb-10 pb-10">
+
                 <h1 className="text-black dark:text-white text-2xl font-bold px-5 p-4">Certifications</h1>
-                <div className="grid grid-cols-1 sm:grid-cols-4 gap-x-3 gap-y-4 justify-items-center mx-0 sm:mx-8 my-4">
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-2 gap-y-4 justify-items-center mx-0 sm:mx-2 my-4">
                     <div className="h-45 w-62 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 
                     text-sm font-semibold text-center rounded-xl cursor-pointer flex items-center justify-center"
                         onClick={() => setShowModal(true)}>
@@ -275,7 +277,7 @@ function Content() {
                     <div className="w-full">
                         <h1 className="text-black dark:text-white text-xl font-bold text-left mb-5">Get in touch</h1>
                         <div className="bg-gray-50 dark:bg-black dark:border-gray-600 flex justify-center items-center border border-black/10 rounded-lg p-9">
-                            <p className="text-medium font-semibold text-center text-gray-900 dark:text-gray-300">
+                            <p className="text-medium font-semibold text-center text-black dark:text-gray-300">
                                 Actively seeking an OJT/Internship opportunity.
                             </p>
                         </div>
@@ -290,7 +292,7 @@ function Content() {
                             className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-3 px-5 mb-3 cursor-pointer"
                         >
                             <FaFacebook className="h-5 w-5 text-blue-600" />
-                            <p className="text-sm font-medium">Facebook</p>
+                            <p className="text-base sm:text-sm font-medium">Facebook</p>
                         </button>
 
                         <button
@@ -298,7 +300,7 @@ function Content() {
                             className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-3 px-5 mb-3 cursor-pointer"
                         >
                             <FaInstagram className="h-5 w-5 text-pink-500" />
-                            <p className="text-sm font-medium">Instagram</p>
+                            <p className="text-base sm:text-sm font-medium">Instagram</p>
                         </button>
 
                         <button
@@ -306,7 +308,7 @@ function Content() {
                             className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-3 px-5 cursor-pointer"
                         >
                             <FaGithub className="h-5 w-5" />
-                            <p className="text-sm font-medium">Github</p>
+                            <p className="text-base sm:text-sm font-medium">Github</p>
                         </button>
                     </div>
 
@@ -316,18 +318,18 @@ function Content() {
 
                         <button
                             onClick={() => window.open("mailto:markjustincanuel2@gmail.com", "_blank")}
-                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-2 px-3 mb-3"
+                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-2 px-4 mb-3"
                         >
-                            <FaEnvelope className="h-4 w-4" />
-                            <p className="text-xs font-medium">markjustincanuel2@gmail.com</p>
+                            {/*<FaEnvelope className="h-4 w-4" />*/}
+                            <p className="text-base sm:text-xs font-medium">markjustincanuel2@gmail.com</p>
                         </button>
 
                         <button
                             onClick={() => window.open("tel#", "_blank")}
-                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-2 px-3"
+                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-2 px-4"
                         >
-                            <FaPhone className="h-4 w-4" />
-                            <p className="text-xs font-medium">09679101896</p>
+                            {/*<FaPhone className="h-4 w-4" />*/}
+                            <p className="text-base sm:text-xs font-medium">09679101896</p>
                         </button>
                     </div>
 
