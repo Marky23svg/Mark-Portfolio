@@ -6,7 +6,7 @@ import Proj3 from "./assets/proj3.png";
 import Cert1 from "./assets/cert1.jpg";
 import Cert2 from "./assets/cert2.jpg";
 import { useNavigate } from "react-router-dom"; //Image hover
-import { FaFacebook, FaInstagram, FaGithub, FaEnvelope, FaPhone } from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaGithub, FaEnvelope, FaPhone, FaLinkedin } from "react-icons/fa6";
 import { useState } from "react";
 
 
@@ -287,13 +287,13 @@ function Content() {
                     <div className="w-full">
                         <h1 className="text-black dark:text-white text-xl font-bold text-left mb-5">Social Links</h1>
 
-                        <button
+                      {/*}  <button
                             onClick={() => window.open("https://www.facebook.com/markjustin.canuel", "_blank")}
                             className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-3 px-5 mb-3 cursor-pointer"
                         >
                             <FaFacebook className="h-5 w-5 text-blue-600" />
                             <p className="text-base sm:text-sm font-medium">Facebook</p>
-                        </button>
+                        </button> */}
 
                         <button
                             onClick={() => window.open("https://www.instagram.com/imnotmarkkk_/", "_blank")}
@@ -301,6 +301,14 @@ function Content() {
                         >
                             <FaInstagram className="h-5 w-5 text-pink-500" />
                             <p className="text-base sm:text-sm font-medium">Instagram</p>
+                        </button>
+
+                        <button
+                            onClick={() => window.open("https://www.linkedin.com/in/mark-justin-canuel-081bb7378/", "_blank")}
+                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-3 px-5 mb-3 cursor-pointer"
+                        >
+                            <FaLinkedin className="h-5 w-5 text-blue-600" />
+                            <p className="text-base sm:text-sm font-medium">LinkedIn</p>
                         </button>
 
                         <button
@@ -348,7 +356,7 @@ function Content() {
                     </div>
                     <div className="bg-gray-50 dark:bg-black dark:border-gray-600 flex justify-center items-center border border-black/10 rounded-lg p-3">
                         <p className="text-sm font-semibold text-gray-900 dark:text-gray-300">
-                            Improve my skills in software development and contribute to real-world impactful projects.
+                            Improve my skills in web and software development and contribute to real-world impactful projects.
                         </p>
                     </div>
                 </div>

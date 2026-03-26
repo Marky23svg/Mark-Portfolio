@@ -30,7 +30,7 @@ function Header() {
         <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
           <div className="flex items-center gap-2">
           <h2 className="text-2xl sm:text-3xl font-bold">
-            Canuel, Mark Justin 
+            Mark Justin Canuel 
           </h2>
           <MdVerified className="h-5 w-5 sm:h-6 sm:w-6 text-blue-500" />
           </div>

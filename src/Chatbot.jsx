@@ -116,7 +116,7 @@ Your response (as Mark, first person, conversational):`
           {/* Header */}
           <div className="bg-gray-200 dark:bg-gray-100 border-gray-300 p-3 border-b rounded-t-xl flex justify-between items-center">
             <div>
-              <span className="text-black font-medium">Mark</span>
+              <span className="text-black font-medium">Mark Justin Canuel</span>
               
             </div>
             <button 
