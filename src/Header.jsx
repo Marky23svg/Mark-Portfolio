@@ -15,7 +15,7 @@ function Header() {
       <div className="absolute top-4 right-4 sm:top-12 sm:right-60">
         <ThemeToggle />
       </div>
-      <section className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10 py-10 px-5 pb-5 sm:px-60 bg-gray-50 dark:bg-black border-b border-black/10 dark:border-gray-600">
+      <section className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10 py-10 px-5 pb-5 sm:px-60 bg-gray-50 dark:bg-black border-b border-gray-300 dark:border-gray-600">
 
         {/* Image */}
         <img

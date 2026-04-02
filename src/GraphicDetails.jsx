@@ -82,14 +82,14 @@ export default function GraphicDetails() {
         {/* Navigation Buttons */}
         <button
           onClick={prevSlide}
-          className="absolute top-1/2 left-2 -translate-y-1/2 bg-black/50 text-white h-10 w-10 rounded-full hover:bg-black dark:bg-white dark:text-black dark:hover:bg-gray-400"
+          className="absolute top-1/2 left-2 -translate-y-1/2 bg-black/40 text-white h-10 w-10 rounded-full hover:bg-black dark:bg-white dark:text-black dark:hover:bg-gray-400 cursor-pointer"
         >
           <ChevronLeft className="h-6 w-6 m-auto" />
         </button>
 
         <button
           onClick={nextSlide}
-          className="absolute top-1/2 right-2 -translate-y-1/2 bg-black/50 text-white h-10 w-10 rounded-full hover:bg-black dark:bg-white dark:text-black dark:hover:bg-gray-400"
+          className="absolute top-1/2 right-2 -translate-y-1/2 bg-black/40 text-white h-10 w-10 rounded-full hover:bg-black dark:bg-white dark:text-black dark:hover:bg-gray-400 cursor-pointer"
         >
           <ChevronRight className="h-6 w-6 m-auto" />
         </button>

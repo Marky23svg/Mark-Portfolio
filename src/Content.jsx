@@ -36,15 +36,15 @@ function Content() {
                 <div className="relative mx-8 my-2"> 
                     {/* timeline column */}
                     <div className="absolute left-0 top-0 h-full w-10 flex justify-center">
-                        <div className="w-0.5 bg-gray-400 dark:bg-gray-500 h-full mt-2"></div>
+                        <div className="w-[0.1px] bg-gray-400 dark:bg-gray-500 h-full mt-2"></div>
                     </div>
 
                     {/* item */}
                     <div className="relative flex mb-3">
                         {/* dot */}
                         <div className="absolute left-5 top-1">
-                            <div className="h-5 w-5 bg-gray-400 shadow-black rounded- pt-1 -translate-x-1/2">
-                                <div className="h-3 w-3 bg-gray-900 dark:bg-gray-100 shadow-black rounded- ml-1 "></div>
+                            <div className="h-3 w-3 bg-black dark:bg-white shadow-black rounded- pt-1 -translate-x-1/2">
+                                {/*<div className="h-3 w-3 bg-gray-900 dark:bg-gray-100 shadow-black rounded- ml-1 "></div>*/}
                             </div>
 
                         </div>
@@ -58,10 +58,10 @@ function Content() {
                     </div>
 
                     {/* item */}
-                    <div className="relative flex mb-3">
+                    <div className="relative flex mb-3 group">
                         {/* dot */}
                         <div className="absolute left-5 top-2">
-                            <div className="h-4 w-4 bg-gray-50 dark:bg-black hover:bg-black dark:hover:bg-white border border-gray-400 border-2 shadow-black rounded- cursor-pointer pt-1 -translate-x-1/2">
+                            <div className="h-3 w-3 bg-gray-50 dark:bg-black group-hover:bg-black dark:group-hover:bg-white border border-gray-500 border-1 shadow-black rounded- cursor-pointer pt-1 -translate-x-1/2">
                             </div>
 
                         </div>
@@ -74,10 +74,10 @@ function Content() {
                         </div>
                     </div>
 
-                    <div className="relative flex mb-3">
+                    <div className="relative flex mb-3 group">
                         {/* dot */}
                         <div className="absolute left-5 top-2">
-                            <div className="h-4 w-4 bg-gray-50 dark:bg-black hover:bg-black dark:hover:bg-white border border-gray-400 border-2 shadow-black rounded- cursor-pointer pt-1 -translate-x-1/2">
+                            <div className="h-3 w-3 bg-gray-50 dark:bg-black group-hover:bg-black dark:group-hover:bg-white border border-gray-400 border-1 shadow-black rounded- cursor-pointer pt-1 -translate-x-1/2">
                             </div>
 
                         </div>
@@ -90,10 +90,10 @@ function Content() {
                         </div>
                     </div>
 
-                    <div className="relative flex mb-3">
+                    <div className="relative flex mb-3 group">
                         {/* dot */}
                         <div className="absolute left-5 top-2">
-                            <div className="h-4 w-4 bg-gray-50 dark:bg-black hover:bg-black dark:hover:bg-white border border-gray-400 border-2 shadow-black rounded- cursor-pointer pt-1 -translate-x-1/2">
+                            <div className="h-3 w-3 bg-gray-50 dark:bg-black group-hover:bg-black dark:group-hover:bg-white border border-gray-400 border-1 shadow-black rounded- cursor-pointer pt-1 -translate-x-1/2">
                             </div>
 
                         </div>
@@ -106,10 +106,10 @@ function Content() {
                         </div>
                     </div>
 
-                    <div className="relative flex mb-3">
+                    <div className="relative flex mb-3 group">
                         {/* dot */}
                         <div className="absolute left-5 top-2">
-                            <div className="h-4 w-4 bg-gray-50 dark:bg-black hover:bg-black dark:hover:bg-white border border-gray-400 border-2 shadow-black rounded- cursor-pointer pt-1 -translate-x-1/2">
+                            <div className="h-3 w-3 bg-gray-50 dark:bg-black group-hover:bg-black dark:group-hover:bg-white border border-gray-400 border-1 shadow-black rounded- cursor-pointer pt-1 -translate-x-1/2">
                             </div>
 
                         </div>
@@ -122,10 +122,10 @@ function Content() {
                         </div>
                     </div>
 
-                    <div className="relative flex mb-8">
+                    <div className="relative flex mb-8 group">
                         {/* dot */}
                         <div className="absolute left-5 top-2">
-                            <div className="h-4 w-4 bg-gray-50 dark:bg-black hover:bg-black dark:hover:bg-white border border-gray-400 border-2 shadow-black rounded- cursor-pointer pt-1 -translate-x-1/2">
+                            <div className="h-3 w-3 bg-gray-50 dark:bg-black group-hover:bg-black dark:group-hover:bg-white border border-gray-400 border-1 shadow-black cursor-pointer pt-1 -translate-x-1/2">
                             </div>
 
                         </div>
@@ -149,19 +149,30 @@ function Content() {
                     <TechCarousel />
                 </div>
 
-                <div className="grid grid-cols-3 sm:grid-cols-6 mx-8 pr-2 my-4 gap-x-5 gap-y-4 ">
-                    <div className="h-6 w-24 bg-[#ff4d00] text-sm text-white font-medium text-center rounded-md cursor-pointer ">HTML</div>
-                    <div className="h-6 w-24 bg-[#005eff] text-sm text-white font-medium text-center rounded-md cursor-pointer">CSS</div>
-                    <div className="h-6 w-24 bg-[#ffee00] text-sm text-black/80 font-medium text-center rounded-md cursor-pointer">JavaScript</div>
-                    <div className="h-6 w-24 bg-[#00d9ff] text-sm text-white font-medium text-center rounded-md cursor-pointer">React</div>
-                    <div className="h-6 w-24 bg-[#000021] text-sm text-[#00d9ff] font-medium text-center rounded-md cursor-pointer">Tailwind</div>
-                    <div className="h-6 w-24 bg-[#7511f5] text-sm text-white font-medium text-center rounded-md cursor-pointer">Bootstrap</div>
-                    <div className="h-6 w-24 bg-[#5aa5fa] text-sm text-[white] font-medium text-center rounded-md cursor-pointer">MySQL</div>
-                    <div className="h-6 w-24 bg-[#71ba41] text-sm text-white font-medium text-center rounded-md cursor-pointer">Spring Boot</div>
-                    <div className="h-6 w-24 bg-[#000021] text-sm text-[#ff0d6e] font-medium text-center rounded-md cursor-pointer">Figma</div>
-                    <div className="h-6 w-24 bg-[#0181ce] text-sm text-white font-medium text-center rounded-md cursor-pointer">VSCode</div>
-                    <div className="h-6 w-24 bg-[#001e36] text-sm text-[#31a8ff] font-medium text-center rounded-md cursor-pointer">Photoshop</div>
+                <div className="grid grid-cols-3 sm:grid-cols-6 mx-8 my-4 gap-x-1 gap-y-2 ">
+                    <div className="h-6 w-24 bg-[#ff4d00] text-xs text-white font-medium text-center cursor-pointer pt-1">HTML</div>
+                    <div className="h-6 w-24 bg-[#005eff] text-xs text-white font-medium text-center cursor-pointer pt-1">CSS</div>
+                    <div className="h-6 w-24 bg-[#ffee00] text-xs text-black/80 font-medium text-center cursor-pointer pt-1">JavaScript</div>
+                    <div className="h-6 w-24 bg-[#00d9ff] text-xs text-white font-medium text-center cursor-pointer pt-1">React</div>
+                    <div className="h-6 w-24 bg-[#000021] text-xs text-[#00d9ff] font-medium text-center cursor-pointer pt-1">Tailwind</div>
+                    <div className="h-6 w-24 bg-[#7511f5] text-xs text-white font-medium text-center cursor-pointer pt-1">Bootstrap</div>
+                    <div className="h-6 w-24 bg-[#5aa5fa] text-xs text-[white] font-medium text-center cursor-pointer pt-1">MySQL</div>
+                    <div className="h-6 w-24 bg-[#71ba41] text-xs text-white font-medium text-center cursor-pointer pt-1">Spring Boot</div>
+                    <div className="h-6 w-24 bg-[#000021] text-xs text-[#ff0d6e] font-medium text-center cursor-pointer pt-1">Figma</div>
+                    <div className="h-6 w-24 bg-[#0181ce] text-xs text-white font-medium text-center cursor-pointer pt-1">VSCode</div>
+                    <div className="h-6 w-24 bg-[#001e36] text-xs text-[#31a8ff] font-medium text-center cursor-pointer pt-1">Photoshop</div>
 
+                    {/*<div className="h-6 w-24 bg-black/10 text-xs text-black font-meduim text-center cursor-pointer pt-1">HTML</div>
+                    <div className="h-6 w-24 bg-[#E9E9E9] text-xs text-black font-meduim text-center cursor-pointer pt-1">CSS</div>
+                    <div className="h-6 w-24 bg-[#ffee00] text-xs text-black/80 font-medium text-center cursor-pointerpt-1">JavaScript</div>
+                    <div className="h-6 w-24 bg-[#00d9ff] text-xs text-white font-medium text-center cursor-pointer pt-1">React</div>
+                    <div className="h-6 w-24 bg-[#000021] text-xs text-[#00d9ff] font-medium text-center cursor-pointer pt-1">Tailwind</div>
+                    <div className="h-6 w-24 bg-[#7511f5] text-xs text-white font-medium text-center cursor-pointer pt-1">Bootstrap</div>
+                    <div className="h-6 w-24 bg-[#5aa5fa] text-xs text-[white] font-medium text-center cursor-pointer pt-1">MySQL</div>
+                    <div className="h-6 w-24 bg-[#71ba41] text-xs text-white font-medium text-center cursor-pointer pt-1">Spring Boot</div>
+                    <div className="h-6 w-24 bg-[#000021] text-xs text-[#ff0d6e] font-medium text-center cursor-pointer pt-1">Figma</div>
+                    <div className="h-6 w-24 bg-[#0181ce] text-xs text-white font-medium text-center cursor-pointer pt-1">VSCode</div>
+                    <div className="h-6 w-24 bg-[#001e36] text-xs text-[#31a8ff] font-medium text-center cursor-pointer pt-1">Photoshop</div>*/}
                 </div>
             </div>
 

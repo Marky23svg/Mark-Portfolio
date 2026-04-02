@@ -30,7 +30,7 @@ export default function ThemeToggle() {
       />
       
       {/* Switch track */}
-      <div className="w-16 h-8 bg-gray-300 dark:bg-gray-700 rounded-full peer relative">
+      <div className="w-16 h-8 bg-gray-300 dark:bg-gray-300 rounded-full peer relative">
         {/* Icons inside track - perfectly centered */}
         <FaSun className={`absolute left-2 top-1/2 -translate-y-1/2 text-yellow-500 text-base transition-opacity z-10 ${darkMode ? 'opacity-0' : 'opacity-100'}`} />
         <FaMoon className={`absolute right-2 top-1/2 -translate-y-1/2 text-blue-950 text-base transition-opacity z-10 ${darkMode ? 'opacity-100' : 'opacity-0'}`} />
