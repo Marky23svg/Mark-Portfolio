@@ -112,16 +112,16 @@ Your response (as Mark, first person, conversational):`
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="w-85 h-110 bg-white border border-gray-300 dark:border-gray-600 rounded-xl shadow-xl flex flex-col">
+        <div className="w-85 h-110 bg-white dark:bg-black border border-gray-300 dark:border-gray-600 rounded-xl shadow-xl flex flex-col">
           {/* Header */}
-          <div className="bg-gray-200 dark:bg-gray-100 border-gray-300 p-3 border-b rounded-t-xl flex justify-between items-center">
+          <div className="bg-gray-200 dark:bg-black border-gray-300 dark:border-gray-500 p-3 border-b rounded-t-xl flex justify-between items-center">
             <div>
-              <span className="text-black font-medium">Mark Justin Canuel</span>
+              <span className="text-black dark:text-white font-medium">Mark Justin Canuel</span>
               
             </div>
             <button 
               onClick={() => setIsOpen(false)}
-              className="text-black text-xl cursor-pointer"
+              className="text-black dark:text-white text-xl cursor-pointer"
             >
               <CgClose />
             </button>
@@ -156,14 +156,14 @@ Your response (as Mark, first person, conversational):`
           </div>
 
           {/* Input */}
-          <div className="p-3 border-t border-gray-300">
+          <div className="p-3 border-t border-gray-300 dark:border-gray-500">
             <form onSubmit={handleSendMessage} className="flex gap-2">
               <input
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Feel free to ask about me..."
-                className="flex-1 px-3 py-2 text-sm rounded border border-gray-300 text-black"
+                className="flex-1 px-3 py-2 text-sm rounded border border-gray-300 text-black dark:text-white"
                 disabled={isLoading}
               />
               <button 

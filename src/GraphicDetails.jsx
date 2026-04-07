@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import Graphic1 from "./assets/graphic1.png";
-import Graphic2 from "./assets/graphic2.png";
-import Graphic3 from "./assets/graphic3.png";
-import Graphic4 from "./assets/graphic4.png";
-import Graphic5 from "./assets/graphic5.png";
-import Graphic6 from "./assets/graphic6.png";
-import Graphic7 from "./assets/graphic7.png";
+import Graphic1 from "./assets/graphic1.webp";
+import Graphic2 from "./assets/graphic2.webp";
+import Graphic3 from "./assets/graphic3.webp";
+import Graphic4 from "./assets/graphic4.webp";
+import Graphic5 from "./assets/graphic5.webp";
+import Graphic6 from "./assets/graphic6.webp";
+import Graphic7 from "./assets/graphic7.webp";
+import Graphic8 from "./assets/graphic8.webp";
 
 export default function GraphicDetails() {
   const navigate = useNavigate();
@@ -21,6 +22,7 @@ export default function GraphicDetails() {
     { src: Graphic5, title: "Poster 5" },
     { src: Graphic6, title: "Poster 6" },
     { src: Graphic7, title: "Poster 7" },
+    { src: Graphic8, title: "Poster 8" },
   ];
 
   const nextSlide = () => {
