@@ -133,8 +133,8 @@ Your response (as Mark, first person, conversational):`
               <div key={i} className={`mb-2 ${msg.sender === "user" ? "text-right" : ""}`}>
                 <span className={`inline-block p-2 rounded-xl max-w-[75%] break-words ${
                   msg.sender === "user" 
-                    ? "bg-black text-white text-sm" 
-                    : "bg-gray-200 text-black text-sm"
+                    ? "bg-black text-white text-sm dark:bg-white dark:text-black" 
+                    : "bg-gray-200 text-black text-sm dark:bg-zinc-900 dark:text-white"
                 }`}>
                   {msg.text}
                 </span>
@@ -144,11 +144,11 @@ Your response (as Mark, first person, conversational):`
             {/* Loading indicator */}
             {isLoading && (
               <div className="flex justify-start mb-2">
-                <span className="inline-block p-2 rounded-lg bg-gray-200 text-black">
+                <span className="inline-block p-2 rounded-lg bg-gray-200 dark:bg-zinc-900 text-black">
                   <div className="flex space-x-1">
-                    <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
-                    <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                    <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
+                    <div className="w-2 h-2 bg-gray-500 dark:bg-white rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
+                    <div className="w-2 h-2 bg-gray-500 dark:bg-white rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                    <div className="w-2 h-2 bg-gray-500 dark:bg-white rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
                   </div>
                 </span>
               </div>
@@ -163,13 +163,13 @@ Your response (as Mark, first person, conversational):`
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Feel free to ask about me..."
-                className="flex-1 px-3 py-2 text-sm rounded border border-gray-300 text-black dark:text-white"
+                className="flex-1 px-3 py-2 text-sm rounded border border-gray-300 dark:border-gray-500 text-black dark:text-white"
                 disabled={isLoading}
               />
               <button 
                 type="submit"
                 disabled={isLoading}
-                className="px-4 py-2 bg-black text-white rounded border border-gray-300 hover:bg-white hover:text-black cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-4 py-2 bg-black text-white rounded border border-gray-300 dark:border-gray-500 hover:bg-white hover:text-black cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <RiSendPlaneFill />
               </button>
