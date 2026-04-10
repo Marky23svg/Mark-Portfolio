@@ -47,7 +47,7 @@ export default function GraphicDetails() {
           Graphic Design Projects
         </h1>
         <button
-          className="bg-gray-900 dark:bg-gray-100 dark:text-black text-white px-4 py-1 rounded-lg border border-black/40 hover:opacity-80 transition"
+          className="bg-black dark:bg-gray-100 dark:hover:bg-black dark:hover:text-white rounded-lg h-8 w-24 text-white dark:text-black cursor-pointer border border-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors"
           onClick={() => navigate("/")}
         >
           Back
