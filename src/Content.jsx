@@ -5,6 +5,7 @@ import Proj2 from "./assets/proj2.png";
 import Proj3 from "./assets/proj3.png";
 import Cert1 from "./assets/cert1.jpg";
 import Cert2 from "./assets/cert2.jpg";
+import Cert3 from "./assets/cert3.jpg";
 import { useNavigate } from "react-router-dom"; //Image hover
 import { FaFacebook, FaInstagram, FaGithub, FaEnvelope, FaPhone, FaLinkedin } from "react-icons/fa6";
 import { useState } from "react";
@@ -223,7 +224,7 @@ function Content() {
 
             </div>
             <div className="bg-gray-50 dark:bg-black rounded-xl sm:border border-gray-300 dark:border-gray-600 min-h-[50px] col-span-2">
-                <h1 className="text-black dark:text-white text-2xl text-center font-bold px-8 p-5">Do what you Love, Love what you Do</h1>
+                <h1 className="text-black dark:text-white text-2xl text-center font-bold px-1 sm:px-8 p-5 my-10 sm:my-0">Do what you Love, <br className="block sm:hidden"></br> Love what you Do</h1>
             </div>
             <div className="bg-gray-50 dark:bg-black rounded-xl sm:border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] col-span-1 sm:col-span-3 sm:pb-10 pb-10">
 
@@ -261,22 +262,16 @@ function Content() {
                         />
 
                     </div>
-                    {/* Additional certification items can be added here 
-                    <div className="h-50 w-62 bg-gray-50 dark:bg-gray-900 dark:border border-gray-600 text-sm text-white font-semibold shadow-lg text-center rounded-xl cursor-pointer">
+
+                    <div className="h-45 w-62 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 
+                    text-sm font-semibold text-center rounded-xl cursor-pointer flex items-center justify-center"
+                    onClick={() => window.open("https://www.udacity.com/certificate/e/a42076a6-2c2c-11f1-a4ec-47040fbe9c58", "_blank")}>
                         <img
-                            src={Proj2}
-                            className="h-36 object-cover rounded-xl p-1"
+                            src={Cert3}
+                            className="h-44.5 object-cover rounded-xl p-1"
                         />
-                        <h3 className="text-gray-900 dark:text-white text-normal font-semibold mt-3">Travel Booking Website</h3>
+
                     </div>
-                    <div className="h-50 w-62 bg-gray-50 dark:bg-gray-900 dark:border border-gray-600 text-sm text-white font-semibold shadow-lg text-center rounded-xl cursor-pointer">
-                        <img
-                            src={Proj3}
-                            className="h-36 object-cover rounded-xl p-1"
-                        />
-                        <h3 className="text-gray-900 dark:text-white text-normal font-semibold mt-3">F1 Racing Website</h3>
-                    </div>
-                    */}
                 </div>
 
             </div>
