@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
-import Graphic1 from "./assets/graphic1.webp";
-import Graphic2 from "./assets/graphic2.webp";
-import Graphic3 from "./assets/graphic3.webp";
-import Graphic4 from "./assets/graphic4.webp";
-import Graphic5 from "./assets/graphic5.webp";
-import Graphic6 from "./assets/graphic6.webp";
-import Graphic7 from "./assets/graphic7.webp";
-import Graphic8 from "./assets/graphic8.webp";
+import Graphic1 from "../assets/graphic1.webp";
+import Graphic2 from "../assets/graphic2.webp";
+import Graphic3 from "../assets/graphic3.webp";
+import Graphic4 from "../assets/graphic4.webp";
+import Graphic5 from "../assets/graphic5.webp";
+import Graphic6 from "../assets/graphic6.webp";
+import Graphic7 from "../assets/graphic7.webp";
+import Graphic8 from "../assets/graphic8.webp";
 
 export default function GraphicDetails() {
   const navigate = useNavigate();
@@ -40,16 +41,17 @@ export default function GraphicDetails() {
 
 
   return (
-    <div className="min-h-screen bg-gray-100 p-3 dark:bg-black">
+    <div className="min-h-screen bg-gray-50 p-3 dark:bg-black">
       {/* Header */}
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold text-black dark:text-white">
           Graphic Design Projects
         </h1>
         <button
-          className="bg-black dark:bg-gray-100 dark:hover:bg-black dark:hover:text-white rounded-lg h-8 w-24 text-white dark:text-black cursor-pointer border border-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors"
+          className="bg-gray-50 dark:bg-black dark:hover:bg-white dark:hover:text-black rounded-lg h-8 w-24 text-black dark:text-white cursor-pointer border border-gray-300 dark:border-gray-600 hover:bg-black hover:text-white transition-colors flex items-center justify-center gap-1"
           onClick={() => navigate("/")}
         >
+          <MdKeyboardDoubleArrowLeft />
           Back
         </button>
       </div>

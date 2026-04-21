@@ -1,21 +1,23 @@
-import TechCarousel from "./TechCarousel";
-import GraphicCarousel from "./GraphicCarousel";
-import Proj1 from "./assets/proj1.png";
-import Proj2 from "./assets/proj2.png";
-import Proj3 from "./assets/proj3.png";
-import Cert1 from "./assets/cert1.jpg";
-import Cert2 from "./assets/cert2.jpg";
-import Cert3 from "./assets/cert3.jpg";
+import TechCarousel from "../components/TechCarousel";
+import GraphicCarousel from "../components/GraphicCarousel";
+import Proj1 from "../assets/proj1.png";
+import Proj2 from "../assets/proj2.png";
+import Proj3 from "../assets/proj3.png";
+import Cert1 from "../assets/cert1.jpg";
+import Cert2 from "../assets/cert2.jpg";
+import Cert3 from "../assets/cert3.jpg";
+import Cert4 from "../assets/cert4.jpg";
 import { useNavigate } from "react-router-dom"; //Image hover
 import { FaFacebook, FaInstagram, FaGithub, FaEnvelope, FaPhone, FaLinkedin } from "react-icons/fa6";
 import { useState } from "react";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 
 
 
 function Content() {
     const navigate = useNavigate(); //For button
-    const [showModal, setShowModal] = useState(false); 
+    const [showModal, setShowModal] = useState(false);
     return (
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-5 sm:px-60 px-3 bg-gray-50 dark:bg-black">
@@ -34,7 +36,7 @@ function Content() {
             <div className="bg-gray-50 dark:bg-black rounded-xl sm:border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] row-span-1 sm:row-span-2">
                 <h1 className="text-black dark:text-white text-2xl font-bold px-5 pt-4">Education</h1>
 
-                <div className="relative mx-8 my-2"> 
+                <div className="relative mx-8 my-2">
                     {/* timeline column */}
                     <div className="absolute left-0 top-0 h-full w-10 flex justify-center">
                         <div className="w-[0.1px] bg-gray-400 dark:bg-gray-500 h-full mt-2"></div>
@@ -184,10 +186,11 @@ function Content() {
                 </div>
                 <div className="flex justify-center px-8">
                     <button
-                        className="bg-black dark:bg-gray-100 dark:hover:bg-black dark:hover:text-white rounded-lg h-8 w-24 text-white dark:text-black cursor-pointer border border-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors"
+                        className="bg-gray-50 dark:bg-black dark:hover:bg-white dark:hover:text-black rounded-lg h-8 w-24 text-black dark:text-white cursor-pointer border border-gray-300 dark:border-gray-600 hover:bg-black hover:text-white transition-colors flex items-center justify-center gap-1"
                         onClick={() => navigate("/graphic-design-details")}
                     >
                         View
+                        <MdKeyboardDoubleArrowRight />
                     </button>
                 </div>
             </div>
@@ -226,54 +229,46 @@ function Content() {
             <div className="bg-gray-50 dark:bg-black rounded-xl sm:border border-gray-300 dark:border-gray-600 min-h-[50px] col-span-2">
                 <h1 className="text-black dark:text-white text-2xl text-center font-bold px-1 sm:px-8 p-5 my-10 sm:my-0">Do what you Love, <br className="block sm:hidden"></br> Love what you Do</h1>
             </div>
-            <div className="bg-gray-50 dark:bg-black rounded-xl sm:border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] col-span-1 sm:col-span-3 sm:pb-10 pb-10">
 
-                <h1 className="text-black dark:text-white text-2xl font-bold px-5 p-4">Certifications</h1>
-
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-2 gap-y-4 justify-items-center mx-0 sm:mx-2 my-4">
-                    <div className="h-45 w-62 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 
-                    text-sm font-semibold text-center rounded-xl cursor-pointer flex items-center justify-center"
-                        onClick={() => setShowModal(true)}>
-                        <img
-                            src={Cert1}
-                            className="h-44 object-cover rounded-xl p-1"
-                        />
-
-                    </div>
-                    {/* Modal Popup */}
-                    {showModal && (
-                        <div
-                            className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4"
-                            onClick={() => setShowModal(false)}
-                        >
-                            <img
-                                src={Cert1}
-                                className="max-w-full max-h-full object-contain rounded-lg"
-                                onClick={(e) => e.stopPropagation()}
-                            />
-                        </div>
-                    )}
-                    <div className="h-45 w-62 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 
-                    text-sm font-semibold text-center rounded-xl cursor-pointer flex items-center justify-center"
-                    onClick={() => window.open("https://www.vibecoders.ph/cert/GAI2Z26-611B", "_blank")}>
-                        <img
-                            src={Cert2}
-                            className="h-44.5 object-cover rounded-xl p-1"
-                        />
-
-                    </div>
-
-                    <div className="h-45 w-62 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 
-                    text-sm font-semibold text-center rounded-xl cursor-pointer flex items-center justify-center"
-                    onClick={() => window.open("https://www.udacity.com/certificate/e/a42076a6-2c2c-11f1-a4ec-47040fbe9c58", "_blank")}>
-                        <img
-                            src={Cert3}
-                            className="h-44.5 object-cover rounded-xl p-1"
-                        />
-
-                    </div>
+            <div className="bg-gray-50 dark:bg-black rounded-xl sm:border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] col-span-1 sm:col-span-3 sm:pb-3 pb-10">
+                <div className="flex justify-between items-center px-5 p-4">
+                    <h1 className="text-black dark:text-white text-2xl font-bold">Certifications</h1>
+                    <button
+                        className="bg-gray-50 dark:bg-black dark:hover:bg-white dark:hover:text-black rounded-lg h-8 w-24 text-black dark:text-white cursor-pointer border border-gray-300 dark:border-gray-600 hover:bg-black hover:text-white transition-colors flex items-center justify-center gap-1"
+                        onClick={() => navigate("/certifications")}
+                    >
+                        View
+                        <MdKeyboardDoubleArrowRight />
+                    </button>
                 </div>
 
+                <div className="grid grid-cols-1 sm:grid-cols-4 gap-x-1 gap-y-4 justify-items-center mx-0 sm:mx-2 my-4">
+                    {/* first certificate */}
+                    <div className="h-37 w-55 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm font-semibold text-center rounded-xl cursor-pointer flex items-center justify-center"
+                        onClick={() => setShowModal(true)}>
+                        <img src={Cert1} className="h-37 w-full object-cover rounded-xl p-1" />
+                    </div>
+                    {showModal && (
+                        <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4" onClick={() => setShowModal(false)}>
+                            <img src={Cert1} className="max-w-full max-h-full object-contain rounded-lg" onClick={(e) => e.stopPropagation()} />
+                        </div>
+                    )}
+                    {/* second certificate */}
+                    <div className="h-37 w-55 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm font-semibold text-center rounded-xl cursor-pointer flex items-center justify-center"
+                        onClick={() => window.open("https://www.vibecoders.ph/cert/GAI2Z26-611B", "_blank")}>
+                        <img src={Cert2} className="h-37 w-full object-cover rounded-xl p-1" />
+                    </div>
+                    {/* third certificate */}
+                    <div className="h-37 w-55 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm font-semibold text-center rounded-xl cursor-pointer flex items-center justify-center"
+                        onClick={() => window.open("https://www.udacity.com/certificate/e/a42076a6-2c2c-11f1-a4ec-47040fbe9c58", "_blank")}>
+                        <img src={Cert3} className="h-37 w-full object-cover rounded-xl p-1" />
+                    </div>
+
+                    <div className="h-37 w-55 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm font-semibold text-center rounded-xl cursor-pointer flex items-center justify-center"
+                        onClick={() => window.open("https://www.freecodecamp.org/certification/imnotmarkk_/responsive-web-design-v9", "_blank")}>
+                        <img src={Cert4} className="h-37 w-full object-cover rounded-xl p-1" />
+                    </div>
+                </div>
             </div>
 
             <div className="bg-gray-50 dark:bg-black rounded-xl sm:border border-gray-300 dark:border-gray-600 shadow-black/20 col-span-2 sm:pb-10 pb-5">
@@ -282,7 +277,7 @@ function Content() {
                     {/* Column 1: Get in touch */}
                     <div className="w-full">
                         <h1 className="text-black dark:text-white text-xl font-bold text-left mb-5">Get in touch</h1>
-                        <div className="bg-gray-50 dark:bg-black dark:border-gray-600 flex justify-center items-center border border-black/10 rounded-lg p-9">
+                        <div className="bg-gray-50 dark:bg-black dark:border-gray-600 flex justify-center items-center border border-gray-300 rounded-lg p-9">
                             <p className="text-medium font-semibold text-center text-black dark:text-gray-300">
                                 Actively seeking an OJT/Internship opportunity.
                             </p>
@@ -293,7 +288,7 @@ function Content() {
                     <div className="w-full">
                         <h1 className="text-black dark:text-white text-xl font-bold text-left mb-5">Social Links</h1>
 
-                      {/*}  <button
+                        {/*}  <button
                             onClick={() => window.open("https://www.facebook.com/markjustin.canuel", "_blank")}
                             className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-3 px-5 mb-3 cursor-pointer"
                         >
@@ -303,7 +298,7 @@ function Content() {
 
                         <button
                             onClick={() => window.open("https://www.instagram.com/imnotmarkkk_/", "_blank")}
-                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-3 px-5 mb-3 cursor-pointer"
+                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-gray-300 flex items-center gap-3 px-5 mb-3 cursor-pointer"
                         >
                             <FaInstagram className="h-5 w-5 text-pink-500" />
                             <p className="text-base sm:text-sm font-medium">Instagram</p>
@@ -311,7 +306,7 @@ function Content() {
 
                         <button
                             onClick={() => window.open("https://www.linkedin.com/in/mark-justin-canuel-081bb7378/", "_blank")}
-                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-3 px-5 mb-3 cursor-pointer"
+                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-gray-300 flex items-center gap-3 px-5 mb-3 cursor-pointer"
                         >
                             <FaLinkedin className="h-5 w-5 text-blue-600" />
                             <p className="text-base sm:text-sm font-medium">LinkedIn</p>
@@ -319,7 +314,7 @@ function Content() {
 
                         <button
                             onClick={() => window.open("https://github.com/Marky23svg", "_blank")}
-                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-3 px-5 cursor-pointer"
+                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-gray-300 flex items-center gap-3 px-5 cursor-pointer"
                         >
                             <FaGithub className="h-5 w-5" />
                             <p className="text-base sm:text-sm font-medium">Github</p>
@@ -332,7 +327,7 @@ function Content() {
 
                         <button
                             onClick={() => window.open("mailto:markjustincanuel2@gmail.com", "_blank")}
-                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-2 px-4 mb-3"
+                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-gray-300 flex items-center gap-2 px-4 mb-3"
                         >
                             {/*<FaEnvelope className="h-4 w-4" />*/}
                             <p className="text-base sm:text-xs font-medium">markjustincanuel2@gmail.com</p>
@@ -340,7 +335,7 @@ function Content() {
 
                         <button
                             onClick={() => window.open("tel#", "_blank")}
-                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-black/10 flex items-center gap-2 px-4"
+                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-gray-300 flex items-center gap-2 px-4"
                         >
                             {/*<FaPhone className="h-4 w-4" />*/}
                             <p className="text-base sm:text-xs font-medium">09679101896</p>
@@ -355,12 +350,12 @@ function Content() {
                 <h1 className="text-black dark:text-white text-xl font-bold text-left px-5 p-4 mb-1">Goals</h1>
                 <div className="px-5 pb-4.5">
 
-                    <div className="bg-gray-50 dark:bg-black dark:border-gray-600 flex justify-center items-center border border-black/10 rounded-lg p-3 mb-3">
+                    <div className="bg-gray-50 dark:bg-black dark:border-gray-600 flex justify-center items-center border border-gray-300 rounded-lg p-3 mb-3">
                         <p className="text-sm font-semibold text-gray-900 dark:text-gray-300">
                             Grow and build a strong career in IT through continuous learning and hands-on experience.
                         </p>
                     </div>
-                    <div className="bg-gray-50 dark:bg-black dark:border-gray-600 flex justify-center items-center border border-black/10 rounded-lg p-3">
+                    <div className="bg-gray-50 dark:bg-black dark:border-gray-600 flex justify-center items-center border border-gray-300 rounded-lg p-3">
                         <p className="text-sm font-semibold text-gray-900 dark:text-gray-300">
                             Improve my skills in web and software development and contribute to real-world impactful projects.
                         </p>

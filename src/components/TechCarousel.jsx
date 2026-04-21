@@ -1,14 +1,14 @@
-import Html from "./assets/html.png";
-import Css from "./assets/css.png";
-import Js from "./assets/js.png";
-import ReactLogo from "./assets/reactlogo.png";
-import Tailwind from "./assets/tailwind.png";
-import Bootstrap from "./assets/bootstrap.png";
-import Mysql from "./assets/mysql.png";
-import Spring from "./assets/spring.png";
-import Figma from "./assets/figma.png";
-import Vscode from "./assets/vscode.png";
-import Ps from "./assets/ps.png";
+import Html from "../assets/html.png";
+import Css from "../assets/css.png";
+import Js from "../assets/js.png";
+import ReactLogo from "../assets/reactlogo.png";
+import Tailwind from "../assets/tailwind.png";
+import Bootstrap from "../assets/bootstrap.png";
+import Mysql from "../assets/mysql.png";
+import Spring from "../assets/spring.png";
+import Figma from "../assets/figma.png";
+import Vscode from "../assets/vscode.png";
+import Ps from "../assets/ps.png";
 
 
 const logos = [Html, Css, Js, ReactLogo, Tailwind, Bootstrap, Mysql, Spring, Figma, Vscode, Ps];

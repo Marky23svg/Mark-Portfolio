@@ -160,7 +160,7 @@ Respond as Mark (natural, helpful, concise, and intelligent):
           <div className="bg-gray-200 dark:bg-black border-gray-300 dark:border-gray-500 p-3 border-b rounded-t-xl flex justify-between items-center">
             <div className='flex items-center gap-2'>
               <span className="text-black dark:text-white font-medium">Mark Justin Canuel</span>
-              <FaCircle className="h-2 w-2 text-green-500" />
+              <FaCircle className="h-2 w-2 text-green-500 drop-shadow-[0_0_3px_rgba(34,197,94,0.8)]" />
             </div>
             <button 
               onClick={() => setIsOpen(false)}

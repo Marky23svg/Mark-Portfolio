@@ -3,8 +3,8 @@ import { FaDownload, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { GoLocation } from "react-icons/go";
 import { MdVerified } from "react-icons/md";
 
-import Mark from './assets/Markpfp3.png';
-import MarkHover from './assets/MarkpfpHover.png'; // <-- new image
+import Mark from '../assets/Markpfp3.png';
+import MarkHover from '../assets/MarkpfpHover.png'; // <-- new image
 import ThemeToggle from './ThemeToggle.jsx';
 
 function Header() {
