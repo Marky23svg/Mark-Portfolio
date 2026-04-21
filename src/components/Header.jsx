@@ -41,7 +41,7 @@ function Header() {
           </h2>
 
           <h2 className="text-lg sm:text-xl font-medium text-black dark:text-white">
-            Frontend Developer
+            Software Engineer
           </h2>
 
           {/* Buttons */}

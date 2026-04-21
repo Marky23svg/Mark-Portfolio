@@ -7,8 +7,10 @@ import Graphic5 from "../assets/graphic5.webp";
 import Graphic6 from "../assets/graphic6.webp";
 import Graphic7 from "../assets/graphic7.webp";
 import Graphic8 from "../assets/graphic8.webp";
+import Graphic9 from "../assets/graphic9.webp";
+import Graphic10 from "../assets/graphic10.webp";
 
-const logos = [Graphic1, Graphic2, Graphic3, Graphic4, Graphic5, Graphic6, Graphic7, Graphic8];
+const logos = [Graphic1, Graphic2, Graphic3, Graphic4, Graphic5, Graphic6, Graphic7, Graphic8, Graphic9, Graphic10];
 
 export default function GraphicCarousel() {
   const [loaded, setLoaded] = useState(false);
