@@ -21,7 +21,7 @@ function Preloader({ children }) {
   useEffect(() => {
     let startTime = null;
     let animationFrame = null;
-    const duration = 2000;
+    const duration = 900;
 
     const animate = (currentTime) => {
       if (!startTime) startTime = currentTime;
@@ -68,7 +68,7 @@ function Preloader({ children }) {
             />
           </div>
 
-          <p className="mt-4 text-xs text-gray-400 dark:text-gray-500 font-light">
+          <p className="mt-4 text-sm text-gray-400 dark:text-gray-500 font-light">
             Loading portfolio
           </p>
         </div>
