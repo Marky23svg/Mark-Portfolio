@@ -19,7 +19,7 @@ function Content() {
     const navigate = useNavigate(); //For button
     const [showModal, setShowModal] = useState(false);
     return (
-
+<>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-5 sm:px-60 px-3 bg-gray-50 dark:bg-black">
 
             {/*About me*/}
@@ -341,14 +341,7 @@ function Content() {
                             <p className="text-base sm:text-xs font-medium">09679101896</p>
                         </button>
 
-                        <button
-
-                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-gray-300 flex items-center gap-2 px-4"
-                        >
-                            <p className="text-base sm:text-xs font-medium text-start">
-                                © {new Date().getFullYear()} Mark Justin Canuel. All rights reserved.
-                            </p>
-                        </button>
+                        
                     </div>
 
                 </div>
@@ -372,15 +365,17 @@ function Content() {
                 </div>
             </div>
 
-
-
-
-
-
-
-
-
         </div>
+        <footer className="bg-gray-50 dark:bg-black ">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                    <div className="flex justify-center items-center">
+                        <p className="text-xs text-gray-600 dark:text-gray-300 text-center">
+                            © {new Date().getFullYear()} Mark Justin Canuel. All rights reserved.
+                        </p>
+                    </div>
+                </div>
+            </footer>
+            </>
     );
 }
 export default Content;
