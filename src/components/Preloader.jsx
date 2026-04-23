@@ -21,7 +21,7 @@ function Preloader({ children }) {
   useEffect(() => {
     let startTime = null;
     let animationFrame = null;
-    const duration = 900;
+    const duration = 1000;
 
     const animate = (currentTime) => {
       if (!startTime) startTime = currentTime;
@@ -63,7 +63,7 @@ function Preloader({ children }) {
           {/* Progress Bar */}
           <div className="h-[2px] bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
             <div 
-              className="h-full bg-blue-600 dark:bg-blue-600 rounded-full transition-[width] duration-300 ease-linear"
+              className="h-full bg-blue-600 dark:bg-blue-600 rounded-full transition-[width] duration-100 ease-linear"
               style={{ width: `${progress}%` }}
             />
           </div>
