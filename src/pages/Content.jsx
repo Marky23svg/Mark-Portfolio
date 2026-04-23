@@ -335,10 +335,19 @@ function Content() {
 
                         <button
                             onClick={() => window.open("tel#", "_blank")}
-                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-gray-300 flex items-center gap-2 px-4"
+                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-gray-300 flex items-center gap-2 px-4 mb-3"
                         >
                             {/*<FaPhone className="h-4 w-4" />*/}
                             <p className="text-base sm:text-xs font-medium">09679101896</p>
+                        </button>
+
+                        <button
+
+                            className="bg-gray-50 dark:bg-black dark:border-gray-600 h-10 w-full rounded-lg border border-gray-300 flex items-center gap-2 px-4"
+                        >
+                            <p className="text-base sm:text-xs font-medium text-start">
+                                © {new Date().getFullYear()} Mark Justin Canuel. All rights reserved.
+                            </p>
                         </button>
                     </div>
 

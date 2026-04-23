@@ -60,7 +60,7 @@ function Header() {
 
             <button
               onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })}
-              className="group px-5 py-1 bg-white border dark:bg-black dark:text-white dark:border-gray-600 border-gray-300 text-black rounded-lg 
+              className="group px-2 py-2 bg-white border dark:bg-black dark:text-white dark:border-gray-600 border-gray-300 text-black rounded-lg 
               hover:text-black dark:hover:text-white transition duration-300 flex items-center gap-2 cursor-pointer">
               <FaEnvelope className="group-hover:translate-y-1 transition-transform" />
               Send Email
@@ -70,7 +70,7 @@ function Header() {
             <button
               onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })}
               className="group px-5 py-2 bg-white border dark:bg-black dark:text-white dark:border-gray-600 border-gray-300 text-black rounded-lg 
-              hover:text-black dark:hover:text-white transition duration-300 flex items-center gap-2 cursor-pointer sm:py-1">
+              hover:text-black dark:hover:text-white transition duration-300 flex items-center gap-2 cursor-pointer ">
               <FaPhoneAlt className="group-hover:translate-y-1 transition-transform" />
               Contact
             </button>
