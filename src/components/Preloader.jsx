@@ -21,7 +21,7 @@ function Preloader({ children }) {
   useEffect(() => {
     let startTime = null;
     let animationFrame = null;
-    const duration = 1900;
+    const duration = 900;
 
     const animate = (currentTime) => {
       if (!startTime) startTime = currentTime;
