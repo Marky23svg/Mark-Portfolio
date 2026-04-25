@@ -199,29 +199,32 @@ function Content() {
                 <h1 className="text-black dark:text-white text-2xl font-bold px-5 p-4">Web Projects</h1>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-3 gap-y-4 justify-items-center mx-0 sm:mx-4 my-4">
-                    <div className="h-40 w-50 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
+                    <div className="h-42 w-50 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
                         onClick={() => window.open("https://demo-system-g5uf.vercel.app/", "_blank")}>
                         <img
                             src={Proj1}
                             className="h-30 object-cover rounded-xl p-1"
                         />
                         <h3 className="text-gray-900 dark:text-white text-normal font-semibold mt-1">eGuide ICCT System</h3>
+                        <h4 className="text-gray-900 dark:text-white text-xs font-thin">School and requirements guide</h4>
                     </div>
-                    <div className="h-40 w-50 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
+                    <div className="h-42 w-50 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
                         onClick={() => window.open("https://destination-website-five.vercel.app/", "_blank")}>
                         <img
                             src={Proj2}
                             className="h-30 object-cover rounded-xl p-1"
                         />
                         <h3 className="text-gray-900 dark:text-white text-normal font-semibold mt-1">Travel Booking Website</h3>
+                        <h4 className="text-gray-900 dark:text-white text-xs font-thin">Booking website frontend</h4>
                     </div>
-                    <div className="h-40 w-50 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
-                        onClick={() => window.open("https://formula1-website-gamma.vercel.app/", "_blank")}>
+                    <div className="h-42 w-50 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
+                        onClick={() => window.open("https://watts-up-vert.vercel.app/", "_blank")}>
                         <img
                             src={Proj3}
                             className="h-30 object-cover rounded-xl p-1"
                         />
-                        <h3 className="text-gray-900 dark:text-white text-normal font-semibold mt-1">Formula 1 Website</h3>
+                        <h3 className="text-gray-900 dark:text-white text-normal font-semibold mt-1">WattsUp</h3>
+                        <h4 className="text-gray-900 dark:text-white text-xs font-thin ">EV Charging Station Locator</h4>
                     </div>
                 </div>
 
