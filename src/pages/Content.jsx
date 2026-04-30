@@ -10,6 +10,7 @@ import Cert4 from "../assets/cert4.jpg";
 import { useNavigate } from "react-router-dom"; //Image hover
 import { FaFacebook, FaInstagram, FaGithub, FaEnvelope, FaPhone, FaLinkedin } from "react-icons/fa6";
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 
@@ -18,6 +19,9 @@ import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 function Content() {
     const navigate = useNavigate(); //For button
     const [showModal, setShowModal] = useState(false);
+
+
+
     return (
 <>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-5 sm:px-60 px-3 bg-gray-50 dark:bg-black">
@@ -251,10 +255,11 @@ function Content() {
                         onClick={() => setShowModal(true)}>
                         <img src={Cert1} className="h-37 w-full object-cover rounded-xl p-1" />
                     </div>
-                    {showModal && (
+                    {showModal && createPortal(
                         <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4" onClick={() => setShowModal(false)}>
-                            <img src={Cert1} className="max-w-full max-h-full object-contain rounded-lg" onClick={(e) => e.stopPropagation()} />
-                        </div>
+                            <img src={Cert1} className="max-h-[80vh] max-w-[80vw] object-contain rounded-lg" onClick={(e) => e.stopPropagation()} />
+                        </div>,
+                        document.body
                     )}
                     {/* second certificate */}
                     <div className="h-37 w-55 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm font-semibold text-center rounded-xl cursor-pointer flex items-center justify-center"
