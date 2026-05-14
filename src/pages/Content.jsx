@@ -3,10 +3,10 @@ import GraphicCarousel from "../components/GraphicCarousel";
 import Proj1 from "../assets/proj1.png";
 import Proj2 from "../assets/proj2.png";
 import Proj3 from "../assets/proj3.png";
-import Cert1 from "../assets/cert1.jpg";
-import Cert2 from "../assets/cert2.jpg";
-import Cert3 from "../assets/cert3.jpg";
-import Cert4 from "../assets/cert4.jpg";
+import Cert1 from "../assets/cert1.webp";
+import Cert2 from "../assets/cert2.webp";
+import Cert3 from "../assets/cert3.webp";
+import Cert4 from "../assets/cert4.webp";
 import { useNavigate } from "react-router-dom"; //Image hover
 import { FaFacebook, FaInstagram, FaGithub, FaEnvelope, FaPhone, FaLinkedin } from "react-icons/fa6";
 import { useState } from "react";
@@ -75,9 +75,9 @@ function Content() {
 
                         {/* content */}
                         <div className="ml-12 bg-gray-50 dark:bg-black  pl-3 w-full">
-                            <h2 className="font-bold">Tech Stack & Programming Experience </h2>
-                            <p className="text-xs text-gray-700 dark:text-gray-300 font-semibold">React, Tailwind, Spring Boot, MySQL, & Web Dev</p>
-                            <p className="text-xs text-gray-700 dark:text-gray-400">2025</p>
+                            <h2 className="font-bold">DevKada Hackathon</h2>
+                            <p className="text-xs text-gray-700 dark:text-gray-300 font-semibold">Competed in a hackathon, developed a prototype that addressed real-world problems with modern web technologies</p>
+                            <p className="text-xs text-gray-700 dark:text-gray-400">2026</p>
                         </div>
                     </div>
 
@@ -91,7 +91,7 @@ function Content() {
 
                         {/* content */}
                         <div className="ml-12 bg-gray-50 dark:bg-black pl-3 w-full">
-                            <h2 className="font-bold">CCNA Certification </h2>
+                            <h2 className="font-bold">Cisco CCNA Networking</h2>
                             <p className="text-xs text-gray-700 dark:text-gray-300 font-semibold">Networking fundamentals, routing, switching, and device configuration</p>
                             <p className="text-xs text-gray-700 dark:text-gray-400">2025</p>
                         </div>

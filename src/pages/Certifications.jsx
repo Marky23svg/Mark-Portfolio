@@ -2,16 +2,17 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 
-import Cert1 from "../assets/cert1.jpg";
-import Cert2 from "../assets/cert2.jpg";
-import Cert3 from "../assets/cert3.jpg";
-import Cert4 from "../assets/cert4.jpg";
+import Cert1 from "../assets/cert1.webp";
+import Cert2 from "../assets/cert2.webp";
+import Cert3 from "../assets/cert3.webp";
+import Cert4 from "../assets/cert4.webp";
+import Cert5 from "../assets/cert5.webp";
 
 const certificates = [
   {
     id: 1,
     image: Cert1,
-    title: "Web Development Certification",
+    title: "DevKada 2026 Hackathon",
     externalLink: null,
   },
   {
@@ -29,7 +30,13 @@ const certificates = [
   {
     id: 4,
     image: Cert4,
-    title: "React Advanced Certification",
+    title: "Freecodecamp Responsive Web Design",
+    externalLink: null,
+  },
+  {
+    id: 5,
+    image: Cert5,
+    title: "WordPress Web Development Certification",
     externalLink: null,
   },
 ];
