@@ -4,7 +4,8 @@ import { GoLocation } from "react-icons/go";
 import { MdVerified } from "react-icons/md";
 
 import Mark from '../assets/Markpfp3.webp';
-import MarkHover from '../assets/MarkpfpHover.webp'; // <-- new image
+import MarkHover from '../assets/MarkpfpHover.webp';
+import Markwebp from '../assets/Markwebp.webp'; // <-- new image
 import ThemeToggle from './ThemeToggle.jsx';
 
 function Header() {
@@ -19,7 +20,7 @@ function Header() {
 
         {/* Image */}
         <img
-          src={hovered ? MarkHover : Mark}
+          src={hovered ? Markwebp : Mark}
           alt="Mark Dev"
           className="w-32 h-32 sm:w-35 sm:h-35 rounded-md shadow-md transition-all duration-500 cursor-pointer"
           onMouseEnter={() => setHovered(true)}
