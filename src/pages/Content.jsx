@@ -28,17 +28,18 @@ function Content() {
 
             {/*About me*/}
             <div className="bg-gray-50 dark:bg-black rounded-xl sm:border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] sm:min-h-[50px] col-span-2 sm:pb-1 pb-5">
-                <h1 className="text-black dark:text-white text-2xl font-bold px-5 p-4">About Me</h1>
-                <p className="text-black dark:text-gray-300 px-5 text-justify text-base font-normal">
-                    I am <b>Mark Justin Canuel</b>, a 3rd year Bachelor of Science in Information Technology student with a strong interest
-                    in UI/UX design and web development. I specialize in frontend development, where I enjoy building clean, responsive, and
-                    user-friendly interfaces, and I also have basic knowledge of backend development, allowing me to understand how different
-                    parts of a system work together. As a student, I am continuously learning and improving my skills through hands-on projects,
-                    with the goal of creating web applications that are both visually appealing and functional.
-                </p>
+                <h1 className="text-black dark:text-white text-xl font-bold px-5 p-4">About Me</h1>
+                <p className="text-black dark:text-gray-300 px-5 text-justify text-sm font-normal">
+    I am <b>Mark Justin Canuel</b>, an aspiring <b>Software Engineer</b> and a 3rd year Bachelor of Science in Information Technology student. 
+    I specialize in frontend development, building clean, responsive, and user-friendly interfaces, while also exploring backend technologies
+     to understand full-stack integration. Through my experience as a capstone project leader and collaborating with various groups, I have developed
+      strong leadership, communication, and teamwork skills. I actively join hackathons and IT events to challenge myself, learn new technologies,
+       and collaborate with fellow developers. Through continuous learning and hands-on projects, I am committed to developing web applications
+        that are both visually compelling and scalable. Outside of coding, I do graphic design using Photoshop, blending creativity with technology.
+</p>
             </div>
             <div className="bg-gray-50 dark:bg-black rounded-xl sm:border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] row-span-1 sm:row-span-2">
-                <h1 className="text-black dark:text-white text-2xl font-bold px-5 pt-4">Education</h1>
+                <h1 className="text-black dark:text-white text-xl font-bold px-5 pt-4">Experience</h1>
 
                 <div className="relative mx-8 my-2">
                     {/* timeline column */}
@@ -151,7 +152,7 @@ function Content() {
 
             {/*Tools & Technologies*/}
             <div className="bg-gray-50 dark:bg-black rounded-xl sm:border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] col-span-2">
-                <h1 className="text-black dark:text-white text-2xl font-bold px-5 p-4">Tools & Technologies</h1>
+                <h1 className="text-black dark:text-white text-xl font-bold px-5 p-4">Tools & Technologies</h1>
                 <div className="px-0 py-7">
                     <TechCarousel />
                 </div>
@@ -164,10 +165,13 @@ function Content() {
                     <div className="h-6 w-24 bg-[#000021] text-xs text-[#00d9ff] font-medium text-center cursor-pointer pt-1">Tailwind</div>
                     <div className="h-6 w-24 bg-[#7511f5] text-xs text-white font-medium text-center cursor-pointer pt-1">Bootstrap</div>
                     <div className="h-6 w-24 bg-[#5aa5fa] text-xs text-[white] font-medium text-center cursor-pointer pt-1">MySQL</div>
-                    <div className="h-6 w-24 bg-[#71ba41] text-xs text-white font-medium text-center cursor-pointer pt-1">Spring Boot</div>
+                    <div className="h-6 w-24 bg-[#6DB33F] text-xs text-white font-medium text-center cursor-pointer pt-1">Spring Boot</div>
                     <div className="h-6 w-24 bg-[#000021] text-xs text-[#ff0d6e] font-medium text-center cursor-pointer pt-1">Figma</div>
                     <div className="h-6 w-24 bg-[#0181ce] text-xs text-white font-medium text-center cursor-pointer pt-1">VSCode</div>
                     <div className="h-6 w-24 bg-[#001e36] text-xs text-[#31a8ff] font-medium text-center cursor-pointer pt-1">Photoshop</div>
+                    <div className="h-6 w-24 bg-[#141414] text-xs text-[#ffffff] font-medium text-center cursor-pointer pt-1">Express</div>
+                    <div className="h-6 w-24 bg-[#6CC24A] text-xs text-[#ffffff] font-medium text-center cursor-pointer pt-1">Node</div>
+                    <div className="h-6 w-24 bg-[#001E2B] text-xs text-[#00ED64] font-medium text-center cursor-pointer pt-1">MongoDB</div>
 
                     {/*<div className="h-6 w-24 bg-black/10 text-xs text-black font-meduim text-center cursor-pointer pt-1">HTML</div>
                     <div className="h-6 w-24 bg-[#E9E9E9] text-xs text-black font-meduim text-center cursor-pointer pt-1">CSS</div>
@@ -184,7 +188,7 @@ function Content() {
             </div>
 
             <div className="bg-gray-50 dark:bg-black rounded-xl sm:border border-gray-300 dark:border-gray-600 min-h-[50px] py-4  row-span-3">
-                <h1 className="text-black dark:text-white text-2xl font-bold px-5 ">Graphic Design Projects</h1>
+                <h1 className="text-black dark:text-white text-xl font-bold px-5 ">Graphic Design Projects</h1>
                 <div className="px-0 py-10">
                     <GraphicCarousel />
                 </div>
@@ -200,7 +204,7 @@ function Content() {
             </div>
             <div className="bg-gray-50 dark:bg-black rounded-xl sm:border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] sm:min-h-[50px] col-span-2 row-span-2 pb-10">
 
-                <h1 className="text-black dark:text-white text-2xl font-bold px-5 p-4">Web Projects</h1>
+                <h1 className="text-black dark:text-white text-xl font-bold px-5 p-4">Web Projects</h1>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-3 gap-y-4 justify-items-center mx-0 sm:mx-4 my-4">
                     <div className="h-42 w-50 bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-600 text-sm text-white font-semibold text-center rounded-xl cursor-pointer"
@@ -239,7 +243,7 @@ function Content() {
 
             <div className="bg-gray-50 dark:bg-black rounded-xl sm:border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] col-span-1 sm:col-span-3 sm:pb-3 pb-10">
                 <div className="flex justify-between items-center px-5 p-4">
-                    <h1 className="text-black dark:text-white text-2xl font-bold">Certifications</h1>
+                    <h1 className="text-black dark:text-white text-xl font-bold">Certifications</h1>
                     <button
                         className="bg-gray-50 dark:bg-black dark:hover:bg-white dark:hover:text-black rounded-lg h-8 w-24 text-black dark:text-white cursor-pointer border border-gray-300 dark:border-gray-600 hover:bg-black hover:text-white transition-colors flex items-center justify-center gap-1"
                         onClick={() => navigate("/certifications")}

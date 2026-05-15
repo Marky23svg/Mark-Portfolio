@@ -9,9 +9,12 @@ import Spring from "../assets/spring.png";
 import Figma from "../assets/figma.png";
 import Vscode from "../assets/vscode.png";
 import Ps from "../assets/ps.png";
+import Express from "../assets/express.png";
+import Nodejs from "../assets/node.png";
+import Mongo from "../assets/mongo.png";
 
 
-const logos = [Html, Css, Js, ReactLogo, Tailwind, Bootstrap, Mysql, Spring, Figma, Vscode, Ps];
+const logos = [Html, Css, Js, ReactLogo, Tailwind, Bootstrap, Mysql, Spring, Figma, Vscode, Ps, Express, Nodejs, Mongo];
 
 export default function TechCarousel() {
   return (

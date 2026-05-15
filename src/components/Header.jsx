@@ -22,7 +22,7 @@ function Header() {
         <img
           src={hovered ? Markwebp : Mark}
           alt="Mark Dev"
-          className="w-32 h-32 sm:w-35 sm:h-35 rounded-md shadow-md transition-all duration-500 cursor-pointer"
+          className="w-32 h-32 sm:w-35 sm:h-35 rounded-lg shadow-md transition-all duration-500 cursor-pointer"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
         />
@@ -47,10 +47,10 @@ function Header() {
 
           {/* Buttons */}
 
-          <div className="flex flex-wrap justify-center sm:justify-start gap-3 mt-2 sm">
+           <div className="flex flex-wrap justify-center sm:justify-start gap-3 mt-2 sm">
             <a href="/Mark_resume.pdf" download="MARK_JUSTIN_CANUEL_Resume.pdf">
               <button className="group px-5 py-2 bg-gradient-to-r from-[#FFD700] to-[#FBBF24] 
-      text-gray-100 font-semibold rounded-lg flex items-center gap-2 cursor-pointer
+      text-gray-100  font-semibold rounded-lg flex items-center gap-2 cursor-pointer
       shadow-[0_0_15px_#FFD700] hover:shadow-[0_0_30px_#FFD700] 
       hover:text-black transition-all duration-300">
                 <FaDownload className="group-hover:translate-y-1 transition-transform" />
