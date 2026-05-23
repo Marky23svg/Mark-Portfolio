@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaDownload, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { GoLocation } from "react-icons/go";
 import { MdVerified } from "react-icons/md";
+import { IoMdDownload } from "react-icons/io";
 
 import Mark from '../assets/Markpfp3.webp';
 import MarkHover from '../assets/MarkpfpHover.webp';
@@ -53,7 +54,7 @@ function Header() {
       text-gray-100  font-semibold rounded-lg flex items-center gap-2 cursor-pointer
       shadow-[0_0_15px_#FFD700] hover:shadow-[0_0_30px_#FFD700] 
       hover:text-black transition-all duration-300">
-                <FaDownload className="group-hover:translate-y-1 transition-transform" />
+                <IoMdDownload className="group-hover:translate-y-1 transition-transform h-" />
                 Resume
               </button>
             </a>
