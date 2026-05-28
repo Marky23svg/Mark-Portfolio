@@ -6,6 +6,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import Proj1 from "../assets/proj1.png";
 import Proj2 from "../assets/proj2.png";
 import Proj3 from "../assets/proj3.png";
+import Proj4 from "../assets/proj4.webp";
 
 const projects = [
   {
@@ -27,6 +28,13 @@ const projects = [
     image: Proj3,
     title: "WattsUp",
     description: "EV Charging Station Locator",
+    externalLink: "https://watts-up-vert.vercel.app/",
+  },
+  {
+    id: 4,
+    image: Proj4,
+    title: "GoGreen",
+    description: "Eco-friendly travel planner w/ Budget Tracker",
     externalLink: "https://watts-up-vert.vercel.app/",
   },
 ];
