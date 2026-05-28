@@ -1,6 +1,7 @@
 import Html from "../assets/html.png";
 import Css from "../assets/css.png";
 import Js from "../assets/js.png";
+import Ts from "../assets/ts.png";
 import ReactLogo from "../assets/reactlogo.png";
 import Tailwind from "../assets/tailwind.png";
 import Bootstrap from "../assets/bootstrap.png";
@@ -14,7 +15,7 @@ import Nodejs from "../assets/node.png";
 import Mongo from "../assets/mongo.png";
 
 
-const logos = [Html, Css, Js, ReactLogo, Tailwind, Bootstrap, Mysql, Spring, Figma, Vscode, Ps, Express, Nodejs, Mongo];
+const logos = [Html, Css, Js, Ts, ReactLogo, Tailwind, Bootstrap, Mysql, Spring, Figma, Vscode, Ps, Express, Nodejs, Mongo];
 
 export default function TechCarousel() {
   return (

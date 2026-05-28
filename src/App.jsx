@@ -4,6 +4,7 @@ import Header from './components/Header.jsx';
 import Content from './pages/Content.jsx';
 import GraphicDetails from './pages/GraphicDetails.jsx';
 import Certifications from "./pages/Certifications.jsx";
+import Projects from "./pages/Projects.jsx";
 import Chatbot from './components/Chatbot.jsx';
 import Preloader from "./components/Preloader";
 import PageTransition from "./components/PageTransition";
@@ -23,6 +24,7 @@ function App() {
           } />
           <Route path="/graphic-design-details" element={<GraphicDetails />} />
           <Route path="/certifications" element={<Certifications />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
       </Router>
     </Preloader>

@@ -54,6 +54,7 @@ BACKGROUND:
 - Aspiring Software Engineer (React, Tailwind, Spring Boot, MySQL, Nodejs, Express, MongoDb)
 - CCNA certified (networking fundamentals)
 - Built "eGuide ICCT" (Centralized School Requirements Guide System) as capstone project
+- Built WattsUp (EV Charging Station Locator) as side project
 - Passionate about UI/UX, Software Engineering, Frontend developer and building clean, user-friendly interfaces
 
 COMMUNICATION STYLE:
