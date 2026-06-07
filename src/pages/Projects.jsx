@@ -35,7 +35,7 @@ const projects = [
     image: Proj4,
     title: "GoGreen",
     description: "Eco-friendly travel planner w/ Budget Tracker",
-    externalLink: "https://watts-up-vert.vercel.app/",
+    externalLink: "https://go-green-download-web.vercel.app/",
   },
 ];
 
