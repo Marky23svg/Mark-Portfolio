@@ -7,6 +7,7 @@ import Cert2 from "../assets/cert2.webp";
 import Cert3 from "../assets/cert3.webp";
 import Cert4 from "../assets/cert4.webp";
 import Cert5 from "../assets/cert5.webp";
+import Cert6 from "../assets/cert6.jpg";
 
 const certificates = [
   {
@@ -37,6 +38,12 @@ const certificates = [
     id: 5,
     image: Cert5,
     title: "WordPress Web Development Certification",
+    externalLink: null,
+  },
+  {
+    id: 6,
+    image: Cert6,
+    title: "Application Development and Emerging Technologies",
     externalLink: null,
   },
 ];

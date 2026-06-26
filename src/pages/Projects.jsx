@@ -7,13 +7,14 @@ import Proj1 from "../assets/proj1.png";
 import Proj2 from "../assets/proj2.png";
 import Proj3 from "../assets/proj3.png";
 import Proj4 from "../assets/proj4.webp";
+import Proj5 from "../assets/proj5.png";
 
 const projects = [
   {
     id: 1,
     image: Proj1,
-    title: "eGuide ICCT System",
-    description: "School and requirements guide system",
+    title: "eGuide ICCT",
+    description: "School and documents guide system",
     externalLink: "https://demo-system-g5uf.vercel.app/",
   },
   {
@@ -36,6 +37,13 @@ const projects = [
     title: "GoGreen",
     description: "Eco-friendly travel planner w/ Budget Tracker",
     externalLink: "https://go-green-download-web.vercel.app/",
+  },
+  {
+    id: 5,
+    image: Proj5,
+    title: "eGuide ICCT v2",
+    description: "School and documents guide system",
+    externalLink: "https://e-guide-fullstack-cjdmrk.vercel.app/",
   },
 ];
 
