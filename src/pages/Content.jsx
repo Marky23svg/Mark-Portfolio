@@ -90,7 +90,7 @@ function Content() {
 
                             {/* content */}
                             <div className="ml-12 bg-gray-50 dark:bg-black pl-3 w-full">
-                                <h2 className="font-bold">Cisco CCNA Networking</h2>
+                                <h2 className="font-bold">Cisco Networking Academy</h2>
                                 <p className="text-xs text-gray-700 dark:text-gray-300 font-semibold">Networking fundamentals, routing, switching, and device configuration</p>
                                 <p className="text-xs text-gray-700 dark:text-gray-400">2025</p>
                             </div>

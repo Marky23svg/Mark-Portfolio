@@ -13,7 +13,7 @@ const projects = [
   {
     id: 1,
     image: Proj1,
-    title: "eGuide ICCT",
+    title: "eGuide ICCT Mini Capstone Frontend",
     description: "School and documents guide system",
     externalLink: "https://demo-system-g5uf.vercel.app/",
   },
@@ -41,7 +41,7 @@ const projects = [
   {
     id: 5,
     image: Proj5,
-    title: "eGuide ICCT v2",
+    title: "eGuide ICCT Web App",
     description: "School and documents guide system",
     externalLink: "https://e-guide-fullstack-cjdmrk.vercel.app/",
   },
@@ -80,7 +80,7 @@ function Projects() {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="group bg-white dark:bg-black rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer border border-gray-200 dark:border-gray-700"
+            className="group bg-white dark:bg-black rounded-xl overflow-hidden   transition-all duration-300 cursor-pointer border border-gray-200 dark:border-gray-700"
             onClick={() => handleCardClick(project)}
           >
             {/* Image Container - Slightly shorter */}

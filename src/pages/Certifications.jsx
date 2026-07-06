@@ -8,6 +8,7 @@ import Cert3 from "../assets/cert3.webp";
 import Cert4 from "../assets/cert4.webp";
 import Cert5 from "../assets/cert5.webp";
 import Cert6 from "../assets/cert6.jpg";
+import Cert7 from "../assets/cert7.jpg";
 
 const certificates = [
   {
@@ -45,6 +46,12 @@ const certificates = [
     image: Cert6,
     title: "Application Development and Emerging Technologies",
     externalLink: null,
+  },
+  {
+    id: 6,
+    image: Cert7,
+    title: "Application Development and Emerging Technologies",
+    externalLink: "https://www.datacamp.com/certificate/DAA0017604221232",
   },
 ];
 

@@ -14,12 +14,12 @@ function Header() {
 
   return (
     <header className="relative">
-      
+
       {/*<section className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10 py-10 px-5 pb-5 sm:px-60 bg-gray-50 dark:bg-black border-b border-gray-300 dark:border-gray-600">*/}
       <section className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10 py-10 pb-5 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-60 2xl:px-60 bg-gray-50 dark:bg-black border-b border-gray-300 dark:border-gray-600">
-<div className="absolute top-4 right-4 sm:top-11 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-56 2xl:px-60">
-        <ThemeToggle />
-      </div>
+        <div className="absolute top-4 right-4 sm:top-11 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-56 2xl:px-60">
+          <ThemeToggle />
+        </div>
         {/* Image */}
         <img
           src={hovered ? Markwebp : Mark}
@@ -32,14 +32,14 @@ function Header() {
 
         <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
           <div className="flex items-center gap-2">
-          <h2 className="text-2xl sm:text-3xl font-bold">
-            Mark Justin Canuel 
-          </h2>
-          <MdVerified className="h-5 w-5 sm:h-6 sm:w-6 text-blue-500" />
+            <h2 className="text-2xl sm:text-3xl font-bold">
+              Mark Justin Canuel
+            </h2>
+            <MdVerified className="h-5 w-5 sm:h-6 sm:w-6 text-blue-500" />
           </div>
           <h2 className="text-sm sm:text-base font-medium text-gray-700 dark:text-gray-400
           flex items-center gap-1">
-            <GoLocation className="text-gray-700 dark:text-gray-400"/>
+            <GoLocation className="text-gray-700 dark:text-gray-400" />
             Marikina City, Philippines
           </h2>
 
@@ -49,8 +49,8 @@ function Header() {
 
           {/* Buttons */}
 
-           <div className="flex flex-wrap justify-center sm:justify-start gap-3 mt-2 sm">
-            <a href="/Mark_resume.pdf" download="MARK_JUSTIN_CANUEL_Resume.pdf">
+          <div className="flex flex-wrap justify-center sm:justify-start gap-3 mt-2 sm">
+            <a href="/Mark_resumev2.pdf" download="MARK_JUSTIN_CANUEL_Resume.pdf">
               <button className="group px-5 py-2 bg-gradient-to-r from-[#FFD700] to-[#FBBF24] 
       text-gray-100  font-semibold rounded-lg flex items-center gap-2 cursor-pointer
       shadow-[0_0_15px_#FFD700] hover:shadow-[0_0_30px_#FFD700] 
@@ -62,9 +62,10 @@ function Header() {
 
 
             <button
-              onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })}
+              onClick={() => window.location.href = "mailto:markjustincanuel2@gmail.com"}
               className="group px-2 py-2 bg-white border dark:bg-black dark:text-white dark:border-gray-600 border-gray-300 text-black rounded-lg 
-              hover:text-black dark:hover:text-white transition duration-300 flex items-center gap-2 cursor-pointer">
+          hover:text-black dark:hover:text-white transition duration-300 flex items-center gap-2 cursor-pointer"
+            >
               <FaEnvelope className="group-hover:translate-y-1 transition-transform" />
               Send Email
             </button>
