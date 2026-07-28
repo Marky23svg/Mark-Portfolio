@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
+import { useTransition } from "../context/TransitionContext.jsx";
 import Graphic1 from "../assets/graphic1.webp";
 import Graphic2 from "../assets/graphic2.webp";
 import Graphic3 from "../assets/graphic3.webp";
@@ -27,7 +27,7 @@ const posters = [
 ];
 
 export default function GraphicDetails() {
-  const navigate = useNavigate();
+  const { navigateTo } = useTransition();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
@@ -95,7 +95,7 @@ export default function GraphicDetails() {
         </h1>
         <button
           className="bg-gray-50 dark:bg-black dark:hover:bg-white dark:hover:text-black rounded-lg h-8 w-24 text-black dark:text-white cursor-pointer border border-gray-300 dark:border-gray-600 hover:bg-black hover:text-white transition-colors flex items-center justify-center gap-1"
-          onClick={() => navigate("/")}
+          onClick={() => navigateTo("/")}
         >
           <MdKeyboardDoubleArrowLeft />
           Back

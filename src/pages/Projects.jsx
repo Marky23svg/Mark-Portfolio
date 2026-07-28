@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useTransition } from "../context/TransitionContext.jsx";
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
@@ -48,7 +48,7 @@ const projects = [
 ];
 
 function Projects() {
-  const navigate = useNavigate();
+  const { navigateTo } = useTransition();
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleCardClick = (project) => {
@@ -68,7 +68,7 @@ function Projects() {
         </h1>
         <button
           className="bg-gray-50 dark:bg-black dark:hover:bg-white dark:hover:text-black rounded-lg h-8 w-24 text-black dark:text-white cursor-pointer border border-gray-300 dark:border-gray-600 hover:bg-black hover:text-white transition-colors flex items-center justify-center gap-1"
-          onClick={() => navigate("/")}
+          onClick={() => navigateTo("/")}
         >
           <MdKeyboardDoubleArrowLeft />
           Back

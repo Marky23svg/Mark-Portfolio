@@ -1,3 +1,4 @@
+import "../TechCarousel.css";
 import Html from "../assets/html.png";
 import Css from "../assets/css.png";
 import Js from "../assets/js.png";

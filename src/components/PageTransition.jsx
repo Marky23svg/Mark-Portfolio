@@ -48,17 +48,18 @@ function PageTransition({ children }) {
       
       {!hideOverlay && (
         <div 
-          className={`fixed z-50 pointer-events-none transition-transform duration-800 ease-in-out ${
-            isVisible ? 'translate-x-full' : 'translate-x-0'
-          } ${isDarkMode ? 'bg-white' : 'bg-black'}`}
+          className={`fixed z-50 pointer-events-none ${isDarkMode ? 'bg-white' : 'bg-black'}`}
           style={{
-            transform: 'skewX(-45deg) scale(1.5)',
             transformOrigin: 'left center',
             width: isMobile ? '500%' : '250%',
             left: isMobile ? '-80%' : '-30%',
             top: isMobile ? '-600%' : '-200%',
             bottom: isMobile ? '-600%' : '-200%',
-            height: isMobile ? '1300%' : '500%'
+            height: isMobile ? '1300%' : '500%',
+            transition: 'transform 0.3s ease-in-out',
+            transform: isVisible
+              ? 'skewX(-45deg) scale(1.5) translateX(100%)'
+              : 'skewX(-45deg) scale(1.5) translateX(0%)'
           }}
         />
       )}

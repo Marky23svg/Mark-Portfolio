@@ -7,7 +7,7 @@ import Cert1 from "../assets/cert1.webp";
 import Cert2 from "../assets/cert2.webp";
 import Cert3 from "../assets/cert3.webp";
 import Cert4 from "../assets/cert4.webp";
-import { useNavigate } from "react-router-dom"; //Image hover
+import { useTransition } from "../context/TransitionContext.jsx"; //Image hover
 import { FaFacebook, FaInstagram, FaGithub, FaEnvelope, FaPhone, FaLinkedin } from "react-icons/fa6";
 import { useState } from "react";
 import { createPortal } from "react-dom";
@@ -15,7 +15,7 @@ import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 
 function Content() {
-    const navigate = useNavigate(); //For button
+    const { navigateTo } = useTransition(); //For button
     const [showModal, setShowModal] = useState(false);
 
 
@@ -194,7 +194,7 @@ function Content() {
                     <div className="flex justify-center px-8">
                         <button
                             className="bg-gray-50 dark:bg-black dark:hover:bg-white dark:hover:text-black rounded-lg h-8 w-24 text-black dark:text-white cursor-pointer border border-gray-300 dark:border-gray-600 hover:bg-black hover:text-white transition-colors flex items-center justify-center gap-1"
-                            onClick={() => navigate("/graphic-design-details")}
+                            onClick={() => navigateTo("/graphic-design-details")}
                         >
                             View
                             <MdKeyboardDoubleArrowRight />
@@ -206,7 +206,7 @@ function Content() {
                         <h1 className="text-black dark:text-white text-xl font-bold px-5 p-4">Projects</h1>
                         <button
                             className="bg-gray-50 dark:bg-black dark:hover:bg-white dark:hover:text-black rounded-lg h-8 w-24 text-black dark:text-white cursor-pointer border border-gray-300 dark:border-gray-600 hover:bg-black hover:text-white transition-colors flex items-center justify-center gap-1"
-                            onClick={() => navigate("/projects")}
+                            onClick={() => navigateTo("/projects")}
                         >
                             View
                             <MdKeyboardDoubleArrowRight />
@@ -252,7 +252,7 @@ function Content() {
                         <h1 className="text-black dark:text-white text-xl font-bold">Certifications</h1>
                         <button
                             className="bg-gray-50 dark:bg-black dark:hover:bg-white dark:hover:text-black rounded-lg h-8 w-24 text-black dark:text-white cursor-pointer border border-gray-300 dark:border-gray-600 hover:bg-black hover:text-white transition-colors flex items-center justify-center gap-1"
-                            onClick={() => navigate("/certifications")}
+                            onClick={() => navigateTo("/certifications")}
                         >
                             View
                             <MdKeyboardDoubleArrowRight />

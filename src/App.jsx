@@ -8,24 +8,28 @@ import Projects from "./pages/Projects.jsx";
 import Chatbot from './components/Chatbot.jsx';
 import Preloader from "./components/Preloader";
 import PageTransition from "./components/PageTransition";
+import Theme2 from "./pages/Theme2.jsx";
+import { TransitionProvider } from "./context/TransitionContext.jsx";
 
 function App() {
   return (
     <Preloader>
       <Router>
-        <Chatbot />
-        <Routes>
-          <Route path="/" element={
-            <PageTransition>
-              <Header />
-              <Content />
-              
-            </PageTransition>
-          } />
-          <Route path="/graphic-design-details" element={<GraphicDetails />} />
-          <Route path="/certifications" element={<Certifications />} />
-          <Route path="/projects" element={<Projects />} />
-        </Routes>
+        <TransitionProvider>
+          <Chatbot />
+          <Routes>
+            <Route path="/" element={
+              <PageTransition>
+                <Header />
+                <Content />
+              </PageTransition>
+            } />
+            <Route path="/graphic-design-details" element={<PageTransition><GraphicDetails /></PageTransition>} />
+            <Route path="/certifications" element={<PageTransition><Certifications /></PageTransition>} />
+            <Route path="/projects" element={<PageTransition><Projects /></PageTransition>} />
+            <Route path="/v2" element={<PageTransition><Theme2 /></PageTransition>} />
+          </Routes>
+        </TransitionProvider>
       </Router>
     </Preloader>
   );

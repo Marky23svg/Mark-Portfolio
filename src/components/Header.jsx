@@ -3,22 +3,29 @@ import { FaDownload, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { GoLocation } from "react-icons/go";
 import { MdVerified } from "react-icons/md";
 import { IoMdDownload } from "react-icons/io";
-
+import { useTransition } from '../context/TransitionContext.jsx';
 import Mark from '../assets/Markpfp3.webp';
 import MarkHover from '../assets/MarkpfpHover.webp';
 import Markwebp from '../assets/Markwebp.webp'; // <-- new image
 import ThemeToggle from './ThemeToggle.jsx';
+import { PiUserSwitchFill } from "react-icons/pi";
 
 function Header() {
   const [hovered, setHovered] = useState(false); // state to track hover
+  const { navigateTo } = useTransition();
 
   return (
     <header className="relative">
 
       {/*<section className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10 py-10 px-5 pb-5 sm:px-60 bg-gray-50 dark:bg-black border-b border-gray-300 dark:border-gray-600">*/}
       <section className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10 py-10 pb-5 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-60 2xl:px-60 bg-gray-50 dark:bg-black border-b border-gray-300 dark:border-gray-600">
-        <div className="absolute top-4 right-4 sm:top-11 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-56 2xl:px-60">
+        <div className="absolute top-4 right-4 sm:top-11 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-56 2xl:px-60 flex flex-row flex-nowrap items-center gap-2">
           <ThemeToggle />
+          <button
+          
+             className="bg-gray-200 dark:bg-neutral-800 dark:hover:bg-white dark:hover:text-black rounded-full h-8 w-8 text-black dark:text-white cursor-pointer border border-gray-300 dark:border-gray-600 hover:bg-black hover:text-white transition-colors flex items-center justify-center gap-1"
+              onClick={() => navigateTo("/v2")}
+                        ><PiUserSwitchFill className="h-6 w-6" /></button>
         </div>
         {/* Image */}
         <img

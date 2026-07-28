@@ -3,6 +3,12 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* ================================
+   FONT IMPORTS
+================================ */
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ================================
    COLOR THEME VARIABLES
 ================================ */
 
@@ -38,7 +44,13 @@
   body {
     background-color: rgb(var(--bg-page));
     color: rgb(var(--text-main));
+    font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     @apply transition-colors duration-300;
+  }
+
+  /* Montserrat font class - only for Theme2 */
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
   }
 }
 
@@ -109,4 +121,3 @@
     transform: translateX(-50%);
   }
 }
-
