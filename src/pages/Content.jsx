@@ -28,7 +28,7 @@ function Content() {
                 <div className="bg-gray-50 dark:bg-black rounded-xl sm:border border-gray-300 dark:border-gray-600 shadow-black/20 min-h-[50px] sm:min-h-[50px] col-span-2 sm:pb-1 pb-5">
                     <h1 className="text-black dark:text-white text-xl font-bold px-5 p-4">About Me</h1>
                     <p className="text-black dark:text-gray-300 px-5 text-justify text-sm font-normal">
-                        I am <b>Mark Justin Canuel</b>, an aspiring <b>Software Engineer</b> and a 3rd year Bachelor of Science in Information Technology student.
+                        I am <b>Mark Justin Canuel</b>, an aspiring <b>Software Engineer</b> and a 4th year Bachelor of Science in Information Technology student.
                         I specialize in frontend development, building clean, responsive, and user-friendly interfaces, while also exploring backend technologies
                         to understand full-stack integration. Through my experience as a capstone project leader and collaborating with various groups, I have developed
                         strong leadership, communication, and teamwork skills. I actively join hackathons and IT events to challenge myself, learn new technologies,

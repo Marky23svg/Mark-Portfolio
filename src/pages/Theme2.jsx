@@ -10,8 +10,12 @@ import ProfileImg from "../assets/Markpfp3.webp";
 import V2bglight from "../assets/v2bglight.jpeg";
 import V2bgdark from "../assets/v2bgdark.jpeg";
 import V2mark from "../assets/v2mark.jpg";
-import TechCarousel from "../components/TechCarousel";
+import V2gif from "../assets/v2gif.gif";
+import V2markdp from "../assets/v2markdp.jpeg";
 import GraphicCarousel from "../components/GraphicCarousel";
+import TechCarousel from "../components/TechCarousel";
+import MacBookProMockup from "../components/MacBookProMockup";
+import IPhone17ProMaxMockup from "../components/IPhone17ProMaxMockup";
 import Proj1 from "../assets/proj1.png";
 import Proj2 from "../assets/proj2.png";
 import Proj3 from "../assets/proj3.png";
@@ -25,23 +29,24 @@ import Cert5 from "../assets/cert5.webp";
 import Cert6 from "../assets/cert6.jpg";
 import Cert7 from "../assets/cert7.jpg";
 
+
 const projects = [
-  { id: 1, image: Proj1, title: "eGuide ICCT Mini Capstone Frontend", description: "School and documents guide system", link: "https://demo-system-g5uf.vercel.app/" },
-  { id: 2, image: Proj2, title: "Travel Booking Website", description: "Booking website frontend", link: "https://destination-website-five.vercel.app/" },
-  { id: 3, image: Proj3, title: "WattsUp", description: "EV Charging Station Locator", link: "https://watts-up-vert.vercel.app/" },
-  { id: 4, image: Proj4, title: "GoGreen", description: "Eco-friendly travel planner w/ Budget Tracker", link: "https://go-green-download-web.vercel.app/" },
-  { id: 5, image: Proj5, title: "eGuide ICCT Web App", description: "School and documents guide system", link: "https://e-guide-fullstack-cjdmrk.vercel.app/" },
+    { id: 1, image: Proj1, title: "eGuide ICCT Mini Capstone Frontend", description: "School and documents guide system", link: "https://demo-system-g5uf.vercel.app/" },
+    { id: 2, image: Proj2, title: "Travel Booking Website", description: "Booking website frontend", link: "https://destination-website-five.vercel.app/" },
+    { id: 3, image: Proj3, title: "WattsUp", description: "EV Charging Station Locator", link: "https://watts-up-vert.vercel.app/" },
+    { id: 4, image: Proj4, title: "GoGreen", description: "Eco-friendly travel planner w/ Budget Tracker", link: "https://go-green-download-web.vercel.app/" },
+    { id: 5, image: Proj5, title: "eGuide ICCT Web App", description: "School and documents guide system", link: "https://e-guide-fullstack-cjdmrk.vercel.app/" },
 ];
 
 
 const certificates = [
-  { id: 1, image: Cert1, title: "DevKada 2026 Hackathon", link: null },
-  { id: 2, image: Cert2, title: "Vibe Coders Certification", link: "https://www.vibecoders.ph/cert/GAI2Z26-611B" },
-  { id: 3, image: Cert3, title: "Udacity Nanodegree", link: "https://www.udacity.com/certificate/e/a42076a6-2c2c-11f1-a4ec-47040fbe9c58" },
-  { id: 4, image: Cert4, title: "Freecodecamp Responsive Web Design", link: null },
-  { id: 5, image: Cert5, title: "WordPress Web Development Certification", link: null },
-  { id: 6, image: Cert6, title: "Application Development and Emerging Technologies", link: null },
-  { id: 7, image: Cert7, title: "DataCamp Certification", link: "https://www.datacamp.com/certificate/DAA0017604221232" },
+    { id: 1, image: Cert1, title: "DevKada 2026 Hackathon", link: null },
+    { id: 2, image: Cert2, title: "Gen AI to Z Certification", link: "https://www.vibecoders.ph/cert/GAI2Z26-611B" },
+    { id: 3, image: Cert3, title: "Udacity AWS AI Practitioner", link: "https://www.udacity.com/certificate/e/a42076a6-2c2c-11f1-a4ec-47040fbe9c58" },
+    { id: 4, image: Cert4, title: "Freecodecamp Responsive Web Design", link: null },
+    { id: 5, image: Cert5, title: "WordPress Web Development Certification", link: null },
+    { id: 6, image: Cert6, title: "Application Development and Emerging Technologies", link: null },
+    { id: 7, image: Cert7, title: "DataCamp Associate Data Analyst Certification", link: "https://www.datacamp.com/certificate/DAA0017604221232" },
 ];
 
 function Theme2() {
@@ -49,6 +54,7 @@ function Theme2() {
     const [isDarkMode, setIsDarkMode] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
     const [menuOpen, setMenuOpen] = useState(false);
+    const [hovered, setHovered] = useState(false);
 
     const scrollTo = (id) => {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -184,16 +190,15 @@ function Theme2() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-start">
 
                             {/* Left - Image */}
-                            <div className="flex justify-center mt-4 sm:mb-0 mb-8">
-                                <div className="relative md:ml-20">
-                                    <div className="absolute -inset-4 bg-gradient-to-r from-amber-500 to-neutral-900 border-2 border-gray-300 rounded-4xl blur-xl opacity-90" />
-                                    <div className="absolute -inset-4 bg-gradient-to-r from-amber-400 to-neutral-900 border-neutral-400 dark:border-neutral-600 rounded-4xl blur-x opacity-" />
-                                    <img
-                                        src={V2mark}
-                                        alt="Mark Justin Canuel"
-                                        className="relative w-64 sm:w-80 h-auto md:h-110 md:w-80 object-cover rounded-2xl shadow-2xl "
-                                    />
-                                </div>
+                            <div
+                                className="flex justify-center mt- sm:mb-0 mb-8 "
+                                onMouseEnter={() => setHovered(true)}
+                                onMouseLeave={() => setHovered(false)}
+                            >
+                                <IPhone17ProMaxMockup
+                                    src={hovered ? V2gif : V2markdp}
+                                    title="Mark Justin Canuel"
+                                />
                             </div>
 
                             {/* Right - About Me Text */}
@@ -209,16 +214,16 @@ function Theme2() {
 
                                 <div className="grid grid-cols-3 gap-4 mt-1">
                                     <div className="bg-white/40 dark:bg-neutral-900 backdrop-blur-sm rounded-4xl border border-gray-300 dark:border-neutral-600 p-4 text-center">
-                                        <h3 className="text-2xl font-bold text-black dark:text-white">3+</h3>
-                                        <p className="text-sm text-neutral-500 dark:text-white/60">Years Experience</p>
+                                        <h3 className="text-lg sm:text-2xl font-bold text-black dark:text-white">3+</h3>
+                                        <p className="text-[12px] sm:text-sm text-neutral-500 dark:text-white/60">Years Experience</p>
                                     </div>
                                     <div className="bg-white/40 dark:bg-neutral-900 backdrop-blur-sm rounded-4xl border border-gray-300 dark:border-neutral-600 p-4 text-center">
-                                        <h3 className="text-2xl font-bold text-black dark:text-white">Focus</h3>
-                                        <p className="text-sm text-neutral-500 dark:text-white/60">Design & Code</p>
+                                        <h3 className="text-lg sm:text-2xl font-bold text-black dark:text-white">Focus</h3>
+                                        <p className="text-[12px] sm:text-sm text-neutral-500 dark:text-white/60">Design & Code</p>
                                     </div>
                                     <div className="bg-white/40 dark:bg-neutral-900 backdrop-blur-sm rounded-4xl border border-gray-300 dark:border-neutral-600 p-4 text-center">
-                                        <h3 className="text-2xl font-bold text-black dark:text-white">Location</h3>
-                                        <p className="text-sm text-neutral-500 dark:text-white/60">Marikina City</p>
+                                        <h3 className="text-lg sm:text-2xl font-bold text-black dark:text-white">Location</h3>
+                                        <p className="text-[12px] sm:text-sm text-neutral-500 dark:text-white/60">Marikina City</p>
                                     </div>
                                 </div>
 
@@ -244,39 +249,63 @@ function Theme2() {
                 <TechCarousel />
             </div>
 
+            {/* Projects Section */}
             <section id="projects" className="relative z-10 py-12 px-4 sm:px-6 bg-white dark:bg-black/80 backdrop-blur-sm">
-                <h2 className="text-3xl sm:text-4xl font-bold text-center text-black dark:text-white font-montserrat mb-8">
-                    Projects
-                </h2>
-                <div className="max-w-6xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {projects.map((project) => (
-                            <div
-                                key={project.id}
-                                className="group bg-white/40 dark:bg-neutral-900 backdrop-blur-md border border-gray-300 dark:border-neutral-600 rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
-                                onClick={() => window.open(project.link, "_blank")}
-                            >
-                                <div className="relative overflow-hidden h-48">
-                                    <img
-                                        src={project.image}
-                                        alt={project.title}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                    />
-                                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                        <span className="text-white text-sm font-medium flex items-center gap-2">
-                                            View Project <FaExternalLinkAlt className="w-3 h-3" />
-                                        </span>
-                                    </div>
-                                </div>
-                                <div className="p-5">
-                                    <h3 className="text-black dark:text-white font-semibold text-base mb-1">{project.title}</h3>
-                                    <p className="text-neutral-500 dark:text-white/60 text-xs">{project.description}</p>
-                                </div>
-                            </div>
-                        ))}
+    <h2 className="text-3xl sm:text-4xl font-bold text-center text-black dark:text-white font-montserrat mb-12">
+        Projects
+    </h2>
+
+    <div className="max-w-6xl mx-auto flex flex-col gap-20">
+        {projects.map((project, index) => (
+            <div key={project.id} className="flex flex-col gap-6">
+                {/* Project row */}
+                <div
+                    className={`flex flex-col items-center gap-8 cursor-pointer ${
+                        index % 2 === 0
+                            ? 'lg:flex-row'
+                            : 'lg:flex-row-reverse'
+                    } group transition-all duration-300 hover:scale-[1.01]`}
+                    onClick={() => window.open(project.link, "_blank")}
+                >
+                    {/* MacBook Mockup */}
+                    <div className={`w-full lg:w-3/5 ${
+                        index % 2 === 0 ? 'lg:pr-4' : 'lg:pl-4'
+                    }`}>
+                        <MacBookProMockup src={project.image} title={project.title} />
+                    </div>
+
+                    {/* Info */}
+                    <div className={`w-full lg:w-2/5 ${
+                        index % 2 === 0 
+                            ? 'lg:text-left lg:pr-8' 
+                            : 'lg:text-right lg:pl-8'
+                    }`}>
+                        <h3 className={`text-xl sm:text-2xl font-base text-black dark:text-white flex items-center gap-2 transition-colors group-hover:text-amber-400 ${
+                            index % 2 === 0 
+                                ? 'justify-start' 
+                                : 'justify-end'
+                        }`}>
+                            {project.title}
+                            <FaExternalLinkAlt className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                        </h3>
+                        <p className={`text-neutral-600 dark:text-white/60 text-sm sm:text-base font-light mt-2 ${
+                            index % 2 === 0 ? 'text-left' : 'text-right'
+                        }`}>
+                            {project.description}
+                        </p>
+                        <div className={`mt-4 ${
+                            index % 2 === 0 ? 'text-left' : 'text-right'
+                        }`}>
+                            <span className="inline-block px-4 py-1.5 text-xs font-medium border border-neutral-300 dark:border-neutral-600  bg-gray-50 dark:bg-black/10 text-neutral-600 dark:text-gray-400 rounded-full hover:bg-neutral00 dark:hover:bg-neutral-900 transition-colors">
+                                View Project
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        ))}
+    </div>
+</section>
 
             {/* Certifications Section */}
             <section id="certifications" className="relative z-10 py-12 px-4 sm:px-6 bg-gray-50 dark:bg-black backdrop-blur-sm">
@@ -349,7 +378,7 @@ function Theme2() {
                         </div>
                         <div>
                             <p className="text-xs text-neutral-500 dark:text-white/50">LinkedIn</p>
-                            <p className="text-black dark:text-white font-medium">mark-justin-canuel</p>
+                            <p className="text-black dark:text-white font-medium">Mark Justin Canuel</p>
                         </div>
                     </a>
                     {/* GitHub */}

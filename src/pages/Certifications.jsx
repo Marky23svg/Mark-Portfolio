@@ -20,13 +20,13 @@ const certificates = [
   {
     id: 2,
     image: Cert2,
-    title: "Vibe Coders Certification",
+    title: "Gen AI to Z Certification",
     externalLink: "https://www.vibecoders.ph/cert/GAI2Z26-611B",
   },
   {
     id: 3,
     image: Cert3,
-    title: "Udacity Nanodegree",
+    title: "Udacity AWS AI Practitioner",
     externalLink: "https://www.udacity.com/certificate/e/a42076a6-2c2c-11f1-a4ec-47040fbe9c58",
   },
   {
