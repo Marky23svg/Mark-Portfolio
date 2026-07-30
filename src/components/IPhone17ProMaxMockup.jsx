@@ -6,7 +6,7 @@ function IPhone17ProMaxMockup({ src, children, className = "", title = "iPhone S
       <div className="relative rounded-[40px] border border-neutral-600 overflow-hidden" style={{
         background: 'linear-gradient(145deg, #3a3a3c 0%, #2a2a2c 30%, #1a1a1c 60%, #111113 100%)',
         padding: '3px',
-        boxShadow: '0 0 0 1px rgba(255,255,255,0.08), 0 30px 80px rgba(0,0,0,0.5), 0 10px 30px rgba(0,0,0,0.5)',
+        boxShadow: '0 0 0 1px rgba(255,255,255,0.08), 0 30px 80px rgba(0,0,0,0.5), 0 10px 30px rgba(0,0,0,0.4)',
       }}>
 
         {/* Frame edge reflection top */}
@@ -98,7 +98,7 @@ function IPhone17ProMaxMockup({ src, children, className = "", title = "iPhone S
       </div>
 
       {/* Ground shadow */}
-      <div className="w-3/4 h-4 mx-auto blur-2xl rounded-full mt-2" style={{ background: 'radial-gradient(ellipse, rgba(0,0,0,0.6) 0%, transparent 70%)' }} />
+      <div className="w-3/4 h-5 mx-auto blur-xl rounded-full mt-2" style={{ background: 'radial-gradient(ellipse, rgba(0,0,0,0.6) 0%, transparent 10%)' }} />
     </div>
   );
 }

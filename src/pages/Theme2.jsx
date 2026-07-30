@@ -7,8 +7,8 @@ import { MdVerified } from "react-icons/md";
 import { useTransition } from "../context/TransitionContext.jsx";
 import ThemeToggle from "../components/ThemeToggle";
 import ProfileImg from "../assets/Markpfp3.webp";
-import V2bglight from "../assets/v2bglight.jpeg";
-import V2bgdark from "../assets/v2bgdark.jpeg";
+import V2bglight from "../assets/v2bglight4k.jpeg";
+import V2bgdark from "../assets/v2bgdark4k.jpeg";
 import V2mark from "../assets/v2mark.jpg";
 import V2gif from "../assets/v2gif.gif";
 import V2markdp from "../assets/v2markdp.jpeg";
@@ -94,15 +94,15 @@ function Theme2() {
                 <div className="absolute bottom-20 right-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl z-0" />
 
                 {/* Navigation */}
-                <nav className="relative z-20 flex justify-between bg-white/80 dark:bg-black/10 border-b border-gray-300 dark:border-neutral-700 backdrop-blur-md items-center px-6 md:px-12 py-4">
+                <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between bg-white/80 dark:bg-black/10 border-b border-gray-300 dark:border-neutral-700 backdrop-blur-md items-center px-6 md:px-12 py-4">
                     <img src={isDarkMode ? "/mjv2dark.png" : "/mjv2light.png"} alt="Logo" className="h-10 w-auto" />
 
                     {/* Desktop nav links */}
                     <ul className="hidden md:flex gap-8">
-                        <li><button onClick={() => scrollTo('about')} className="text-black dark:text-white transition hover:opacity-70 cursor-pointer">About Me</button></li>
-                        <li><button onClick={() => scrollTo('projects')} className="text-black dark:text-white transition hover:opacity-70 cursor-pointer">Projects</button></li>
-                        <li><button onClick={() => scrollTo('certifications')} className="text-black dark:text-white transition hover:opacity-70 cursor-pointer">Certificates</button></li>
-                        <li><button onClick={() => scrollTo('contact')} className="text-black dark:text-white transition hover:opacity-70 cursor-pointer">Contact</button></li>
+                        <li><button onClick={() => scrollTo('about')} className="text-black font-thin dark:text-white transition hover:opacity-70 cursor-pointer">About Me</button></li>
+                        <li><button onClick={() => scrollTo('projects')} className="text-black font-thin dark:text-white transition hover:opacity-70 cursor-pointer">Projects</button></li>
+                        <li><button onClick={() => scrollTo('certifications')} className="text-black font-thin dark:text-white transition hover:opacity-70 cursor-pointer">Certificates</button></li>
+                        <li><button onClick={() => scrollTo('contact')} className="text-black font-thin dark:text-white transition hover:opacity-70 cursor-pointer">Contact</button></li>
                     </ul>
 
                     {/* Desktop controls */}
@@ -182,7 +182,7 @@ function Theme2() {
 
             {/* About Me Section */}
             <section id="about" className="relative z-10 py-12 px-4 sm:px-6 bg-white dark:bg-black/80 backdrop-blur-sm">
-                <h2 className="text-3xl sm:text-4xl font-bold text-center text-black dark:text-white font-montserrat mb-6">
+                <h2 className="text-3xl sm:text-4xl font-light text-center font-montserrat text-black dark:text-white font-montserrat mb-6">
                     About Me
                 </h2>
                 <div className="max-w-9xl mx-auto">
@@ -251,65 +251,62 @@ function Theme2() {
 
             {/* Projects Section */}
             <section id="projects" className="relative z-10 py-12 px-4 sm:px-6 bg-white dark:bg-black/80 backdrop-blur-sm">
-    <h2 className="text-3xl sm:text-4xl font-bold text-center text-black dark:text-white font-montserrat mb-12">
-        Projects
-    </h2>
+                <h2 className="text-3xl sm:text-4xl font-light text-center text-black dark:text-white font-montserrat mb-12">
+                    Projects
+                </h2>
 
-    <div className="max-w-6xl mx-auto flex flex-col gap-20">
-        {projects.map((project, index) => (
-            <div key={project.id} className="flex flex-col gap-6">
-                {/* Project row */}
-                <div
-                    className={`flex flex-col items-center gap-8 cursor-pointer ${
-                        index % 2 === 0
-                            ? 'lg:flex-row'
-                            : 'lg:flex-row-reverse'
-                    } group transition-all duration-300 hover:scale-[1.01]`}
-                    onClick={() => window.open(project.link, "_blank")}
-                >
-                    {/* MacBook Mockup */}
-                    <div className={`w-full lg:w-3/5 ${
-                        index % 2 === 0 ? 'lg:pr-4' : 'lg:pl-4'
-                    }`}>
-                        <MacBookProMockup src={project.image} title={project.title} />
-                    </div>
-
-                    {/* Info */}
-                    <div className={`w-full lg:w-2/5 ${
-                        index % 2 === 0 
-                            ? 'lg:text-left lg:pr-8' 
-                            : 'lg:text-right lg:pl-8'
-                    }`}>
-                        <h3 className={`text-xl sm:text-2xl font-base text-black dark:text-white flex items-center gap-2 transition-colors group-hover:text-amber-400 ${
-                            index % 2 === 0 
-                                ? 'justify-start' 
-                                : 'justify-end'
-                        }`}>
-                            {project.title}
-                            <FaExternalLinkAlt className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-opacity flex-shrink-0" />
-                        </h3>
-                        <p className={`text-neutral-600 dark:text-white/60 text-sm sm:text-base font-light mt-2 ${
-                            index % 2 === 0 ? 'text-left' : 'text-right'
-                        }`}>
-                            {project.description}
-                        </p>
-                        <div className={`mt-4 ${
-                            index % 2 === 0 ? 'text-left' : 'text-right'
-                        }`}>
-                            <span className="inline-block px-4 py-1.5 text-xs font-medium border border-neutral-300 dark:border-neutral-600  bg-gray-50 dark:bg-black/10 text-neutral-600 dark:text-gray-400 rounded-full hover:bg-neutral00 dark:hover:bg-neutral-900 transition-colors">
-                                View Project
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        ))}
+                <div className="max-w-6xl mx-auto flex flex-col gap-20">
+                    {projects.map((project, index) => (
+                        <div key={project.id} className="flex flex-col gap-6">
+                            {/* Project row */}
+                            <div
+                                className={`flex flex-col items-center gap-8 cursor-pointer ${index % 2 === 0
+                                        ? 'lg:flex-row'
+                                        : 'lg:flex-row-reverse'
+                                    } group transition-all duration-300 hover:scale-[1.01]`}
+                                onClick={() => window.open(project.link, "_blank")}
+                            >
+                                {/* MacBook Mockup */}
+                                <div className={`w-full mx-auto ${
+    index % 2 === 0 ? 'lg:pr-4' : 'lg:pl-4'
+}`}>
+    <div className="transform scale-75 sm:scale-90 md:scale-95 lg:scale-100 origin-center">
+        <MacBookProMockup src={project.image} title={project.title} />
     </div>
-</section>
+</div>
+
+                                {/* Info */}
+                                <div className={`w-full lg:w-2/5 ${index % 2 === 0
+                                        ? 'lg:text-left sm:text-center md:text-center lg:pr-8'
+                                        : 'lg:text-right sm:text-center md:text-center lg:pl-8'
+                                    }`}>
+                                    <h3 className={`text-xl sm:text-2xl font-base text-black dark:text-white flex items-center gap-2 transition-colors group-hover:text-amber-400 ${index % 2 === 0
+                                            ? 'justify-start'
+                                            : 'justify-end'
+                                        }`}>
+                                        {project.title}
+                                        <FaExternalLinkAlt className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                                    </h3>
+                                    <p className={`text-neutral-600 dark:text-white/60 text-sm sm:text-base font-light mt-2 ${index % 2 === 0 ? 'text-left' : 'text-right'
+                                        }`}>
+                                        {project.description}
+                                    </p>
+                                    <div className={`mt-4 ${index % 2 === 0 ? 'text-left' : 'text-right'
+                                        }`}>
+                                        <span className="inline-block px-4 py-1.5 text-xs font-medium border border-neutral-300 dark:border-neutral-600  bg-gray-50 dark:bg-black/10 text-neutral-600 dark:text-gray-400 rounded-full hover:bg-neutral00 dark:hover:bg-neutral-900 transition-colors">
+                                            View Project
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
 
             {/* Certifications Section */}
             <section id="certifications" className="relative z-10 py-12 px-4 sm:px-6 bg-gray-50 dark:bg-black backdrop-blur-sm">
-                <h2 className="text-3xl sm:text-4xl font-bold text-center text-black dark:text-white font-montserrat mb-8">
+                <h2 className="text-3xl sm:text-4xl font-light text-center text-black dark:text-white font-montserrat mb-8">
                     Certifications
                 </h2>
                 <div className="max-w-6xl mx-auto">
@@ -347,7 +344,7 @@ function Theme2() {
 
             {/* Graphic Design Section */}
             <section id="graphic" className="relative z-10 py-12 px-4 sm:px-6 bg-white dark:bg-black/80 backdrop-blur-sm">
-                <h2 className="text-3xl sm:text-4xl font-bold text-center text-black dark:text-white font-montserrat mb-2">
+                <h2 className="text-3xl sm:text-4xl font-light text-center text-black dark:text-white font-montserrat mb-2">
                     Graphic Design
                 </h2>
                 <p className="text-center text-neutral-500 dark:text-white/50 text-sm mb-8">A collection of my Photoshop works</p>
@@ -358,7 +355,7 @@ function Theme2() {
 
             {/* Contact Section */}
             <section id="contact" className="relative z-10 py-16 px-4 sm:px-6 bg-gray-50 dark:bg-black backdrop-blur-sm">
-                <h2 className="text-3xl sm:text-4xl font-bold text-center text-black dark:text-white font-montserrat mb-2">Contact</h2>
+                <h2 className="text-3xl sm:text-4xl font-light text-center text-black dark:text-white font-montserrat mb-2">Contact</h2>
                 <p className="text-center text-neutral-500 dark:text-white/50 text-sm mb-10">Feel free to reach out!</p>
                 <div className="max-w-2xl mx-auto flex flex-col gap-4">
                     {/* Email */}
