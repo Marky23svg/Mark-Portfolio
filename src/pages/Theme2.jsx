@@ -7,8 +7,8 @@ import { MdVerified } from "react-icons/md";
 import { useTransition } from "../context/TransitionContext.jsx";
 import ThemeToggle from "../components/ThemeToggle";
 import ProfileImg from "../assets/Markpfp3.webp";
-import V2bglight from "../assets/v2bglight4k.jpeg";
-import V2bgdark from "../assets/v2bgdark4k.jpeg";
+import V2bglight from "../assets/v2bglight4k.webp";
+import V2bgdark from "../assets/v2bgdark4k.webp";
 import V2mark from "../assets/v2mark.jpg";
 import V2gif from "../assets/v2gif.gif";
 import V2markdp from "../assets/v2markdp.jpeg";
@@ -305,7 +305,7 @@ function Theme2() {
             </section>
 
             {/* Certifications Section */}
-            <section id="certifications" className="relative z-10 py-12 px-4 sm:px-6 bg-gray-50 dark:bg-black backdrop-blur-sm">
+            <section id="certifications" className="relative z-10 py-12 px-4 sm:px-6 bg-white dark:bg-black backdrop-blur-sm">
                 <h2 className="text-3xl sm:text-4xl font-light text-center text-black dark:text-white font-montserrat mb-8">
                     Certifications
                 </h2>
@@ -326,7 +326,7 @@ function Theme2() {
                                     </div>
                                 </div>
                                 <div className="p-4">
-                                    <h3 className="text-black dark:text-white font-semibold text-sm">{cert.title}</h3>
+                                    <h3 className="text-black dark:text-white text-center font-light text-xs">{cert.title}</h3>
                                 </div>
                             </div>
                         ))}
@@ -354,7 +354,7 @@ function Theme2() {
             </section>
 
             {/* Contact Section */}
-            <section id="contact" className="relative z-10 py-16 px-4 sm:px-6 bg-gray-50 dark:bg-black backdrop-blur-sm">
+            <section id="contact" className="relative z-10 py-16 px-4 sm:px-6 bg-white dark:bg-black backdrop-blur-sm">
                 <h2 className="text-3xl sm:text-4xl font-light text-center text-black dark:text-white font-montserrat mb-2">Contact</h2>
                 <p className="text-center text-neutral-500 dark:text-white/50 text-sm mb-10">Feel free to reach out!</p>
                 <div className="max-w-2xl mx-auto flex flex-col gap-4">
