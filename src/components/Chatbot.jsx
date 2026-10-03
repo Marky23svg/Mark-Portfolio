@@ -4,7 +4,7 @@ import { LuMessageCircle } from "react-icons/lu";
 import { RiSendPlaneFill } from "react-icons/ri";
 import { CgClose } from "react-icons/cg";
 import { FaCircle } from "react-icons/fa";
-import Mark from '../assets/Markpfp3.webp';
+import Mark from '../assets/Markpfp.png';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // ============================================

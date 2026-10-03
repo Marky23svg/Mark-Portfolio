@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin, FaInstagram, FaArrowDown, FaPhone } from "react-icons/fa6";
-import { FaExternalLinkAlt, FaEnvelope } from "react-icons/fa";
+import { FaExternalLinkAlt, FaEnvelope, FaApple } from "react-icons/fa";
 import { PiUserSwitchFill } from "react-icons/pi";
 import { CgClose, CgMenu } from "react-icons/cg";
 import { MdVerified } from "react-icons/md";
@@ -305,34 +305,137 @@ function Theme2() {
             </section>
 
             {/* Certifications Section */}
-            <section id="certifications" className="relative z-10 py-12 px-4 sm:px-6 bg-white dark:bg-black backdrop-blur-sm">
-                <h2 className="text-3xl sm:text-4xl font-light text-center text-black dark:text-white font-montserrat mb-8">
-                    Certifications
-                </h2>
-                <div className="max-w-6xl mx-auto">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {certificates.map((cert) => (
-                            <div
-                                key={cert.id}
-                                className="group bg-white/40 dark:bg-neutral-900 backdrop-blur-md border border-gray-300 dark:border-neutral-600 rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
-                                onClick={() => cert.link ? window.open(cert.link, "_blank") : setSelectedImage(cert.image)}
-                            >
-                                <div className="relative overflow-hidden h-40">
-                                    <img src={cert.image} alt={cert.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                        <span className="text-white text-sm font-medium flex items-center gap-2">
-                                            {cert.link ? <>View Certificate <FaExternalLinkAlt className="w-3 h-3" /></> : "Preview"}
-                                        </span>
-                                    </div>
-                                </div>
-                                <div className="p-4">
-                                    <h3 className="text-black dark:text-white text-center font-light text-xs">{cert.title}</h3>
-                                </div>
-                            </div>
-                        ))}
+            
+{/* Certifications Section */}
+<section
+    id="certifications"
+    className="relative z-10 py-16 px-4 sm:px-6 bg-white dark:bg-black"
+>
+    <h2 className="text-3xl sm:text-4xl font-light text-center text-black dark:text-white font-montserrat mb-3">
+        Certifications
+    </h2>
+
+    <p className="text-center text-sm text-neutral-500 dark:text-white/50 mb-10">
+        Credentials, learning milestones, and achievements
+    </p>
+
+    <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {certificates.map((cert) => (
+                <div
+                    key={cert.id}
+                    onClick={() =>
+                        cert.link
+                            ? window.open(cert.link, "_blank", "noopener,noreferrer")
+                            : setSelectedImage(cert.image)
+                    }
+                    className="
+                        group relative isolate overflow-hidden cursor-pointer
+                        rounded-[28px]
+                        border border-gray-200 dark:border-white/[0.12]
+                        bg-white/50 dark:bg-white/[0.045]
+                        backdrop-blur-2xl
+                        shadow-[0_8px_30px_rgba(0,0,0,0.04)]
+                        dark:shadow-[0_8px_30px_rgba(0,0,0,0.18)]
+                        transition-all duration-500 ease-out
+                        hover:-translate-y-1.5
+                        hover:bg-white/75 dark:hover:bg-white/[0.075]
+                        hover:border-white dark:hover:border-white/20
+                        hover:shadow-[0_18px_45px_rgba(0,0,0,0.10)]
+                        dark:hover:shadow-[0_18px_45px_rgba(0,0,0,0.35)]
+                    "
+                >
+                    {/* Subtle glass highlight */}
+                    <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white dark:via-white/40 to-transparent z-10 pointer-events-none" />
+
+                    {/* Certificate image */}
+                    <div className="relative m-2.5 mb-0 overflow-hidden rounded-[21px] aspect-[4/3] bg-neutral-100 dark:bg-neutral-800">
+                        <img
+                            src={cert.image}
+                            alt={cert.title}
+                            loading="lazy"
+                            className="
+                                w-full h-full object-cover
+                                transition-transform duration-700 ease-out
+                                group-hover:scale-[1.06]
+                            "
+                        />
+
+                        {/* Image overlay */}
+                        <div className="
+                            absolute inset-0
+                            bg-gradient-to-t from-black/60 via-black/5 to-transparent
+                            opacity-70 group-hover:opacity-100
+                            transition-opacity duration-300
+                        " />
+
+                        {/* Preview action */}
+                        <div className="
+                            absolute bottom-3 right-3
+                            flex items-center gap-1.5
+                            rounded-full px-3 py-1.5
+                            bg-white/20 backdrop-blur-xl
+                            border border-white/30
+                            text-white text-[11px] font-medium
+                            shadow-lg
+                            transition-all duration-300
+                            group-hover:bg-white/30
+                        ">
+                            {cert.link ? (
+                                <>
+                                    View Certificate
+                                    <FaExternalLinkAlt className="w-2.5 h-2.5" />
+                                </>
+                            ) : (
+                                <>
+                                    Preview
+                                    <span className="text-xs">↗</span>
+                                </>
+                            )}
+                        </div>
                     </div>
+
+                    {/* Card information */}
+                    <div className="relative px-4 pt-4 pb-5">
+                        <div className="flex items-start gap-3">
+                            {/* Certificate icon */}
+                            <div className="
+                                flex-shrink-0 flex items-center justify-center
+                                w-8 h-8 rounded-xl
+                                bg-black/[0.04] dark:bg-white/[0.08]
+                                border border-black/[0.04] dark:border-white/[0.06]
+                            ">
+                                <FaApple className="h-[15px] text-neutral-500 dark:text-white/70 -mt-0.5" />
+                            </div>
+
+                            <div className="min-w-0 flex-1">
+                                <h3 className="
+                                    text-xs font-medium leading-snug
+                                    text-neutral-900 dark:text-white/90
+                                    transition-colors duration-300
+                                    group-hover:text-black dark:group-hover:text-white
+                                ">
+                                    {cert.title}
+                                </h3>
+
+                                <p className="mt-1.5 -mb-2 text-[11px] text-neutral-500 dark:text-white/45">
+                                    Certificate of achievement
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Bottom glass accent */}
+                    <div className="
+                        absolute bottom-0 left-6 right-6 h-px
+                        bg-gradient-to-r from-transparent via-black/[0.06] dark:via-white/[0.12] to-transparent
+                        pointer-events-none
+                    " />
                 </div>
-            </section>
+            ))}
+        </div>
+    </div>
+</section>
 
             {/* Image Preview Modal */}
             {selectedImage && (
