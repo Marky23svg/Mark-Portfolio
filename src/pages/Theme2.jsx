@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin, FaInstagram, FaArrowDown, FaPhone } from "react-icons/fa6";
 import { FaExternalLinkAlt, FaEnvelope, FaApple } from "react-icons/fa";
-import { PiUserSwitchFill } from "react-icons/pi";
 import { CgClose, CgMenu } from "react-icons/cg";
 import { MdVerified } from "react-icons/md";
 import { useTransition } from "../context/TransitionContext.jsx";
 import ThemeToggle from "../components/ThemeToggle";
+import ThemeSwitcher from "../components/ThemeSwitcher"; // Import the new component
 import ProfileImg from "../assets/Markpfp3.webp";
 import V2bglight from "../assets/v2bglight4k.webp";
 import V2bgdark from "../assets/v2bgdark4k.webp";
@@ -50,7 +50,6 @@ const certificates = [
 ];
 
 function Theme2() {
-    const { navigateTo } = useTransition();
     const [isDarkMode, setIsDarkMode] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
     const [menuOpen, setMenuOpen] = useState(false);
@@ -108,9 +107,7 @@ function Theme2() {
                     {/* Desktop controls */}
                     <div className="hidden md:flex flex-row flex-nowrap items-center gap-4">
                         <ThemeToggle />
-                        <button onClick={() => navigateTo("/")} className="bg-gray-200 dark:bg-neutral-800 dark:hover:bg-white dark:hover:text-black rounded-full h-8 w-8 text-black dark:text-white cursor-pointer border border-gray-300 dark:border-gray-600 hover:bg-black hover:text-white transition-colors flex items-center justify-center">
-                            <PiUserSwitchFill className="w-6 h-6" />
-                        </button>
+                        <ThemeSwitcher />
                     </div>
 
                     <button className="md:hidden cursor-pointer p-1" onClick={() => setMenuOpen(true)}>
@@ -139,9 +136,7 @@ function Theme2() {
                         {/* Controls */}
                         <div className="flex items-center gap-4 px-6 pt-2 border-t border-gray-200 dark:border-neutral-700">
                             <ThemeToggle />
-                            <button onClick={() => { navigateTo("/"); setMenuOpen(false); }} className="bg-gray-200 dark:bg-neutral-800 dark:hover:bg-white dark:hover:text-black rounded-full h-8 w-8 text-black dark:text-white cursor-pointer border border-gray-300 dark:border-gray-600 hover:bg-black hover:text-white transition-colors flex items-center justify-center">
-                                <PiUserSwitchFill className="w-6 h-6" />
-                            </button>
+                            <ThemeSwitcher />
                         </div>
                     </div>
                 </div>

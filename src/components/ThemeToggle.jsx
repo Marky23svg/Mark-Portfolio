@@ -31,10 +31,10 @@ export default function ThemeToggle() {
       />
       
       {/* Switch track */}
-      <div className="w-16 h-8 bg-gray-200 dark:bg-neutral-800 rounded-full peer relative">
+      <div className="w-16 h-8 bg-white/20 dark:bg-black/5  border border-gray-200 dark:border-neutral-800 rounded-full peer relative">
         {/* Icons inside track - perfectly centered */}
         <LuSun className={`absolute left-2 top-1/2 -translate-y-1/2 text-yellow-500 text-base transition-opacity z-10 ${darkMode ? 'opacity-0' : 'opacity-100'}`} />
-        <LuMoon className={`absolute right-2 top-1/2 -translate-y-1/2 text-blue-950 text-base transition-opacity z-10 ${darkMode ? 'opacity-100' : 'opacity-0'}`} />
+        <LuMoon className={`absolute right-1.5 top-1/2 -translate-y-1/2 text-blue-950 text-base transition-opacity z-10 ${darkMode ? 'opacity-100' : 'opacity-0'}`} />
         
         {/* Sliding circle - properly sized and positioned */}
         <div className={`absolute top-0.5 left-0.5 w-7 h-7 bg-white rounded-full shadow-md transition-transform duration-300 ${darkMode ? 'translate-x-8' : 'translate-x-0'}`}></div>

@@ -9,6 +9,7 @@ import Chatbot from './components/Chatbot.jsx';
 import Preloader from "./components/Preloader";
 import PageTransition from "./components/PageTransition";
 import Theme2 from "./pages/Theme2.jsx";
+import Theme3 from "./pages/Theme3.jsx";
 import { TransitionProvider } from "./context/TransitionContext.jsx";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path="/certifications" element={<PageTransition><Certifications /></PageTransition>} />
             <Route path="/projects" element={<PageTransition><Projects /></PageTransition>} />
             <Route path="/v2" element={<PageTransition><Theme2 /></PageTransition>} />
+            <Route path="/v3" element={<PageTransition><Theme3 /></PageTransition>} />
           </Routes>
         </TransitionProvider>
       </Router>

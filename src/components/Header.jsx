@@ -1,24 +1,20 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { FaDownload, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { GoLocation } from "react-icons/go";
 import { MdVerified } from "react-icons/md";
 import { IoMdDownload } from "react-icons/io";
 import { useTransition } from '../context/TransitionContext.jsx';
-import Mark from '../assets/Markpfp3.webp';
-import MarkHover from '../assets/MarkpfpHover.webp';
-import Markwebp from '../assets/Markwebp.webp';
 import MarkDogs from '../assets/MarkDogs.gif';
 import MarkShiba from '../assets/MarkShiba.jpg';
 import MarkDogsSound from '../assets/MarkDogsSound.mp3';
 import ThemeToggle from './ThemeToggle.jsx';
-import { PiUserSwitchFill } from "react-icons/pi";
+import ThemeSwitcher from "./ThemeSwitcher"; // Make sure this file exists!
 
 function Header() {
   const [hovered, setHovered] = useState(false);
   const [audioUnlocked, setAudioUnlocked] = useState(false);
   const audioRef = useRef(null);
   const isPlayingRef = useRef(false);
-  const { navigateTo } = useTransition();
 
   // Unlock audio on first user interaction
   useEffect(() => {
@@ -47,12 +43,11 @@ function Header() {
     };
   }, []);
 
-  // Play sound and keep it looping
   const playSound = () => {
     if (audioRef.current && audioUnlocked && !isPlayingRef.current) {
       audioRef.current.currentTime = 0;
       audioRef.current.volume = 0.5;
-      audioRef.current.loop = true; // 👈 keeps playing while hovered
+      audioRef.current.loop = true;
       audioRef.current.play().catch(err => console.log('Play failed:', err));
       isPlayingRef.current = true;
     }
@@ -66,23 +61,6 @@ function Header() {
     }
   };
 
-  const handleMouseEnter = () => {
-    setHovered(true);
-    playSound();
-  };
-
-  const handleMouseMove = () => {
-    // If the sound already ended, restart it while still hovering
-    if (audioRef.current && audioUnlocked && audioRef.current.paused) {
-      playSound();
-    }
-  };
-
-  const handleMouseLeave = () => {
-    setHovered(false);
-    stopSound();
-  };
-
   return (
     <header className="relative">
       {/* Hidden audio element */}
@@ -92,12 +70,10 @@ function Header() {
 
         {/* Controls */}
         <div className="absolute top-4 right-4 sm:top-11 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-56 2xl:px-60 flex flex-col-reverse sm:flex-row flex-nowrap items-end sm:items-center gap-2">
-          <button
-            className="bg-gray-200 dark:bg-neutral-800 dark:hover:bg-white dark:hover:text-black rounded-full h-8 w-8 text-black dark:text-white cursor-pointer border border-gray-300 dark:border-gray-600 hover:bg-black hover:text-white transition-colors flex items-center justify-center gap-1"
-            onClick={() => navigateTo("/v2")}
-          >
-            <PiUserSwitchFill className="h-6 w-6" />
-          </button>
+          
+          {/* Reusable ThemeSwitcher component */}
+          <ThemeSwitcher />
+
           <ThemeToggle />
         </div>
 
@@ -106,9 +82,9 @@ function Header() {
           src={hovered ? MarkDogs : MarkShiba}
           alt="Mark Dev"
           className="w-32 h-32 sm:w-35 sm:h-35 rounded-lg shadow-md transition-all duration-500 cursor-pointer object-cover"
-          onMouseEnter={handleMouseEnter}
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
+          onMouseEnter={() => { setHovered(true); playSound(); }}
+          onMouseMove={() => { if (audioRef.current && audioUnlocked && audioRef.current.paused) playSound(); }}
+          onMouseLeave={() => { setHovered(false); stopSound(); }}
         />
 
         <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
