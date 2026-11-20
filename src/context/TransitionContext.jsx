@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 const TransitionContext = createContext(null);
@@ -7,6 +7,7 @@ export function TransitionProvider({ children }) {
   const navigate = useNavigate();
   const [isExiting, setIsExiting] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const navigateTimerRef = useRef(null);
 
   useEffect(() => {
     const checkTheme = () => setIsDarkMode(document.documentElement.classList.contains("dark"));
@@ -16,9 +17,12 @@ export function TransitionProvider({ children }) {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => () => clearTimeout(navigateTimerRef.current), []);
+
   const navigateTo = (path) => {
+    clearTimeout(navigateTimerRef.current);
     setIsExiting(true);
-    setTimeout(() => {
+    navigateTimerRef.current = setTimeout(() => {
       setIsExiting(false);
       navigate(path);
     }, 600);

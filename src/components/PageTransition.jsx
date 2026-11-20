@@ -5,14 +5,19 @@ function PageTransition({ children }) {
   const [hideOverlay, setHideOverlay] = useState(false);
 
   useEffect(() => {
+    let hideTimer;
+
     const timer = setTimeout(() => {
       setIsVisible(true);
-      setTimeout(() => {
+      hideTimer = setTimeout(() => {
         setHideOverlay(true);
       }, 600);
     }, 50);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(hideTimer);
+    };
   }, []);
 
   return (

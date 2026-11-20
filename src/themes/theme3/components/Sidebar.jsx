@@ -1,15 +1,15 @@
+import { Link } from "react-router-dom";
 import {
   FiGithub,
   FiLinkedin,
   FiInstagram,
   FiMail,
-  FiTwitter,
 } from "react-icons/fi";
 
-import ThemeSwitcher from "./ThemeSwitcher.jsx";
-import ThemeToggle from "./ThemeToggle.jsx";
+import ThemeSwitcher from "../../../components/ThemeSwitcher.jsx";
+import ThemeToggle from "../../../components/ThemeToggle.jsx";
 
-export default function Sidebar({ projects = [] }) {
+export default function Sidebar({ navItems = [] }) {
   const navClass =
     "flex items-center gap-3 text-sm transition-colors hover:text-blue-400";
 
@@ -40,14 +40,14 @@ export default function Sidebar({ projects = [] }) {
 
       {/* SECTION NAVIGATION */}
       <nav className="flex flex-col gap-2 mb-8 shrink-0">
-        {projects.map((item) => (
-          <a
-            key={item}
-            href={`#${item.toLowerCase()}`}
+        {navItems.map((item) => (
+          <Link
+            key={item.label}
+            to={item.to}
             className="text-base transition-colors hover:text-blue-400"
           >
-            {item}
-          </a>
+            {item.label}
+          </Link>
         ))}
       </nav>
 

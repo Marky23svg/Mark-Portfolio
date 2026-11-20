@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { SiCisco, SiFreecodecamp, SiUdacity, SiDatacamp } from "react-icons/si";
 
+const MotionDiv = motion.div;
+
 const initialCertifications = [
   {
     id: 1,
@@ -56,7 +58,7 @@ export default function CertificationCards({ isDark, themeColors }) {
         const CertificationIcon = certification.icon;
 
         return (
-          <motion.div
+          <MotionDiv
             key={certification.id}
             initial={false}
             animate={{
@@ -133,7 +135,7 @@ export default function CertificationCards({ isDark, themeColors }) {
                 <span className="text-xs sm:text-sm leading-none opacity-50 font-light">{`}`}</span>
               </a>
             )}
-          </motion.div>
+          </MotionDiv>
         );
       })}
     </div>

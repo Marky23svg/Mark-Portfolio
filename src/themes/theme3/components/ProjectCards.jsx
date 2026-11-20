@@ -16,6 +16,8 @@ import Attendify from "../assets/Attendify-logo.png";
 import FacultySys from "../assets/FacultySys.jpg";
 import Eguide from "../assets/EguideLogo.jpg";
 
+const MotionDiv = motion.div;
+
 // Map tech keys → icon + brand color + full name
 const techIconMap = {
   EXPO: { Icon: SiExpo,        color: "#FFFFFF", name: "Expo" },
@@ -99,7 +101,7 @@ export default function ProjectCards({ isDark, themeColors }) {
         const isRight = position === "right";
 
         return (
-          <motion.div
+          <MotionDiv
             key={project.id}
             initial={false}
             animate={{
@@ -252,7 +254,7 @@ export default function ProjectCards({ isDark, themeColors }) {
                 View project <FiArrowRight />
               </button>
             )}
-          </motion.div>
+          </MotionDiv>
         );
       })}
     </div>

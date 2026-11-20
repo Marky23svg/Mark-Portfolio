@@ -68,7 +68,7 @@ function Projects() {
         </h1>
         <button
           className="bg-gray-50 dark:bg-black dark:hover:bg-white dark:hover:text-black rounded-lg h-8 w-24 text-black dark:text-white cursor-pointer border border-gray-300 dark:border-gray-600 hover:bg-black hover:text-white transition-colors flex items-center justify-center gap-1"
-          onClick={() => navigateTo("/")}
+          onClick={() => navigateTo("/theme1")}
         >
           <MdKeyboardDoubleArrowLeft />
           Back
