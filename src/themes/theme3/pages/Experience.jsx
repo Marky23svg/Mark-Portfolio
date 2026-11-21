@@ -79,7 +79,7 @@ export default function Experience() {
 
             {/* Header */}
             <div className="flex flex-wrap items-center justify-between gap-3 mb-8">
-                <h3 className="text-2xl font-pixel tracking-widest text-neutral-100">
+                <h3 className="text-2xl font-pixel tracking-widest text-neutral-800 dark:text-neutral-100">
                     experience
                 </h3>
 

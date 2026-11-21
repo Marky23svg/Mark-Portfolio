@@ -44,7 +44,7 @@ const certificates = [
         title: "Freecodecamp Responsive Web Design",
         issuer: "Freecodecamp",
         date: "",
-        link: null,
+        link: "https://www.freecodecamp.org/certification/imnotmarkk_/responsive-web-design-v9",
         rotation: "rotate-3", // 👈 Tilted Right
     },
     {
@@ -96,7 +96,7 @@ export default function Certifications() {
             
             {/* HEADER */}
             <div className="flex items-center justify-between mb-10 max-w-5xl mx-auto">
-                <h3 className="text-2xl font-pixel  tracking-widest text-neutral-100">
+                <h3 className="text-2xl font-pixel  tracking-widest text-neutral-800 dark:text-neutral-100">
                      credentials
                 </h3>
 
@@ -190,7 +190,7 @@ export default function Certifications() {
                     />
                     <button
                         type="button"
-                        className="absolute right-6 top-6 flex h-10 w-10 items-center justify-center rounded-full bg-black/50 text-3xl text-white transition hover:bg-black/70"
+                        className="absolute right-6 top-6 flex h-10 w-10 items-center font-pixel justify-center rounded-full pb-1 bg-white/10 text-3xl text-white transition hover:bg-white/10 cursor-pointer"
                         onClick={() => setSelectedImage(null)}
                     >
                         ×

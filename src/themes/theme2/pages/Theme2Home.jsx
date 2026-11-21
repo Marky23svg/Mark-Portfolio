@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import { useOutletContext } from "react-router-dom";
 import { FaGithub, FaLinkedin, FaInstagram, FaArrowDown } from "react-icons/fa6";
 import { FaExternalLinkAlt, FaEnvelope, FaApple } from "react-icons/fa";
@@ -220,7 +221,7 @@ export default function Theme2Home() {
                                         ) : (
                                             <>
                                                 Preview
-                                                <span className="text-xs">↗</span>
+                                                <FaExternalLinkAlt className="w-2.5 h-2.5" />
                                             </>
                                         )}
                                     </div>
@@ -265,12 +266,14 @@ export default function Theme2Home() {
                 </div>
             </section>
 
-            {selectedImage && (
-                <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={() => setSelectedImage(null)}>
-                    <img src={selectedImage} alt="Certificate preview" className="max-w-full max-h-full object-contain rounded-2xl shadow-2xl" onClick={(e) => e.stopPropagation()} />
-                    <button className="absolute top-4 right-4 text-white text-3xl bg-black/50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-black/70 transition" onClick={() => setSelectedImage(null)}>×</button>
-                </div>
-            )}
+            {selectedImage &&
+                createPortal(
+                    <div className="fixed inset-0 bg-black/80 z-[100] flex items-center justify-center p-4" onClick={() => setSelectedImage(null)}>
+                        <img src={selectedImage} alt="Certificate preview" className="max-w-180 max-h-180 object-contain rounded-2xl shadow-2xl" onClick={(e) => e.stopPropagation()} />
+                        <button className="absolute top-4 right-4 text-white text-3xl bg-black/50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-black/70 transition" onClick={() => setSelectedImage(null)}>×</button>
+                    </div>,
+                    document.body
+                )}
 
             <section id="graphic" className="relative z-10 py-12 px-4 sm:px-6 bg-white dark:bg-black/80 backdrop-blur-sm">
                 <h2 className="text-3xl sm:text-4xl font-light text-center text-black dark:text-white font-montserrat mb-2">

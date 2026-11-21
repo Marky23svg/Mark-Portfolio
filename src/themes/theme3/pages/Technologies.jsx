@@ -82,7 +82,7 @@ export default function Technologies() {
     return (
         <section id="technologies" className="mb-16 sm:mb-20">
             <div className="flex flex-wrap items-center justify-between gap-3 mb-7">
-                <h3 className="text-2xl font-pixel  tracking-widest text-neutral-100">
+                <h3 className="text-2xl font-pixel  tracking-widest text-neutral-800 dark:text-neutral-100">
                     technologies
                 </h3>
 

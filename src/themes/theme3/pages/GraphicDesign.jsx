@@ -106,14 +106,14 @@ export default function GraphicDesign() {
                         alt="Graphic design preview"
                         decoding="async"
                         draggable="false"
-                        className="max-h-[90vh] max-w-full rounded-lg object-contain shadow-2xl"
+                        className="max-h-[80vh] max-w-full rounded-lg object-contain shadow-2xl"
                         onClick={(event) => event.stopPropagation()}
                     />
 
                     <button
                         type="button"
                         aria-label="Close image preview"
-                        className="absolute right-6 top-6 z-50 flex pb-2 h-10 w-10 items-center justify-center rounded-full bg-white/10 text-3xl text-white transition hover:bg-white/20 cursor-pointer"
+                        className="absolute right-6 top-6 z-50 flex pb-1 mb-2 h-10 w-10 items-center font-pixel justify-center rounded-full bg-white/10 text-3xl text-white transition hover:bg-white/20 cursor-pointer"
                         onClick={() => setSelectedImage(null)}
                     >
                         ×
