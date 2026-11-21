@@ -47,7 +47,11 @@ export default function Theme3Layout() {
     useEffect(() => {
         if (location.hash) return;
 
-        mainRef.current?.scrollTo({ top: 0, behavior: "auto" });
+        if (window.matchMedia("(min-width: 768px)").matches) {
+            mainRef.current?.scrollTo({ top: 0, behavior: "auto" });
+        } else {
+            window.scrollTo({ top: 0, behavior: "auto" });
+        }
     }, [location.pathname, location.hash, location.key]);
 
     const themeColors = {
@@ -59,15 +63,15 @@ export default function Theme3Layout() {
 
     return (
         <div
-            className={`theme3-background h-dvh w-full overflow-hidden font-sans ${themeColors.background} ${themeColors.text} selection:bg-neutral-800 selection:text-white`}
+            className={`theme3-background min-h-dvh w-full font-sans md:h-dvh md:overflow-hidden ${themeColors.background} ${themeColors.text} selection:bg-neutral-800 selection:text-white`}
         >
-            <div className="flex h-full min-h-0 w-full">
+            <div className="flex w-full md:h-full md:min-h-0">
                 <Sidebar navItems={navItems} />
 
                 <main
                     ref={mainRef}
                     data-lenis-prevent=""
-                    className="h-full min-h-0 min-w-0 flex-1 overflow-y-auto overflow-x-hidden overscroll-y-contain"
+                    className="min-w-0 flex-1 md:h-full md:min-h-0 md:overflow-y-auto md:overflow-x-hidden md:overscroll-y-contain"
                 >
                     <header className={`md:hidden sticky top-0 z-30 border-b px-5 py-4 backdrop-blur-md ${isDark ? "bg-[#0a0a0a]/90 border-neutral-800" : "bg-white/90 border-gray-200"}`}>
                         <div className="flex items-center justify-between">
