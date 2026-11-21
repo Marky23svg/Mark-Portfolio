@@ -360,7 +360,7 @@ export default function Theme3Home() {
             </section>
 
             <section id="certifications" className="py-12 sm:py-16">
-                <div className="-mb-25 justify-between flex">
+                <div className="-mb-25 relative z-10 justify-between flex">
                     <p className="text-xs font-mono uppercase tracking-widest text-neutral-500">
                         04 — Credentials
                     </p>
