@@ -11,6 +11,30 @@ import {
 import ThemeSwitcher from "../../../components/ThemeSwitcher.jsx";
 import ThemeToggle from "../../../components/ThemeToggle.jsx";
 
+export function ViewersIndicator({ className = "" }) {
+  return (
+    <div className={`flex flex-col gap-2 shrink-0 ${className}`}>
+      <div className="flex -space-x-2">
+        {[
+          "https://kureansiklopedi.com/_next/image?url=https%3A%2F%2Fcdn.t3pedia.org%2Fmedia%2Fuploads%2F2025%2F05%2F19%2FSNbTxDRvemaXm7uzldFol7DRXjKbqeE4.jpg&w=1280&q=75",
+          "https://assets.fiba.basketball/image/upload/w_2800/c_pad,ar_12:10/c_pad,ar_10:12/ar_10:12,c_crop,g_face,z_0.25/e_trim/c_lpad,ar_1:1/w_2800/w_2200,h_2000,c_crop,x_300/w_300,c_fill/q_auto/f_auto/.headshot--person_235828--competition_208942?buster=20774",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9H39LxgRKoyIlbb6vo0dgcvUtcWOn8sI--_QxBqnxK-miFCEQMCrnUjI&s=10",
+        ].map((avatar, index) => (
+          <div
+            key={index}
+            className="w-7 h-7 rounded-full border-2 border-gray-50 dark:border-[#0a0a0a] bg-cover bg-center bg-white"
+            style={{ backgroundImage: `url(${avatar})` }}
+          />
+        ))}
+      </div>
+
+      <span className="text-xs font-medium mt-1">
+        3 people viewing now
+      </span>
+    </div>
+  );
+}
+
 export default function Sidebar({ navItems = [] }) {
   const navClass =
     "flex items-center gap-3 text-sm transition-colors hover:text-blue-400";
@@ -68,25 +92,7 @@ export default function Sidebar({ navItems = [] }) {
       <hr className="mb-8 border-gray-200 dark:border-neutral-800" />
 
       {/* VISITORS */}
-      <div className="flex flex-col gap-2 mb-8 shrink-0">
-        <div className="flex -space-x-2">
-          {[
-            "https://kureansiklopedi.com/_next/image?url=https%3A%2F%2Fcdn.t3pedia.org%2Fmedia%2Fuploads%2F2025%2F05%2F19%2FSNbTxDRvemaXm7uzldFol7DRXjKbqeE4.jpg&w=1280&q=75",
-            "https://assets.fiba.basketball/image/upload/w_2800/c_pad,ar_12:10/c_pad,ar_10:12/ar_10:12,c_crop,g_face,z_0.25/e_trim/c_lpad,ar_1:1/w_2800/w_2200,h_2000,c_crop,x_300/w_300,c_fill/q_auto/f_auto/.headshot--person_235828--competition_208942?buster=20774",
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9H39LxgRKoyIlbb6vo0dgcvUtcWOn8sI--_QxBqnxK-miFCEQMCrnUjI&s=10",
-          ].map((avatar, index) => (
-            <div
-              key={index}
-              className="w-7 h-7 rounded-full border-2 border-gray-50 dark:border-[#0a0a0a] bg-cover bg-center bg-white"
-              style={{ backgroundImage: `url(${avatar})` }}
-            />
-          ))}
-        </div>
-
-        <span className="text-xs font-medium mt-1">
-          3 people viewing now
-        </span>
-      </div>
+      <ViewersIndicator className="mb-8" />
 
       <hr className="mb-8 border-gray-200 dark:border-neutral-800" />
 

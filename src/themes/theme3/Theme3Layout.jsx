@@ -4,7 +4,7 @@ import { Link, Outlet, useLocation } from "react-router-dom";
 
 import ThemeSwitcher from "../../components/ThemeSwitcher";
 import ThemeToggle from "../../components/ThemeToggle";
-import Sidebar from "./components/Sidebar.jsx";
+import Sidebar, { ViewersIndicator } from "./components/Sidebar.jsx";
 
 const navItems = [
    // { label: "Quotes", to: "/theme3#quotes" },
@@ -117,6 +117,10 @@ export default function Theme3Layout() {
                                     </Link>
                                 ))}
                             </nav>
+                            <hr className="mx-6 border-gray-200 dark:border-neutral-800" />
+                            <div className="px-6 pb-6 pt-5">
+                                <ViewersIndicator />
+                            </div>
                             <hr className="mx-6 border-gray-200 dark:border-neutral-800" />
                             <div className="flex flex-col px-6 py-6 gap-3">
                                 <ThemeToggle circularTransition />
