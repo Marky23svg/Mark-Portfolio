@@ -93,6 +93,7 @@ export default function ProjectCards({ isDark, themeColors }) {
       mt-6 sm:mt-8
       overflow-visible
       px-2
+      font-geist
     ">
       {projects.map((project, index) => {
         const position =
@@ -163,7 +164,7 @@ export default function ProjectCards({ isDark, themeColors }) {
                 </div>
               ) : null}
 
-              <div className={`min-w-0 ${isRight ? "text-right" : ""}`}>
+              <div className={`font-geist min-w-0 ${isRight ? "text-right" : ""}`}>
                 <h4
                   className={`font-bold ${
                     isCenter ? "text-lg sm:text-xl" : "text-sm"

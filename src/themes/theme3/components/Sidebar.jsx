@@ -1,22 +1,23 @@
-import { Link } from "react-router-dom";
+
+import { NavLink } from "react-router-dom";
 import {
   FiGithub,
   FiLinkedin,
   FiInstagram,
   FiMail,
+  FiArrowRight,
 } from "react-icons/fi";
 
 import ThemeSwitcher from "../../../components/ThemeSwitcher.jsx";
 import ThemeToggle from "../../../components/ThemeToggle.jsx";
 
 export default function Sidebar({ navItems = [] }) {
-  const navClass =
+  const navClass = 
     "flex items-center gap-3 text-sm transition-colors hover:text-blue-400";
 
   return (
     <aside
       data-lenis-prevent=""
-      // 👇 Added font-jetbrains here
       className={`
         theme3-background
         font-jetbrains
@@ -31,23 +32,37 @@ export default function Sidebar({ navItems = [] }) {
         bg-gray-50 dark:bg-[#0a0a0a] text-neutral-800 dark:text-neutral-300
       `}
     >
-      {/* NAME - Added font-bold to match the JetBrains look better */}
+      {/* NAME */}
       <h1 className="text-lg font-pixel tracking-tight mb-8 shrink-0 text-black dark:text-white">
-  Mark Justin Canuel
-</h1>
+        Mark Justin Canuel
+      </h1>
 
       <hr className="mb-8 border-gray-200 dark:border-neutral-800" />
 
       {/* SECTION NAVIGATION */}
       <nav className="flex flex-col gap-2 mb-8 shrink-0">
         {navItems.map((item) => (
-          <Link
+          <NavLink
             key={item.label}
             to={item.to}
-            className="text-base transition-colors hover:text-blue-400"
+            className={({ isActive }) =>
+              `flex items-center gap-3 text-base transition-colors duration-200 ${
+                isActive
+                  ? "text-neutral-900 dark:text-neutral-100 font-semibold"
+                  : "text-neutral-400 dark:text-neutral-500 hover:text-blue-400"
+              }`
+            }
           >
-            {item.label}
-          </Link>
+            {({ isActive }) => (
+              <>
+                {isActive && (
+                  <FiArrowRight className="w-4 h-4 shrink-0" />
+                )}
+
+                <span>{item.label}</span>
+              </>
+            )}
+          </NavLink>
         ))}
       </nav>
 
@@ -70,7 +85,7 @@ export default function Sidebar({ navItems = [] }) {
 
       {/* GLOBAL THEME TOGGLE */}
       <div className="mb-5 shrink-0">
-        <ThemeToggle />
+        <ThemeToggle circularTransition />
       </div>
 
       {/* THEME SWITCHER */}
@@ -94,34 +109,34 @@ export default function Sidebar({ navItems = [] }) {
         </a>
 
         <a
-  href="https://github.com/Marky23svg"
-  target="_blank"
-  rel="noopener noreferrer"
-  className={navClass}
->
-  <FiGithub className="w-4 h-4" />
-  <span className="text-xs">@Marky23svg</span>
-</a>
+          href="https://github.com/Marky23svg"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={navClass}
+        >
+          <FiGithub className="w-4 h-4" />
+          <span className="text-xs">@Marky23svg</span>
+        </a>
 
-<a
-  href="https://www.linkedin.com/in/mark-justin-canuel/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className={navClass}
->
-  <FiLinkedin className="w-4 h-4" />
-  <span className="text-xs">in/markjustincanuel</span>
-</a>
+        <a
+          href="https://www.linkedin.com/in/mark-justin-canuel/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={navClass}
+        >
+          <FiLinkedin className="w-4 h-4" />
+          <span className="text-xs">in/markjustincanuel</span>
+        </a>
 
-<a
-  href="https://www.instagram.com/imnotmarkkk_/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className={navClass}
->
-  <FiInstagram className="w-4 h-4" />
-  <span className="text-xs">@imnotmarkkk_</span>
-</a>
+        <a
+          href="https://www.instagram.com/imnotmarkkk_/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={navClass}
+        >
+          <FiInstagram className="w-4 h-4" />
+          <span className="text-xs">@imnotmarkkk_</span>
+        </a>
       </div>
     </aside>
   );

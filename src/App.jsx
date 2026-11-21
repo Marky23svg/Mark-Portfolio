@@ -19,6 +19,10 @@ import Theme2Projects from "./themes/theme2/pages/Projects.jsx";
 import Theme3Layout from "./themes/theme3/Theme3Layout.jsx";
 import Theme3Home from "./themes/theme3/pages/Theme3Home.jsx";
 import Theme3Projects from "./themes/theme3/pages/Projects.jsx";
+import Theme3Experience from "./themes/theme3/pages/Experience.jsx";
+import Theme3Technologies from "./themes/theme3/pages/Technologies.jsx";
+import Theme3Certifications from "./themes/theme3/pages/Certifications.jsx";
+import Theme3GraphicDesign from "./themes/theme3/pages/GraphicDesign.jsx";
 
 import { TransitionProvider } from "./context/TransitionContext.jsx";
 
@@ -98,6 +102,10 @@ function App() {
             >
               <Route index element={<Theme3Home />} />
               <Route path="projects" element={<Theme3Projects />} />
+              <Route path="experience" element={<Theme3Experience />} />
+              <Route path="technologies" element={<Theme3Technologies />} />
+              <Route path="certifications" element={<Theme3Certifications />} />
+              <Route path="graphic-design" element={<Theme3GraphicDesign />} />
             </Route>
 
             {/* LEGACY REDIRECTS */}

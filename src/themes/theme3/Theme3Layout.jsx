@@ -7,12 +7,12 @@ import ThemeToggle from "../../components/ThemeToggle";
 import Sidebar from "./components/Sidebar.jsx";
 
 const navItems = [
-    { label: "Quotes", to: "/theme3#quotes" },
+   // { label: "Quotes", to: "/theme3#quotes" },
     { label: "Projects", to: "/theme3/projects" },
-    { label: "Experience", to: "/theme3#experience" },
-    { label: "Technologies", to: "/theme3#technologies" },
-    { label: "Certifications", to: "/theme3#certifications" },
-    { label: "Graphic Design", to: "/theme3#graphic%20design" },
+    { label: "Experience", to: "/theme3/experience" },
+    { label: "Technologies", to: "/theme3/technologies" },
+    { label: "Certifications", to: "/theme3/certifications" },
+    { label: "Graphic Design", to: "/theme3/graphic-design" },
 ];
 
 export default function Theme3Layout() {
@@ -115,7 +115,7 @@ export default function Theme3Layout() {
                             </nav>
                             <hr className="mx-6 border-gray-200 dark:border-neutral-800" />
                             <div className="flex flex-col px-6 py-6 gap-3">
-                                <ThemeToggle />
+                                <ThemeToggle circularTransition />
                                 <ThemeSwitcher />
                             </div>
                             <hr className="mx-6 border-gray-200 dark:border-neutral-800" />

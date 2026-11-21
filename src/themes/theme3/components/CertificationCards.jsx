@@ -50,7 +50,7 @@ export default function CertificationCards({ isDark, themeColors }) {
   };
 
   return (
-    <div className="relative isolate flex items-center justify-center w-full h-[300px] sm:h-[340px] lg:h-[400px] max-w-5xl mx-auto mt-1 overflow-visible px-4">
+    <div className="relative isolate flex items-center justify-center w-full font-geist h-[300px] sm:h-[340px] lg:h-[400px] max-w-5xl mx-auto mt-1 overflow-visible px-4">
       {certifications.map((certification, index) => {
         const position = index === 0 ? "center" : index === 1 ? "left" : "right";
         const isCenter = position === "center";
