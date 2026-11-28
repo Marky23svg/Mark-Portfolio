@@ -42,6 +42,7 @@ const initialProjects = [
       "Attendance tracking mobile app for company employees, with selfie and location verification on time in/out.",
     tech: ["EXPO", "RN", "TW", "SB"],
     image: Attendify,
+    link: "https://attendify-download.vercel.app/",
   },
   {
     id: 2,
@@ -52,6 +53,7 @@ const initialProjects = [
       "A web system that digitizes student-faculty consultations appointment requests, scheduling, and tracking—with role-based access.",
     tech: ["MDB", "EX", "RN", "NJS", "TW", "SIO"],
     image: FacultySys,
+    link: "https://faculty-consultation-system-murex.vercel.app/login",
   },
   {
     id: 3,
@@ -61,6 +63,7 @@ const initialProjects = [
     description: "A centralized web platform that guides students through various school processes with step-by-step procedures, requirements, and instructions in one accessible system.",
     tech: ["MDB", "EX", "RN", "NJS", "TW",],
     image: Eguide,
+    link: "https://e-guide-fullstack-cjdmrk.vercel.app/",
   },
 ];
 
@@ -244,7 +247,10 @@ export default function ProjectCards({ isDark, themeColors }) {
 
             {/* View Project */}
             {isCenter && (
-              <button
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
                 className={`w-full py-2.5 sm:py-2 rounded-xl font-medium text-xs sm:text-sm flex items-center justify-center gap-2 mt-auto cursor-pointer ${
                   isDark
@@ -253,7 +259,7 @@ export default function ProjectCards({ isDark, themeColors }) {
                 }`}
               >
                 View project <FiArrowRight />
-              </button>
+              </a>
             )}
           </MotionDiv>
         );

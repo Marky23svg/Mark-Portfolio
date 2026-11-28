@@ -43,6 +43,7 @@ const projects = [
         date: "Nov 2026",
         featured: true,
         tech: ["MDB", "EX", "RN", "NJS", "TW", "SIO"],
+        link: "https://faculty-consultation-system-murex.vercel.app/login",
     },
     {
         id: 7,
@@ -53,6 +54,7 @@ const projects = [
         date: "Sep 2026",
         featured: true,
         tech: ["EXPO", "RN", "TW", "SB"],
+        link: "https://attendify-download.vercel.app/",
     },
     {
         id: 8,
@@ -63,6 +65,7 @@ const projects = [
         date: "June 2026",
         featured: true,
         tech: ["MDB", "EX", "RN", "NJS", "TW"],
+        link: "https://e-guide-fullstack-cjdmrk.vercel.app/",
     },
     {
         id: 1,
