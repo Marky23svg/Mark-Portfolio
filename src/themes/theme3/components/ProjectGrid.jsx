@@ -89,7 +89,7 @@ const projects = [
         title: "WattsUp",
         description: "EV Charging Station Locator",
         category: "Web App",
-        link: "https://wattsup-vert.vercel.app/",
+        link: "https://watts-up-vert.vercel.app/",
     },
     {
         id: 4,
